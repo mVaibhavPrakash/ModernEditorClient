@@ -1,0 +1,24 @@
+{
+  "name": "modern-editor-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mVaibhavPrakash/modern-editor-client.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mVaibhavPrakash/modern-editor-client/issues"
+  },
+  "homepage": "https://github.com/mVaibhavPrakash/modern-editor-client#readme",
+  "devDependencies": {
+    "webpack": "^5.42.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
