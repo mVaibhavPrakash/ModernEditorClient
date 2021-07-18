@@ -6,7 +6,7 @@ import '../css/selector.css'
 const Selector = () => {
     const [input,setInput] = useState('title')
     return (
-        <div>
+        <div className='select'>
             <div className="title"><input type="text" placeholder='tiTle!!' /></div>
             <div className='selector'>
                 <span onClick={() =>setInput('head')}><FontAwesomeIcon icon={faHeading}/></span>
