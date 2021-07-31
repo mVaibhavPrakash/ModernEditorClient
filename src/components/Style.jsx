@@ -5,16 +5,21 @@ import '../css/style.css'
 
 const Style = () => {
     const [active,setActive] =useState('options');
-    let icon;
-    if(active==='options'){
-        icon=faArrowDown
+
+    const fun = () =>{
+        let icon;
+        if(active==='options'){
+            icon=faArrowDown
+        }
+        else{
+            icon=faArrowRight
+        }
+        return icon;
     }
-    else{
-        icon=faArrowRight
-    }
+    
     return (
         <div className='style'>
-            <FontAwesomeIcon icon={icon} id='toogleStyle' onClick={()=>{if(active==='options')setActive('optionsActive'); else setActive('options')}}/>
+            <FontAwesomeIcon icon={fun()} id='toogleStyle' onClick={()=>{if(active==='options')setActive('optionsActive'); else setActive('options')}}/>
             <FontAwesomeIcon icon={faBold} className={`${active}`}/>
             <FontAwesomeIcon icon={faItalic} className={`${active}`}/>
             <FontAwesomeIcon icon={faItalic} className={`${active}`}/>
