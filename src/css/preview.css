@@ -1,0 +1,20 @@
+.preview{
+    width:60vw;
+    margin:0 auto;
+    padding-left:2vw;
+}
+
+#preview-title, .preview-head, .preview-para, .preview-ol{
+    color:black;
+    font-family: monospace;
+    width: 100%;
+}
+
+.preview-ol{
+    list-style-position: inside;
+    text-indent: 5px;
+}
+
+li{
+    padding-left:0vw;
+}

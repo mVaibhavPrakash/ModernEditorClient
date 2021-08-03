@@ -1,4 +1,5 @@
 import React from 'react'
+import '../css/preview.css'
 
 const Preview = () => {
     const results={
@@ -26,7 +27,7 @@ const Preview = () => {
             </ul>
         }
         if(key==='ol'){
-            return <ol key={index} className="preview-ul">
+            return <ol key={index} className="preview-ol">
                 {
                     results[key].map(function(value,ind){
                         return <li key={ind}>{value}</li>
