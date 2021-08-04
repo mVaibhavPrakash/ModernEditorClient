@@ -2,11 +2,11 @@ import React, {useState, createContext} from 'react'
 
 export const InputContext = createContext();
 
-export const InputProvider = ({Childrens}) =>{
+export const InputContextProvider = ({children}) =>{
     const [Input, setInput] = useState('');
     return(
         <InputContext.Provider value={[Input, setInput]}>
-            {Childrens}
+            {children}
         </InputContext.Provider>
     )
 }

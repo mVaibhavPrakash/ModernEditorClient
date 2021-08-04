@@ -1,10 +1,12 @@
 import { createContext, useState } from "react";
 
-const StyleContext = createContext();
+export const StyleContext = createContext();
 
-const StyleContextProvider = ({Childrens}) =>{
-    const [style, setStyle] = useState('');
-    <StyleContext.Provider >
-        {Childrens}
-    </StyleContext.Provider>
+export const StyleContextProvider = ({children}) =>{
+    const [Style, setStyle] = useState({});
+    return(
+        <StyleContext.Provider value={[Style,setStyle]}>
+            {children}
+        </StyleContext.Provider>
+    )
 }
