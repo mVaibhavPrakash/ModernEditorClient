@@ -12,8 +12,13 @@ const Editor = () => {
         <>
         <SelectInputProvider>
             <Selector />
-            <Input />
-            <Submit />
+            <InputContextProvider>
+                <StyleContextProvider>
+                    <Input />
+                    <Style/>
+                    <Submit />
+                </StyleContextProvider>
+            </InputContextProvider>
         </SelectInputProvider>
         </>
     )

@@ -2,19 +2,31 @@ import React,{useState, useContext} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown, faArrowRight, faBold, faCode, faItalic} from '@fortawesome/free-solid-svg-icons'
 import '../css/style.css'
-import { SelectInputContext } from '../hooks/SelectInputContext'
+import { StyleContext } from '../hooks/StyleContext'
 
 const Style = () => {
-    const [Element,setElement,Style,setStyle,Input, setInput] = useContext(SelectInputContext);
-const active='options'
+    
+    const [Style,setStyle] = useContext(StyleContext);
+    const [Active,setActive] =useState('options');
+
+    const fun = () =>{
+        let icon;
+        if(Active==='options'){
+            icon=faArrowDown
+        }
+        else{
+            icon=faArrowRight
+        }
+        return icon;
+    }
     
     return (
         <div className='style'>
-            <FontAwesomeIcon icon={faArrowDown} id='toogleStyle'/>
-            <FontAwesomeIcon icon={faBold} className={`${active}`} onClick={setStyle(prev => ({ ...prev, fontStyle: 'bold' }))}/>
-            <FontAwesomeIcon icon={faItalic} className={`${active}`} onClick={setStyle(prev => ({ ...prev, fontStyle: 'italic' }))}/>
-            <FontAwesomeIcon icon={faItalic} className={`${active}`} onClick={setStyle(prev => ({ ...prev, fontStyle: 'bold' }))}/>
-            <FontAwesomeIcon icon={faCode} className={`${active}`} onClick={setStyle(prev => ({ ...prev, fontStyle: 'bold' }))}/>
+            <FontAwesomeIcon icon={fun()} id='toogleStyle' onClick={()=>{if(Active==='options')setActive('optionsActive'); else setActive('options')}}/>
+            <FontAwesomeIcon icon={faBold} className={`${Active}`}  onClick={() =>setStyle(prev =>  ({...prev,fontStyle: 'bold' }))} />
+            <FontAwesomeIcon icon={faItalic} className={`${Active}`} onClick={() =>setStyle(prev =>({...prev,fontStyle: 'italic' }))}/>
+            <FontAwesomeIcon icon={faItalic} className={`${Active}`} onClick={() =>setStyle(prev =>({...prev,fontStyle: 'bold' }))}  />
+            <FontAwesomeIcon icon={faCode} className={`${Active}`}  onClick={() =>setStyle( prev => ({...prev,fontStyle: 'bold' }))} />
         </div>
     )
 }

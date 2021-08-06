@@ -4,7 +4,7 @@ import { InputContext } from '../hooks/InputContext';
 import { SelectInputContext } from '../hooks/SelectInputContext';
 
 export const Input = () => {
-    const [Element,setElement,Style,setStyle,Input, setInput] = useContext(SelectInputContext);
+    const [Input, setInput] = useContext(InputContext);
     return (
         <div className='blogInputDiv'>
             <textarea type="text" className="blogInput" value={Input} onChange={e => setInput(e.target.value)}/>

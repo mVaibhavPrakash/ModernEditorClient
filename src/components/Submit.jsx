@@ -6,11 +6,14 @@ import { StyleContext } from '../hooks/StyleContext'
 import submitData from '../js/submitData.js'
 
 export const Submit = () => {
-    const [Element,setElement,Style,setStyle,Input, setInput] = useContext(SelectInputContext);
+    const [Input, setInput] = useContext(InputContext)
+    const [Element,setElement] = useContext(SelectInputContext)
+    const [Style,setStyle] =useContext(StyleContext)
 
     let obj={
         element : Element,
-        input : Input
+        input : Input,
+        style : Style
     }
 
     return (
