@@ -6,7 +6,7 @@ import Title from './Title'
 import { SelectInputContext} from '../hooks/SelectInputContext'
 
 const Selector = () => {
-    const [Element,setElement] = useContext(SelectInputContext);
+    const [Element,setElement,Style,setStyle,Input, setInput] = useContext(SelectInputContext);
     return (
             <div className='select'>
                 <Title />
