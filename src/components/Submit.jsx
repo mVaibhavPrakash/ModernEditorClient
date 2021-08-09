@@ -10,15 +10,9 @@ export const Submit = () => {
     const [Element,setElement] = useContext(SelectInputContext)
     const [Style,setStyle] =useContext(StyleContext)
 
-    let obj={
-        element : Element,
-        input : Input,
-        style : Style
-    }
-
     return (
         <div className="submitDiv">
-            <button id='submitBlog' onClick={e => submitData(e,obj, setInput, setElement, setStyle)}>Submit</button>
+            <button id='submitBlog' onClick={e => submitData(e,Input,Element,Style, setInput, setElement, setStyle)}>Submit</button>
         </div>
     )
 }

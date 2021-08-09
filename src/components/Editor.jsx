@@ -2,10 +2,11 @@ import React from 'react'
 import Selector from './Selector'
 import {Input} from './Input'
 import {Submit} from './Submit'
-import Style from './Style'
+import CssStyle from './CssStyle'
 import { SelectInputProvider } from '../hooks/SelectInputContext'
 import { StyleContextProvider } from '../hooks/StyleContext'
 import { InputContextProvider } from '../hooks/InputContext'
+import Preview from './Preview'
 
 const Editor = () => {
     return (
@@ -15,11 +16,12 @@ const Editor = () => {
             <InputContextProvider>
                 <StyleContextProvider>
                     <Input />
-                    <Style/>
+                    <CssStyle/>
                     <Submit />
                 </StyleContextProvider>
             </InputContextProvider>
         </SelectInputProvider>
+        <Preview/>
         </>
     )
 }
