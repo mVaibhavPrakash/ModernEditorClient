@@ -1,7 +1,6 @@
 import React, {useContext} from 'react'
 import '../css/input.css'
 import { InputContext } from '../hooks/InputContext';
-import { SelectInputContext } from '../hooks/SelectInputContext';
 
 export const Input = () => {
     const [Input, setInput] = useContext(InputContext);

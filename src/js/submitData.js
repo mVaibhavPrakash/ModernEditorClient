@@ -1,31 +1,8 @@
-const submitData = (
-  e,
-  Input,
-  Element,
-  Style,
-  setInput,
-  setElement,
-  setStyle
-) => {
+const submitData = (e, Input, setInput) => {
   e.preventDefault();
-  if (Element !== '' && Input !== '' && Style !== {}) {
-    let obj = {
-      element: Element,
-      input: Input,
-      style: Style,
-    };
-    let data = JSON.parse(localStorage.getItem('data'));
-    let dat = [];
-    if (data === null) {
-      dat.push(obj);
-    } else {
-      dat = data;
-      dat.push(obj);
-    }
-    localStorage.setItem('data', JSON.stringify(dat));
+  if (Input !== '') {
+    localStorage.setItem('data', Input);
     setInput('');
-    setElement('');
-    setStyle('');
   }
 };
 

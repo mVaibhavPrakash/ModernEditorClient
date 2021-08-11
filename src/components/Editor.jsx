@@ -1,27 +1,19 @@
 import React from 'react'
-import Selector from './Selector'
 import {Input} from './Input'
 import {Submit} from './Submit'
-import CssStyle from './CssStyle'
-import { SelectInputProvider } from '../hooks/SelectInputContext'
-import { StyleContextProvider } from '../hooks/StyleContext'
 import { InputContextProvider } from '../hooks/InputContext'
-import Preview from './Preview'
+import Preview from '../Preview/Preview'
+import Title from './Title'
 
 const Editor = () => {
     return (
         <>
-        <SelectInputProvider>
-            <Selector />
             <InputContextProvider>
-                <StyleContextProvider>
+                    <Title/>
                     <Input />
-                    <CssStyle/>
                     <Submit />
-                </StyleContextProvider>
             </InputContextProvider>
-        </SelectInputProvider>
-        <Preview/>
+                    <Preview/>
         </>
     )
 }
