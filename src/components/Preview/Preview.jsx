@@ -1,6 +1,5 @@
 import React, {useEffect,useState} from 'react'
-import gfm from 'remark-gfm'
-import '../css/preview.css'
+import '../../css/preview.css'
 import Heading1 from './Heading1'
 import Heading2 from './Heading2'
 import Heading3 from './Heading3'
