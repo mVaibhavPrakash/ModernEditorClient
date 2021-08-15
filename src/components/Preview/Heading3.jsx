@@ -5,7 +5,7 @@ const Heading3 = (props) => {
    console.log(props)
     return (
         <>
-        <h3 className='head3'>{props.children}</h3>
+        <h3 className='preview-head3'>{props.children}</h3>
         </>
     )
 }

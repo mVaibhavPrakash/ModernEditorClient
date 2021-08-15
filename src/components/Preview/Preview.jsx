@@ -3,6 +3,11 @@ import '../../css/preview.css'
 import Heading1 from './Heading1'
 import Heading2 from './Heading2'
 import Heading3 from './Heading3'
+import Paragraph from './Pararaph'
+import UList from './UList'
+import Image from './Image'
+import Code from './Code'
+import OList from './Olist'
 import ReactMarkdown from 'react-markdown'
 
 const Preview = () => {
@@ -11,7 +16,11 @@ const Preview = () => {
     const renderers={
         h1:Heading1,
         h2:Heading2,
-        h3:Heading3
+        h3:Heading3,
+        p:Paragraph,
+        img:Image,
+        ui:UList,
+        ol:OList
     }
 
     useEffect(() =>{

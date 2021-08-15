@@ -1,20 +1,28 @@
 .preview{
     width:60vw;
-    margin:0 auto;
-    padding-left:2vw;
+    margin: 0 auto;
 }
 
-#preview-title, .preview-head, .preview-para, .preview-ol{
-    color:black;
-    font-family: monospace;
-    width: 100%;
+.preview-li::marker{
+    color:red
 }
 
-.preview-ol{
-    list-style-position: inside;
-    text-indent: 5px;
+.preview-li{
+    text-align: justify;
 }
 
-li{
-    padding-left:0vw;
+.preview-para{
+    text-align: justify;
+}
+
+.preview-head1{
+    text-align: justify;
+}
+
+.preview-head2{
+    text-align: justify;
+}
+
+.preview-head3{
+    text-align: justify;
 }
