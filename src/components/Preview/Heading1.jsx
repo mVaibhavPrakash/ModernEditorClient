@@ -1,11 +1,13 @@
 import React from 'react'
 
 const Heading1 = (props) => {
-
-   console.log(props)
+    const style={
+        textAlign:'justify',
+        fontSize:'unset'
+    }
     return (
         <>
-        <h1 className='head1'>{props.children}</h1>
+        <h1 className='peview-head1' style={style}>{props.children}</h1>
         </>
     )
 }

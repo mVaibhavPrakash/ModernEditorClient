@@ -2,27 +2,3 @@
     width:60vw;
     margin: 0 auto;
 }
-
-.preview-li::marker{
-    color:red
-}
-
-.preview-li{
-    text-align: justify;
-}
-
-.preview-para{
-    text-align: justify;
-}
-
-.preview-head1{
-    text-align: justify;
-}
-
-.preview-head2{
-    text-align: justify;
-}
-
-.preview-head3{
-    text-align: justify;
-}
