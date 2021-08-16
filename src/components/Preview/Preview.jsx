@@ -1,4 +1,5 @@
 import React, {useEffect,useState} from 'react'
+import ReactMarkdown from 'react-markdown'
 import '../../css/preview.css'
 import Heading1 from './Heading1'
 import Heading2 from './Heading2'
@@ -8,7 +9,6 @@ import UList from './UList'
 import Image from './Image'
 import Code from './Code'
 import OList from './Olist'
-import ReactMarkdown from 'react-markdown'
 
 const Preview = () => {
     const [data,setData] = useState();
@@ -19,6 +19,7 @@ const Preview = () => {
         h3:Heading3,
         p:Paragraph,
         img:Image,
+        code:Code,
         ui:UList,
         ol:OList
     }

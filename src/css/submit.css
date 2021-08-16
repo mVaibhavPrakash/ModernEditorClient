@@ -5,10 +5,12 @@
     color:#2d3e50;
     margin: 0 0 0 0;
     box-sizing: border-box;
+    font-size:.40rem;
 }
 
 .submitDiv{
     margin: 0 auto;
     width:60vw;
     height:1rem;
+    margin-bottom: 10px;
 }
