@@ -20,7 +20,7 @@ const Preview = () => {
         p:Paragraph,
         img:Image,
         code:Code,
-        ui:UList,
+        ul:UList,
         ol:OList
     }
 

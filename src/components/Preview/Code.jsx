@@ -13,9 +13,22 @@ const Code = (props) => {
 }
 
 const code = (props) =>{
-    console.log(props)
+    const array= props.children[1].map((value,key) =>{
+        if(value.type==="span"){
+            let style;
+            if(value.props.style.background !== undefined)
+            {
+                delete value.props.style.background;
+                style=value.props.style
+            }
+            else{
+                style=value.props.style ?? null
+            }
+            return <span className={value.props.className} key={key} style={style}>{value.props.children}</span>
+        }
+    })
     return(
-        <code style={{textShadow:'none',background:'none'}}>{props.children}</code>
+        <code style={{textShadow:'none',background:'none'}}>{array}</code>
     )
 }
 export default Code
