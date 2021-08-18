@@ -1,18 +1,18 @@
-import React from 'react'
+import React, {useEffect,useContext, useState} from 'react'
 import ShowPreview from './ShowPreview'
 import showPreview from '../js/showPreview'
 import '../css/selectpreview.css'
 import '../js/js'
 
 const SelectPreview = () => {
-    return (
-        <>
-            <div className="showpreview-div">
-                <button id='showpreview' onClick={showPreview}>Preview</button>
-            </div>
-            <ShowPreview />
-        </>
-    )
+    const [state, seState] = useState(1)
+    return(<>
+        <div className="showpreview-div">
+            <button className='showpreview' onClick={(e) =>showPreview(e,state,seState)}>Preview</button>
+        </div>
+        <ShowPreview stat={state}/>
+    </>)
 }
+
 
 export default SelectPreview

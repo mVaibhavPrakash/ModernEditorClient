@@ -4,7 +4,7 @@ const submitData = (e, Input, setInput) => {
     if (localStorage.getItem('data') !== null) {
       localStorage.setItem('data', localStorage.getItem('data').concat(Input));
     } else localStorage.setItem('data', Input);
-    setInput('');
+    setInput(' ');
   }
 };
 

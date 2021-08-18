@@ -12,9 +12,8 @@ import OList from './Olist'
 import Edit from './Edit'
 import SubmitBlog from './SubmitBlog'
 
-const Preview = () => {
+const Preview = ({dat}) => {
     const [data,setData] = useState();
-
     const renderers={
         h1:Heading1,
         h2:Heading2,
@@ -27,16 +26,16 @@ const Preview = () => {
     }
 
     useEffect(() =>{
-
-        if(data!==localStorage.getItem('data'))
+        if(data !== localStorage.getItem('data')){
             setData(localStorage.getItem('data'))
+        }
             
-    },[data])
+    },[data,dat])
     return (
         <div className='preview'>
             <ReactMarkdown  children={data} components={renderers} />
             <Edit data={data} />
-            <SubmitBlog />
+            <SubmitBlog dat={dat}/>
         </div>
     )
 }

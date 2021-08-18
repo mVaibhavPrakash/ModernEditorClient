@@ -1,4 +1,11 @@
-#showpreview{
+.showpreview-div{
+    margin: 0 auto;
+    width:60vw;
+    height:0.7rem;
+    margin-bottom: 10px;
+}
+
+.showpreview{
     display: block;
     width:40%;
     height:100%;
@@ -7,11 +14,4 @@
     box-sizing: border-box;
     font-size:.30rem;
     float:right;
-}
-
-.showpreview-div{
-    margin: 0 auto;
-    width:60vw;
-    height:0.7rem;
-    margin-bottom: 10px;
 }
