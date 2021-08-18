@@ -9,6 +9,8 @@ import UList from './UList'
 import Image from './Image'
 import Code from './Code'
 import OList from './Olist'
+import Edit from './Edit'
+import SubmitBlog from './SubmitBlog'
 
 const Preview = () => {
     const [data,setData] = useState();
@@ -33,6 +35,8 @@ const Preview = () => {
     return (
         <div className='preview'>
             <ReactMarkdown  children={data} components={renderers} />
+            <Edit data={data} />
+            <SubmitBlog />
         </div>
     )
 }
