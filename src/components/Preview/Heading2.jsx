@@ -10,9 +10,7 @@ const Heading2 = (props) => {
     }
    console.log(props)
     return (
-        <>
         <h2 className='preview-head2' style={style}>{props.children}</h2>
-        </>
     )
 }
 

@@ -6,12 +6,14 @@ import '../js/js'
 
 const SelectPreview = () => {
     const [state, seState] = useState(1)
-    return(<>
-        <div className="showpreview-div">
-            <button className='showpreview' onClick={(e) =>showPreview(e,state,seState)}>Preview</button>
-        </div>
-        <ShowPreview stat={state}/>
-    </>)
+    return(
+        <React.Fragment>
+            <div className="showpreview-div">
+                <button className='showpreview' onClick={(e) =>showPreview(e,state,seState)}>Preview</button>
+            </div>
+            <ShowPreview stat={state}/>
+        </React.Fragment>
+    )
 }
 
 

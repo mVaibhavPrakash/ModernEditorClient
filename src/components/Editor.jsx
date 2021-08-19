@@ -10,7 +10,7 @@ import SelectPreview from './SelectPreview'
 
 const Editor = () => {
     return (
-        <>
+        <React.Fragment>
             <InputContextProvider>
                     <Title/>
                 <SelectInputProvider>
@@ -22,7 +22,7 @@ const Editor = () => {
                     <SelectPreview />
                 </EditContextProvider>
             </InputContextProvider>
-        </>
+        </React.Fragment>
     )
 }
 

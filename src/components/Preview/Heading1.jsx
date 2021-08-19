@@ -9,9 +9,7 @@ const Heading1 = (props) => {
         margin:'10px 0px 5px 0px'
     }
     return (
-        <>
         <h1 className='peview-head1' style={style}>{props.children}</h1>
-        </>
     )
 }
 
