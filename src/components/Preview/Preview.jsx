@@ -34,8 +34,10 @@ const Preview = ({dat}) => {
     return (
         <div className='preview'>
             <ReactMarkdown  children={data} components={renderers} />
-            <Edit data={data} />
-            <SubmitBlog dat={dat}/>
+            <div style={{display:'flex',justifyContent:'space-between',marginTop:'15px'}}>
+                <Edit data={data} />
+                <SubmitBlog dat={dat}/>
+            </div>
         </div>
     )
 }
