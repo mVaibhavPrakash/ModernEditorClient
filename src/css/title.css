@@ -2,6 +2,7 @@
     font-family: monospace;
     width: 60vw;
     margin: 0 auto;
+    margin-top:50px;
 }
 
 .title input{
@@ -16,4 +17,5 @@
     text-align: center;
     font-size: 0.6rem;
     background-color: rgb(248, 248, 248);
+    font-family: monospace;
 }

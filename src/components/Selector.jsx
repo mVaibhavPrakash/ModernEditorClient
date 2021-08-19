@@ -9,7 +9,6 @@ const Selector = () => {
     const [Element,setElement] = useContext(SelectInputContext);
     return (
             <div className='select'>
-                <Title />
                 <div className='selector'>
                     <span onClick={() =>setElement('head')}><FontAwesomeIcon icon={faHeading}/></span>
                     <span onClick={() =>setElement('para')}><FontAwesomeIcon icon={faParagraph}/></span>

@@ -1,31 +1,20 @@
-const submitData = (
-  e,
-  Input,
-  Element,
-  Style,
-  setInput,
-  setElement,
-  setStyle
-) => {
+const submitData = (e, Input, setInput, isEdit, setEdit) => {
   e.preventDefault();
-  if (Element !== '' && Input !== '' && Style !== {}) {
-    let obj = {
-      element: Element,
-      input: Input,
-      style: Style,
-    };
-    let data = JSON.parse(localStorage.getItem('data'));
-    let dat = [];
-    if (data === null) {
-      dat.push(obj);
+  if (Input !== '') {
+    if (localStorage.getItem('data') !== null) {
+      if (!isEdit)
+        localStorage.setItem(
+          'data',
+          localStorage.getItem('data').concat(Input)
+        );
+      else {
+        localStorage.setItem('data', Input);
+        setEdit(false);
+      }
     } else {
-      dat = data;
-      dat.push(obj);
+      localStorage.setItem('data', Input);
     }
-    localStorage.setItem('data', JSON.stringify(dat));
-    setInput('');
-    setElement('');
-    setStyle('');
+    setInput(' ');
   }
 };
 
