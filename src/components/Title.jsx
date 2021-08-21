@@ -3,7 +3,7 @@ import '../css/title.css'
 const Title = () => {
 
     return (
-        <div className="title"><input type="text" placeholder='tiTle!!' /></div>
+        <div title='Enter Title of the Blog' className="title"><input type="text" placeholder='tiTle!!' /></div>
     )
 }
 

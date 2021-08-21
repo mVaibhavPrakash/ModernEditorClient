@@ -1,13 +1,13 @@
 import {Fragment} from 'react'
 import {Input} from './Input'
 import {Submit} from './Submit'
-import { InputContextProvider } from '../hooks/InputContext'
-import { SelectInputProvider } from '../hooks/SelectInputContext'
-import { EditContextProvider } from '../hooks/EditContext'
 import Title from './Title'
 import Selector from './Selector'
 import ShowPreview from './ShowPreview'
+import { InputContextProvider } from '../hooks/InputContext'
+import { EditContextProvider } from '../hooks/EditContext'
 import { RenderPreviewContextProvider } from '../hooks/RenderPreviewContext'
+import { SelectedTextContextProvider } from '../hooks/SelectedTextContext'
 
 const Editor = () => {
     return (
@@ -15,14 +15,14 @@ const Editor = () => {
             <InputContextProvider>
                     <Title/>
                 <RenderPreviewContextProvider>
-                    <SelectInputProvider>
+                    <SelectedTextContextProvider>
                         <Selector />
-                    </SelectInputProvider>
                     <EditContextProvider>
-                        <Input />
-                        <Submit />
-                        <ShowPreview />
+                            <Input />
+                            <Submit />
+                            <ShowPreview />
                     </EditContextProvider>
+                    </SelectedTextContextProvider>
                 </RenderPreviewContextProvider>
             </InputContextProvider>
         </Fragment>
