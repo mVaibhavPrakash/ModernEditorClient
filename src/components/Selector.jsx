@@ -1,6 +1,6 @@
-import React, {useState,useContext} from 'react'
+import React, {useContext} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCode, faEye, faHeading, faImage, faListOl, faListUl, faMars, faParagraph } from '@fortawesome/free-solid-svg-icons'
+import { faBold, faCode, faEye, faHeading, faImage, faItalic, faLink, faListOl, faListUl, faMars, faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 import showPreview from '../js/showPreview'
 import { SelectInputContext} from '../hooks/SelectInputContext'
 import '../css/selector.css'
@@ -14,12 +14,15 @@ const Selector = () => {
     return (
             <div className='select'>
                 <div className='selector'>
-                    <span title='Select Header' onClick={() =>setElement('head')}><FontAwesomeIcon icon={faHeading}/></span>
-                    <span title='Select Paragraph' onClick={() =>setElement('para')}><FontAwesomeIcon icon={faParagraph}/></span>
-                    <span title='Select Code' onClick={() =>setElement('code')}><FontAwesomeIcon icon={faCode}/></span>
-                    <span title='Select Image' onClick={() =>setElement('img')}><FontAwesomeIcon icon={faImage}/></span>
-                    <span title='Select Un-ordered List' onClick={() =>setElement('listul')}><FontAwesomeIcon icon={faListUl}/></span>
-                    <span title='Select Ordered List' onClick={() =>setElement('listol')}><FontAwesomeIcon icon={faListOl}/></span>
+                    <span title='Header' onClick={() =>setElement('head')}><FontAwesomeIcon icon={faHeading}/></span>
+                    <span title='Bold text' onClick={() =>setElement('bold')}><FontAwesomeIcon icon={faBold}/></span>
+                    <span title='Italic text' onClick={() =>setElement('italic')}><FontAwesomeIcon icon={faItalic}/></span>
+                    <span title='Block Quote' onClick={() =>setElement('quote')}><FontAwesomeIcon icon={faQuoteLeft}/></span>
+                    <span title='Link' onClick={() =>setElement('link')}><FontAwesomeIcon icon={faLink}/></span>
+                    <span title='Code' onClick={() =>setElement('code')}><FontAwesomeIcon icon={faCode}/></span>
+                    <span title='Image' onClick={() =>setElement('img')}><FontAwesomeIcon icon={faImage}/></span>
+                    <span title='Un-ordered List' onClick={() =>setElement('listul')}><FontAwesomeIcon icon={faListUl}/></span>
+                    <span title='Ordered List' onClick={() =>setElement('listol')}><FontAwesomeIcon icon={faListOl}/></span>
                 </div>
                 <div className="showpreview-div">
                     <span ttle='Serach Markdown Syntax' className='showpreview'><FontAwesomeIcon icon={faMars} /></span>

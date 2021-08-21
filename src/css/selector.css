@@ -7,7 +7,7 @@
 .selector{
     display: flex;
     height: 1.2rem;
-    font-size: 0.5rem;
+    font-size: 0.4rem;
     box-sizing: border-box;
     width: 75%;
     margin: 0 auto;
@@ -18,6 +18,11 @@
 .selector span{
     line-height: 1.2rem;
     color: white;
+}
+
+.selector span:hover{
+    background-color: rgba(41,62,75,0.4);
+    color:rgb(41, 62, 75);
 }
 
 .showpreview-div{
@@ -31,7 +36,7 @@
 .showpreview{
     display: block;
     border-style: none;
-    color:white;
+    color:rgba(59,130,246);
     padding: 0 auto;
     font-size:0.5rem;
     line-height: 1.2rem;
