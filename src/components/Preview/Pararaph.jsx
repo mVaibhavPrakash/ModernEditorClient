@@ -11,7 +11,7 @@ const Pararaph = (props) => {
         padding:'2px 0px 2px 0px'
     }
     return (
-        <div className="preview-para" style={style}>{props.children}</div>
+        <p className="preview-para" style={style}>{props.children}</p>
     )
 }
 

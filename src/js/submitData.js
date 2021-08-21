@@ -5,16 +5,17 @@ const submitData = (e, Input, setInput, isEdit, setEdit) => {
       if (!isEdit)
         localStorage.setItem(
           'data',
-          localStorage.getItem('data').concat(Input)
+          localStorage.getItem('data').concat(Input, '\n')
         );
       else {
         localStorage.setItem('data', Input);
         setEdit(false);
       }
     } else {
-      localStorage.setItem('data', Input);
+      let data = Input.concat('\n');
+      localStorage.setItem('data', data);
     }
-    setInput(' ');
+    setInput('');
   }
 };
 
