@@ -1,20 +1,25 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import ReactDom from 'react-dom'
 import Preview from './Preview/Preview'
 import closeModal from '../js/closeModal'
 import '../css/showPreview.css'
+import '../js/js'
+import { RenderPreviewContext } from '../hooks/RenderPreviewContext'
 
-const ShowPreview = ({stat}) => {
+const ShowPreview = () => {
     const style={
         width:'60vw',
         margin:'0 auto',
         height:'auto'
     }
+
+    const [state,setState] = useContext(RenderPreviewContext)
+
     return ReactDom.createPortal(
         <div id="myModal" className="modal">
             <div className="modal-content" style={style}>
                 <span className="close" onClick={(e) =>closeModal(e)}>&times;</span>
-                <Preview dat={stat}/>
+                <Preview dat={state}/>
             </div>
         </div>,document.getElementById('preview-portal')
     )

@@ -6,21 +6,24 @@ import { SelectInputProvider } from '../hooks/SelectInputContext'
 import { EditContextProvider } from '../hooks/EditContext'
 import Title from './Title'
 import Selector from './Selector'
-import SelectPreview from './SelectPreview'
+import ShowPreview from './ShowPreview'
+import { RenderPreviewContextProvider } from '../hooks/RenderPreviewContext'
 
 const Editor = () => {
     return (
         <React.Fragment>
             <InputContextProvider>
                     <Title/>
-                <SelectInputProvider>
-                    <Selector />
-                </SelectInputProvider>
-                <EditContextProvider>
-                    <Input />
-                    <Submit />
-                    <SelectPreview />
-                </EditContextProvider>
+                <RenderPreviewContextProvider>
+                    <SelectInputProvider>
+                        <Selector />
+                    </SelectInputProvider>
+                    <EditContextProvider>
+                        <Input />
+                        <Submit />
+                        <ShowPreview />
+                    </EditContextProvider>
+                </RenderPreviewContextProvider>
             </InputContextProvider>
         </React.Fragment>
     )
