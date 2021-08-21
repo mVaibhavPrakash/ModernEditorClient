@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import {useContext} from 'react'
 import ReactDom from 'react-dom'
 import Preview from './Preview/Preview'
 import closeModal from '../js/closeModal'

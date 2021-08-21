@@ -1,4 +1,4 @@
-import React from 'react'
+
 const SubmitBlog = () => {
     const style={
         width:'25vw',

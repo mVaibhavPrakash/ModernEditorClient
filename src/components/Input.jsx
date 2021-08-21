@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import {useContext} from 'react'
 import '../css/input.css'
 import { InputContext } from '../hooks/InputContext';
 

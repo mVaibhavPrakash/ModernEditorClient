@@ -1,4 +1,4 @@
-import React from 'react'
+
 import '../css/app.css';
 import Editor from './Editor';
 

@@ -1,7 +1,5 @@
-import React from 'react'
 import '../../css/preview.css'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import removeStyle from '../../js/removeStyle.js'
 
 const Code = (props) => {
     const match = /language-(\w+)/.exec(props.className || '')

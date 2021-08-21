@@ -1,4 +1,4 @@
-import React from 'react'
+
 import liGenerator from '../../js/li'
 
 const Olist = (props) => {

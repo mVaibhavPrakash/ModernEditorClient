@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Heading1 = (props) => {
     const style={

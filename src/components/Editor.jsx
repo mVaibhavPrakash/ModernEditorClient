@@ -1,4 +1,4 @@
-import React from 'react'
+import {Fragment} from 'react'
 import {Input} from './Input'
 import {Submit} from './Submit'
 import { InputContextProvider } from '../hooks/InputContext'
@@ -11,7 +11,7 @@ import { RenderPreviewContextProvider } from '../hooks/RenderPreviewContext'
 
 const Editor = () => {
     return (
-        <React.Fragment>
+        <Fragment>
             <InputContextProvider>
                     <Title/>
                 <RenderPreviewContextProvider>
@@ -25,7 +25,7 @@ const Editor = () => {
                     </EditContextProvider>
                 </RenderPreviewContextProvider>
             </InputContextProvider>
-        </React.Fragment>
+        </Fragment>
     )
 }
 
