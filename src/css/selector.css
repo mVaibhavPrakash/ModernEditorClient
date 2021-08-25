@@ -2,42 +2,59 @@
     width: 60vw;
     margin: 0 auto;
     background-image: linear-gradient(to right, rgba(41,62,75,0.4), rgb(41, 62, 75));
+    height:1.2rem;
+    padding:0.2rem 0 0.2rem 0;
+    box-sizing: border-box;
 }
 
 .selector{
     display: flex;
-    height: 1.2rem;
+    height: 0.8rem;
     font-size: 0.4rem;
-    box-sizing: border-box;
     width: 75%;
-    margin: 0 auto;
+    margin: auto;
     justify-content: space-evenly;
     float: right;
 }
 
-.selector span{
-    line-height: 1.2rem;
+.selector button{
     color: white;
+    background-color: inherit;
+    font-size: 0.4rem;
+    border: none;
+    width:0.8rem;
+    text-align: center;
 }
 
-.selector span:hover{
-    background-color: rgba(41,62,75,0.4);
-    color:rgb(41, 62, 75);
+.selector button:hover{
+    color: white;
+    background-color:rgba(0,0,0,0.1);
+    border-radius: 0.2rem;
+    
 }
 
 .showpreview-div{
     display: flex;
-    height:1.2rem;
+    height:0.8rem;
     width:25%;
     margin-bottom: 10px;
+    margin: auto;
     justify-content:space-evenly;
 }
 
 .showpreview{
     display: block;
     border-style: none;
-    color:rgba(59,130,246);
-    padding: 0 auto;
+    margin: 0 auto;
+    color:rgb(77, 134, 224);
+    background-color: inherit;
+    border: none;
+    width: 0.8rem;
     font-size:0.5rem;
-    line-height: 1.2rem;
+    text-align: center;
+}
+
+.showpreview-div button:hover{
+    background-color:white;
+    border-radius: 0.2rem;
 }

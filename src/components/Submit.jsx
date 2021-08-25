@@ -1,4 +1,4 @@
-import React ,{useContext} from 'react'
+import {useContext} from 'react'
 import '../css/submit.css'
 import { EditContext } from '../hooks/EditContext'
 import { InputContext } from '../hooks/InputContext'

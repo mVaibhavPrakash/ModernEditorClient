@@ -1,14 +1,15 @@
-import React, {useContext} from 'react'
+import {useContext} from 'react'
 import { EditContext } from '../../hooks/EditContext.jsx'
 import { InputContext } from '../../hooks/InputContext.jsx'
 import EditBlog from '../../js/EditBlog'
 
 const Edit = (props) => {
     const style={
-        width:'25vw',
-        height:'0.6rem',
+        width:'12vw',
+        height:'0.8rem',
         color:'#2d3e50',
-        fontSize:'0.3rem'
+        fontSize:'0.5rem',
+        borderStyle:'none'
     }
     const [Input,setInput] = useContext(InputContext)
     const [isEdit,setEdit] = useContext(EditContext)

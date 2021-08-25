@@ -1,10 +1,10 @@
-import React, {useEffect,useState} from 'react'
+import {useEffect,useState} from 'react'
 import ReactMarkdown from 'react-markdown'
 import '../../css/preview.css'
 import Heading1 from './Heading1'
 import Heading2 from './Heading2'
 import Heading3 from './Heading3'
-import Paragraph from './Pararaph'
+import Paragraph from './Paragraph'
 import UList from './UList'
 import Image from './Image'
 import Code from './Code'
@@ -32,12 +32,12 @@ const Preview = ({dat}) => {
             
     },[data,dat])
     return (
-        <div className='preview'>
-            <ReactMarkdown  children={data} components={renderers} />
-            <div style={{display:'flex',justifyContent:'space-between',marginTop:'15px'}}>
+        <div className='preview' style={{marginBottom:'20px',overflow:'scroll'}}>
+            <div style={{display:'flex',justifyContent:'flex-start',marginTop:'15px'}}>
                 <Edit data={data} />
                 <SubmitBlog dat={dat}/>
             </div>
+            <ReactMarkdown  children={data} components={renderers} />
         </div>
     )
 }
