@@ -1,17 +1,17 @@
 
-const Pararaph = (props) => {
+const Paragraph = (props) => {
     const style={
         textAlign:'justify',
-        fontSize:'.35rem',
-        width:'60vw',
+        fontSize:'.55rem',
+        width:'100%',
         wordBreak:'break-all',
         fontFamily: "'Source Sans Pro', 'Lucida Grande', sans-serif",
-        color: '#333',
-        padding:'2px 0px 2px 0px'
+        color: '#111111',
+        margin:'0.5rem 0 0.5rem 0'
     }
     return (
         <p className="preview-para" style={style}>{props.children}</p>
     )
 }
 
-export default Pararaph
+export default Paragraph

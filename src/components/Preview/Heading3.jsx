@@ -4,8 +4,8 @@ const Heading3 = (props) => {
         textAlign:'justify',
         fontSize:'unset',
         wordBreak:'break-all',
-        fontSize:'0.575rem',
-        margin:'10px 0px 5px 0px'
+        fontSize:'0.62rem',
+        margin:'0.6rem 0 0.6rem 0',
     }
    console.log(props)
     return (
