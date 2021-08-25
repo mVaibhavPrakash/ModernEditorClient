@@ -5,7 +5,8 @@ const Heading2 = (props) => {
         fontSize:'unset',
         wordBreak:'break-all',
         fontSize:'0.71rem',
-        margin:'0.6rem 0 0.6rem 0'
+        margin:'0.6rem 0 0.6rem 0',
+        color:'#2d3e50'
     }
    console.log(props)
     return (

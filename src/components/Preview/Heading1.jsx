@@ -5,7 +5,8 @@ const Heading1 = (props) => {
         fontSize:'unset',
         wordBreak:'break-all',
         fontSize:'0.8rem',
-        margin:'0.6rem 0 0.6rem 0'
+        margin:'0.6rem 0 0.6rem 0',
+        color:'#2d3e50'
     }
     return (
         <h1 className='peview-head1' style={style}>{props.children}</h1>

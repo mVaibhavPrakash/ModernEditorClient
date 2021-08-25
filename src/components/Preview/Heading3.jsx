@@ -6,6 +6,7 @@ const Heading3 = (props) => {
         wordBreak:'break-all',
         fontSize:'0.62rem',
         margin:'0.6rem 0 0.6rem 0',
+        color:'#2d3e50'
     }
    console.log(props)
     return (

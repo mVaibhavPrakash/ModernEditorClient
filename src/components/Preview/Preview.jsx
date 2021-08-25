@@ -32,7 +32,7 @@ const Preview = ({dat}) => {
             
     },[data,dat])
     return (
-        <div className='preview'>
+        <div className='preview' style={{marginBottom:'20px',overflow:'scroll'}}>
             <div style={{display:'flex',justifyContent:'flex-start',marginTop:'15px'}}>
                 <Edit data={data} />
                 <SubmitBlog dat={dat}/>
