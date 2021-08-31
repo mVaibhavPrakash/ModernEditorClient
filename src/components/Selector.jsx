@@ -16,15 +16,15 @@ const Selector = () => {
     return (
             <div className='select'>
                 <div className='selector'>
-                    <button id='head-btn' title='Header' onClick={(e) =>markdownEdit(e,selected,setSelected,Input,setInput)}><FontAwesomeIcon icon={faHeading}/></button>
-                    <button id='bold-btn' title='Bold text' onClick={(e) =>markdownEdit(e,selected,setSelected,Input,setInput)}><FontAwesomeIcon icon={faBold}/></button>
-                    <button id='italic-btn' title='Italic text' onClick={(e) =>markdownEdit(e,selected,setSelected,Input,setInput)}><FontAwesomeIcon icon={faItalic}/></button>
-                    <button id='block-btn' title='Block Quote' onClick={(e) =>markdownEdit(e,selected,setSelected,Input,setInput)}><FontAwesomeIcon icon={faQuoteLeft}/></button>
-                    <button id='link-btn'  title='Link' onClick={(e) =>markdownEdit(e,selected,setSelected,Input,setInput)}><FontAwesomeIcon icon={faLink}/></button>
-                    <button id='code-btn' title='Code' onClick={(e) =>markdownEdit(e,selected,setSelected,Input,setInput)}><FontAwesomeIcon icon={faCode}/></button>
-                    <button id='image-btn' title='Image' onClick={(e) =>markdownEdit(e,selected,setSelected,Input,setInput)}><FontAwesomeIcon icon={faImage}/></button>
-                    <button id='ul-btn' title='Un-ordered List' onClick={(e) =>markdownEdit(e,selected,setSelected,Input,setInput)}><FontAwesomeIcon icon={faListUl}/></button>
-                    <button id='ol-btn' title='Ordered List' onClick={(e) =>markdownEdit(e,selected,setSelected,Input,setInput)}><FontAwesomeIcon icon={faListOl}/></button>
+                    <button id='head-btn' title='Header' onClick={(e) =>markdownEdit(e,'head-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faHeading}/></button>
+                    <button id='bold-btn' title='Bold text' onClick={(e) =>markdownEdit(e,'bold-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faBold}/></button>
+                    <button id='italic-btn' title='Italic text' onClick={(e) =>markdownEdit(e,'italic-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faItalic}/></button>
+                    <button id='block-btn' title='Block Quote' onClick={(e) =>markdownEdit(e,'block-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faQuoteLeft}/></button>
+                    <button id='link-btn'  title='Link' onClick={(e) =>markdownEdit(e,'link-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faLink}/></button>
+                    <button id='code-btn' title='Code' onClick={(e) =>markdownEdit(e,'code-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faCode}/></button>
+                    <button id='image-btn' title='Image' onClick={(e) =>markdownEdit(e,'imae-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faImage}/></button>
+                    <button id='ul-btn' title='Un-ordered List' onClick={(e) =>markdownEdit(e,'ul-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faListUl}/></button>
+                    <button id='ol-btn' title='Ordered List' onClick={(e) =>markdownEdit(e,'ol-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faListOl}/></button>
                 </div>
                 <div className="showpreview-div">
                     <button ttle='Serach Markdown Syntax' className='showpreview'><FontAwesomeIcon icon={faMars} /></button>
