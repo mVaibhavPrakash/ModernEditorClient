@@ -11,7 +11,12 @@ const markdownEdit = (e, text, selected, Input, setInput) => {
   if (text === 'head-btn') {
     newString = '\n' + '#' + ' ' + selected.input;
   }
-
+  if (text === 'code-btn') {
+    newString = '\n' + '~~~' + 'js' + '\n' + selected.input + '\n' + '~~~';
+  }
+  if (text === 'ul-btn') {
+    newString = '\n' + '*' + ' ' + selected.input;
+  }
   setInput(
     oldString.substr(0, selected.start) +
       newString +

@@ -1,10 +1,9 @@
-
-import '../css/app.css';
 import Editor from './Editor';
+import '../css/app.css'
 
 const App = () =>{
   return (
-    <div className="App">
+    <div className='app'>
       <Editor />
     </div>
   )

@@ -7,6 +7,7 @@ import Heading3 from './Heading3'
 import Paragraph from './Paragraph'
 import UList from './UList'
 import Image from './Image'
+import Blockquote from './Blockquote'
 import Code from './Code'
 import OList from './Olist'
 import Edit from './Edit'
@@ -22,7 +23,8 @@ const Preview = ({dat}) => {
         img:Image,
         code:Code,
         ul:UList,
-        ol:OList
+        ol:OList,
+        blockquote:Blockquote
     }
 
     useEffect(() =>{
