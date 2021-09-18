@@ -1,8 +1,7 @@
-const markdownEdit = (e, selected, setSelected, Input, setInput) => {
+const markdownEdit = (e, text, selected, Input, setInput) => {
   e.preventDefault();
   let oldString = Input;
   let newString;
-  let text = e.target.id;
   if (text === 'bold-btn') {
     newString = '**' + selected.input + '**';
   }
