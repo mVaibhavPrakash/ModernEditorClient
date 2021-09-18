@@ -1,7 +1,7 @@
 .select{
     width: 60vw;
     margin: 0 auto;
-    background-image: linear-gradient(to right, rgba(41,62,75,0.4), rgb(41, 62, 75));
+    background-image:  linear-gradient(to right, rgba(45,56,110,0.4), rgb(45,56,110));
     height:1.2rem;
     padding:0.2rem 0 0.2rem 0;
     box-sizing: border-box;
@@ -27,8 +27,8 @@
 }
 
 .selector button:hover{
-    color: white;
-    background-color:rgba(0,0,0,0.1);
+    background-color: white;
+    color:rgb(45,56,110);
     border-radius: 0.2rem;
     
 }
@@ -46,7 +46,7 @@
     display: block;
     border-style: none;
     margin: 0 auto;
-    color:rgb(77, 134, 224);
+    color:white;
     background-color: inherit;
     border: none;
     width: 0.8rem;
@@ -56,5 +56,6 @@
 
 .showpreview-div button:hover{
     background-color:white;
+    color:#4ba4fa;
     border-radius: 0.2rem;
 }

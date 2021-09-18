@@ -28,7 +28,7 @@ const Selector = () => {
                 </div>
                 <div className="showpreview-div">
                     <button ttle='Serach Markdown Syntax' className='showpreview'><FontAwesomeIcon icon={faMars} /></button>
-                    <button title='Preview' className='showpreview' onClick={(e) =>showPreview(e,state,setState)}><FontAwesomeIcon icon={faEye} /></button>
+                    <button title='Preview' className='showpreview' onClick={(e) =>showPreview(e,state,setState,Input)}><FontAwesomeIcon icon={faEye} /></button>
                 </div>
             </div>
     )
