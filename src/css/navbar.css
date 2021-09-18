@@ -1,0 +1,46 @@
+.nav{
+    height:1.4rem;
+    width:100vw;
+    background-color: white;
+    font-family: monospace;
+    position:fixed;
+    font-size: 0.4rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    color: #2d386e;
+}
+
+.navbarLeft{
+    display: inline;
+    float: left;
+    margin-left: 4vw;
+}
+
+#navbarCompanyLogo{
+    display: inline;
+    font-size: 0.6rem;
+    color:#4ba4fa;
+}
+
+#home{
+    display: inline;
+    margin-left: 4vw;
+    line-height: 1.4rem;
+    cursor: pointer;
+}
+
+.navbarRight{
+    display: inline;
+    float: right;
+    margin-right: 4vw;
+}
+
+#cog{
+    color: #2d386e;
+    background-color: white;
+    font-size: 0.6rem;
+    border: none;
+    width:0.8rem;
+    line-height: 1.4rem;
+    text-align: center;
+    cursor: pointer;
+}

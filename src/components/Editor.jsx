@@ -4,6 +4,7 @@ import {Submit} from './Submit'
 import Title from './Title'
 import Selector from './Selector'
 import ShowPreview from './ShowPreview'
+import Navbar from './Navbar'
 import { InputContextProvider } from '../hooks/InputContext'
 import { EditContextProvider } from '../hooks/EditContext'
 import { RenderPreviewContextProvider } from '../hooks/RenderPreviewContext'
@@ -13,6 +14,7 @@ const Editor = () => {
     return (
         <Fragment>
             <InputContextProvider>
+             <Navbar />
                     <Title/>
                 <RenderPreviewContextProvider>
                     <SelectedTextContextProvider>
