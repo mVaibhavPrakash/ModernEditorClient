@@ -1,0 +1,21 @@
+.editor{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin: 0 auto;
+}
+
+.editorActive{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr;
+
+}
+
+.editorDiv{
+    width: 60vw;
+}
+
+.sideBarDiv{
+    width: 35vw;
+}

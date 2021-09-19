@@ -1,0 +1,75 @@
+.sideBar{
+    display: none;
+    width: 35vw;
+    z-index: 3;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: rgb(195, 197, 197);
+    background-color: rgb(248, 248, 248);
+    position: fixed;
+}
+
+#sideBar-button{
+    font-size: 0.4rem;
+    font-weight: 600;
+    border: none;
+    padding-left: 0.5rem;
+    color: rgb(45,56,110);
+    background-color:rgb(248, 248, 248);
+}
+
+#sideBar-button span{
+    padding-left: 5px;
+    font-size: 0.4rem;
+}
+
+#sideBar-content{
+    margin: 0.5rem;
+    border-top-style:solid ;
+    border-top-width: 1px ;
+    border-top-color: rgb(195, 197, 197);
+}
+
+.sideBar-content-div{
+    border-style: thin;
+    border-width: 5px;
+    border-radius: 0.15rem;
+    margin-bottom:0.35rem ;
+    background-color: white;
+}
+
+#d{
+    margin-bottom:0.35rem ;
+}
+
+#d h2{
+    font-size: 0.55rem;
+    padding: 0.25rem;
+}
+
+.sideBar-content-div h3{
+    font-size: 0.45rem;
+    padding: 0.25rem;
+}
+#d p{
+    font-size: 0.35rem;
+    padding: 0.25rem;
+    color: rgba(45,56,110,0.7);
+}
+.sideBar-content-div p{
+    font-size: 0.35rem;
+    padding: 0.25rem;
+    color: rgba(45,56,110,0.7);
+}
+
+.sideBar-content-div textarea{
+    font-size: 0.35rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    padding: 0.30rem;
+    margin: 0 0.25rem 0.25rem 0.25rem;
+    width: 28vw;
+    border-radius: 8px;
+    resize: vertical;
+    border-color: rgba(45,56,110,0.7);
+}

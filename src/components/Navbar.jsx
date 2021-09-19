@@ -1,6 +1,7 @@
-import { faCog, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faCog} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../css/navbar.css'
+import clickNav from '../js/clickNav';
 
 const Navbar = () => {
     return (
@@ -10,7 +11,7 @@ const Navbar = () => {
                 <a id="home">Home</a>
             </div>
             <div className='navbarRight'>
-                <button id='cog' title='Settings'><FontAwesomeIcon icon={faCog}/></button>
+                <button id='cog' title='Settings' onClick={clickNav}><FontAwesomeIcon icon={faCog}/></button>
             </div>
         </nav>
     )
