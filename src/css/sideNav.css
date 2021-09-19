@@ -25,15 +25,17 @@
 
 #sideBar-content{
     margin: 0.5rem;
+    margin-top: 0.25rem;
     border-top-style:solid ;
     border-top-width: 1px ;
     border-top-color: rgb(195, 197, 197);
 }
 
 .sideBar-content-div{
-    border-style: thin;
-    border-width: 5px;
+    border-style: solid;
+    border-width: 1px;
     border-radius: 0.15rem;
+    border-color :rgb(195, 197, 197);
     margin-bottom:0.35rem ;
     background-color: white;
 }
@@ -43,33 +45,42 @@
 }
 
 #d h2{
-    font-size: 0.55rem;
-    padding: 0.25rem;
+    font-size: 0.42rem;
+    padding: 0.28rem 0.28rem 0 0.28rem;
 }
 
 .sideBar-content-div h3{
-    font-size: 0.45rem;
-    padding: 0.25rem;
+    font-size: 0.35rem;
+    padding: 0.28rem 0.28rem 0 0.28rem;
 }
 #d p{
-    font-size: 0.35rem;
-    padding: 0.25rem;
+    font-size: 0.39rem;
+    padding: 0.28rem;
     color: rgba(45,56,110,0.7);
+    font-family:'Times New Roman', Times, serif;
 }
 .sideBar-content-div p{
-    font-size: 0.35rem;
-    padding: 0.25rem;
+    font-size: 0.32rem;
+    padding: 0.28rem;
     color: rgba(45,56,110,0.7);
+    font-family:'Times New Roman', Times, serif;
 }
 
 .sideBar-content-div textarea{
-    font-size: 0.35rem;
+    width: 28vw;
+    font-size: 0.32rem;
     height: 0.6rem;
     line-height: 0.6rem;
     padding: 0.30rem;
     margin: 0 0.25rem 0.25rem 0.25rem;
-    width: 28vw;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(45,56,110,0.4);
     border-radius: 8px;
     resize: vertical;
-    border-color: rgba(45,56,110,0.7);
+    color: rgba(45,56,110,0.7);
+}
+
+.sideBar-content-div textarea:focus{
+    border-color: rgba(45,56,110,1);
 }
