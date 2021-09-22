@@ -37,7 +37,7 @@ const Preview = ({dat}) => {
         <div className='preview' style={{marginBottom:'20px',overflow:'scroll'}}>
             <div style={{display:'flex',justifyContent:'flex-start',marginTop:'15px'}}>
                 <Edit data={data} />
-                <SubmitBlog dat={dat}/>
+                <SubmitBlog data={data}/>
             </div>
             <ReactMarkdown  children={data} components={renderers} />
         </div>
