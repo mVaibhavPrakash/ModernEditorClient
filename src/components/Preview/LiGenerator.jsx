@@ -1,6 +1,6 @@
 import React from 'react';
 
-const liGenerator = (props) => {
+const LiGenerator = (props) => {
   let array = props.children.map((value, key) => {
     if (value.type === 'li') {
       return (
@@ -22,4 +22,4 @@ const liGenerator = (props) => {
   return array;
 };
 
-export default liGenerator;
+export default LiGenerator;

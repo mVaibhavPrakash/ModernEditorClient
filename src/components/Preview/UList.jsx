@@ -1,5 +1,5 @@
 
-import liGenerator from '../../js/li'
+import LiGenerator from './LiGenerator'
 
 const UList = (props) => {
     const style={
@@ -7,7 +7,7 @@ const UList = (props) => {
     }
     return (
         <ul style={style}>
-            {liGenerator(props)}
+           < LiGenerator props={props} />
         </ul>
     )
 }

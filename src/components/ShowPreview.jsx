@@ -6,7 +6,7 @@ import '../css/showPreview.css'
 import '../js/js'
 import { RenderPreviewContext } from '../hooks/RenderPreviewContext'
 
-const ShowPreview = () => {
+const ShowPreview = ({ModalRef}) => {
     const style={
         width:'60vw',
         margin:'0 auto',
@@ -16,10 +16,10 @@ const ShowPreview = () => {
     const [state,setState] = useContext(RenderPreviewContext)
 
     return ReactDom.createPortal(
-        <div id="myModal" className="modal">
+        <div ref={ModalRef} id="myModal" className="modal">
             <div className="modal-content" style={style}>
-                <span className="close" onClick={(e) =>closeModal(e)}>&times;</span>
-                <Preview dat={state}/>
+                <span className="close" onClick={(e) =>closeModal(e,ModalRef)}>&times;</span>
+                <Preview ModalRef={ModalRef} dat={state}/>
             </div>
         </div>,document.getElementById('preview-portal')
     )

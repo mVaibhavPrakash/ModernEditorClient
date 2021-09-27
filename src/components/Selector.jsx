@@ -8,7 +8,7 @@ import { InputContext} from '../hooks/InputContext'
 import { RenderPreviewContext } from '../hooks/RenderPreviewContext'
 import { SelectedTextContext } from '../hooks/SelectedTextContext'
 
-const Selector = () => {
+const Selector = ({ModalRef}) => {
     const [state, setState] = useContext(RenderPreviewContext)
     const [Input,setInput] = useContext(InputContext)
     const [selected,setSelected] = useContext(SelectedTextContext)
@@ -28,7 +28,7 @@ const Selector = () => {
                 </div>
                 <div className="showpreview-div">
                     <button ttle='Serach Markdown Syntax' className='showpreview'><FontAwesomeIcon icon={faMars} /></button>
-                    <button title='Preview' className='showpreview' onClick={(e) =>showPreview(e,state,setState,Input)}><FontAwesomeIcon icon={faEye} /></button>
+                    <button title='Preview' className='showpreview' onClick={(e) =>showPreview(e,ModalRef,state,setState,Input)}><FontAwesomeIcon icon={faEye} /></button>
                 </div>
             </div>
     )

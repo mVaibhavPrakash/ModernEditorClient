@@ -13,7 +13,7 @@ import OList from './Olist'
 import Edit from './Edit'
 import SubmitBlog from './SubmitBlog'
 
-const Preview = ({dat}) => {
+const Preview = ({ModalRef,dat}) => {
     const [data,setData] = useState();
     const renderers={
         h1:Heading1,
@@ -36,7 +36,7 @@ const Preview = ({dat}) => {
     return (
         <div className='preview' style={{marginBottom:'20px',overflow:'scroll'}}>
             <div style={{display:'flex',justifyContent:'flex-start',marginTop:'15px'}}>
-                <Edit data={data} />
+                <Edit ModalRef={ModalRef} data={data} />
                 <SubmitBlog data={data}/>
             </div>
             <ReactMarkdown  children={data} components={renderers} />

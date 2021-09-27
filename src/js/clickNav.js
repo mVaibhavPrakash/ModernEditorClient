@@ -1,18 +1,14 @@
-const clickNav = () => {
-  let element = document.getElementsByClassName('sideBar');
-  let ele = document.getElementById('edit');
-  let eles = document.getElementsByClassName('editorDiv');
-  let e = document.getElementsByClassName('nav');
-  if (ele.className === 'editor') {
-    element[0].style.display = 'block';
-    ele.className = 'editorActive';
-    eles[0].style.margin = '0 1.7vw 0 3.3vw';
-    e[0].style.width = '65vw';
+const clickNav = (NavRef, SidebarRef, EditRef, EditorDivRef) => {
+  if (EditRef.current.className === 'editor') {
+    SidebarRef.current.style.display = 'block';
+    EditRef.current.className = 'editorActive';
+    EditorDivRef.current.style.margin = '0 1.7vw 0 3.3vw';
+    NavRef.current.style.width = '65vw';
   } else {
-    element[0].style.display = 'none';
-    ele.className = 'editor';
-    eles[0].style.margin = '0 auto';
-    e[0].style.width = '100vw';
+    SidebarRef.current.style.display = 'none';
+    EditRef.current.className = 'editor';
+    EditorDivRef.current.style.margin = '0 auto';
+    NavRef.current.style.width = '100vw';
   }
 };
 

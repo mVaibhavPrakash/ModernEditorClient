@@ -1,9 +1,8 @@
-const showPreview = (e, state, setState, Input) => {
+const showPreview = (e, ModalRef, state, setState, Input) => {
   e.preventDefault();
-  let modal = document.getElementById('myModal');
   let data = localStorage.getItem('data');
   if (data) {
-    modal.style.display = 'block';
+    ModalRef.current.style.display = 'block';
     if (state === 1) setState(0);
     else setState(1);
   }

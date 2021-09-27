@@ -1,6 +1,5 @@
-const EditBlog = (data, setInput, setEdit) => {
-  let modal = document.getElementById('myModal');
-  modal.style.display = 'none';
+const EditBlog = (ModalRef, data, setInput, setEdit) => {
+  ModalRef.current.style.display = 'none';
   setEdit(true);
   setInput(data);
 };

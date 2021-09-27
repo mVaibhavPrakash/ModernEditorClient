@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import {Input} from './Input'
 import {Submit} from './Submit'
 import Title from './Title'
@@ -12,30 +13,35 @@ import { RenderPreviewContextProvider } from '../hooks/RenderPreviewContext'
 import { SelectedTextContextProvider } from '../hooks/SelectedTextContext'
 
 const Editor = () => {
+    const SidebarRef =useRef(null)
+    const EditRef =useRef(null)
+    const EditorDivRef =useRef(null)
+    const NavRef = useRef(null)
+    const ModalRef = useRef(null)
     return (
         <>
-            <Navbar />
-            <div id='edit' className="editor">
-                <div className='editorDiv'>
+         <Navbar NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef}/>
+            <div ref={EditRef} id='edit' className="editor">
+                <div ref={EditorDivRef} className='editorDiv'>
                     <InputContextProvider>
                         <Title/>
                             <RenderPreviewContextProvider>
                                 <SelectedTextContextProvider>
-                                    <Selector />
+                                    <Selector ModalRef={ModalRef}/>
                                 <EditContextProvider>
                                     <Input />
                                     <Submit />
-                                    <ShowPreview />
+                                    <ShowPreview ModalRef={ModalRef}/>
                                 </EditContextProvider>
                                 </SelectedTextContextProvider>
                             </RenderPreviewContextProvider>
                     </InputContextProvider>
                 </div>
-                <div className="sideBarDiv">
-                    <SideNav />
+                <div ref={SidebarRef} className="sideBarDiv">
+                    <SideNav NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef}/>
                 </div>
             </div>
-        </>
+            </>
     )
 }
 

@@ -14,7 +14,7 @@ const Edit = (props) => {
     const [Input,setInput] = useContext(InputContext)
     const [isEdit,setEdit] = useContext(EditContext)
     return (
-        <button id='edit-preview-button' style={style} onClick={(e) => { e.preventDefault();EditBlog(props.data,setInput,setEdit)}}>Edit Blog</button>
+        <button id='edit-preview-button' style={style} onClick={(e) => { e.preventDefault();EditBlog(props.ModalRef,props.data,setInput,setEdit)}}>Edit Blog</button>
     )
 }
 

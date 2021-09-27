@@ -1,7 +1,6 @@
-const closeModal = (e) => {
+const closeModal = (e, ModalRef) => {
   e.preventDefault();
-  let modal = document.getElementById('myModal');
-  modal.style.display = 'none';
+  ModalRef.current.style.display = 'none';
 };
 
 export default closeModal;
