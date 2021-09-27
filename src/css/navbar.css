@@ -15,7 +15,7 @@
 .navbarLeft{
     display: inline;
     float: left;
-    margin-left: 4vw;
+    margin-left: 3.3vw;
 }
 
 #navbarCompanyLogo{
@@ -34,7 +34,7 @@
 .navbarRight{
     display: inline;
     float: right;
-    margin-right: 4vw;
+    margin-right: 1.3vw;
 }
 
 #cog{

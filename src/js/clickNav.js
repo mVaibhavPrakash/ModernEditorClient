@@ -6,7 +6,7 @@ const clickNav = () => {
   if (ele.className === 'editor') {
     element[0].style.display = 'block';
     ele.className = 'editorActive';
-    eles[0].style.margin = '0 1vw 0 4vw';
+    eles[0].style.margin = '0 1.7vw 0 3.3vw';
     e[0].style.width = '65vw';
   } else {
     element[0].style.display = 'none';
