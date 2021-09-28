@@ -1,12 +1,8 @@
-const submitData = (e, Input, setInput, isEdit, setEdit) => {
+const submitData = (e, data, Input, setInput, isEdit, setEdit) => {
   e.preventDefault();
   if (Input) {
-    if (localStorage.getItem('data') !== null) {
-      if (!isEdit)
-        localStorage.setItem(
-          'data',
-          localStorage.getItem('data').concat(Input)
-        );
+    if (data !== null) {
+      if (!isEdit) localStorage.setItem('data', data.concat(Input));
       else {
         localStorage.setItem('data', Input);
         setEdit(false);
