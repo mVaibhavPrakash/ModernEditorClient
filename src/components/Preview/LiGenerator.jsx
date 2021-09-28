@@ -1,5 +1,3 @@
-import React from 'react';
-
 const LiGenerator = (props) => {
   let array = props.children.map((value, key) => {
     if (value.type === 'li') {

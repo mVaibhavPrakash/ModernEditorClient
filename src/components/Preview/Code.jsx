@@ -2,6 +2,7 @@ import '../../css/preview.css'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
 const Code = (props) => {
+    
     const match = /language-(\w+)/.exec(props.className || '')
     return (
         <SyntaxHighlighter language={match[1] ?? null} CodeTag={code} customStyle={{height:'100%',backgroundColor:'#2d3e50',color:'white',fontSize:'.36rem',marginTop:'12px'}}>

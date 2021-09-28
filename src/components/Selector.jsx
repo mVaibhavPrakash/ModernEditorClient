@@ -1,12 +1,12 @@
 import {useContext} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBold, faCode, faEye, faHeading, faImage, faItalic, faLink, faListOl, faListUl, faMars, faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
-import '../css/selector.css'
-import showPreview from '../js/showPreview'
-import markdownEdit from '../js/markdownEdit'
 import { InputContext} from '../hooks/InputContext'
 import { RenderPreviewContext } from '../hooks/RenderPreviewContext'
 import { SelectedTextContext } from '../hooks/SelectedTextContext'
+import showPreview from '../js/showPreview'
+import markdownEdit from '../js/markdownEdit'
+import '../css/selector.css'
 
 const Selector = ({ModalRef}) => {
     const [state, setState] = useContext(RenderPreviewContext)

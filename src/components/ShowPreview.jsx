@@ -1,10 +1,10 @@
 import {useContext} from 'react'
 import ReactDom from 'react-dom'
 import Preview from './Preview/Preview'
+import { RenderPreviewContext } from '../hooks/RenderPreviewContext'
 import closeModal from '../js/closeModal'
 import '../css/showPreview.css'
-import '../js/js'
-import { RenderPreviewContext } from '../hooks/RenderPreviewContext'
+import '../js/windows'
 
 const ShowPreview = ({ModalRef}) => {
     const style={

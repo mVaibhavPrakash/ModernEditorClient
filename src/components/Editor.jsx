@@ -1,16 +1,16 @@
 import { useRef } from 'react'
-import {Input} from './Input'
-import {Submit} from './Submit'
+import Navbar from './Navbar'
 import Title from './Title'
 import Selector from './Selector'
+import {Input} from './Input'
+import {Submit} from './Submit'
 import ShowPreview from './ShowPreview'
-import Navbar from './Navbar'
 import SideNav from './SideNav'
-import '../css/editor.css'
 import { InputContextProvider } from '../hooks/InputContext'
 import { EditContextProvider } from '../hooks/EditContext'
-import { RenderPreviewContextProvider } from '../hooks/RenderPreviewContext'
 import { SelectedTextContextProvider } from '../hooks/SelectedTextContext'
+import { RenderPreviewContextProvider } from '../hooks/RenderPreviewContext'
+import '../css/editor.css'
 
 const Editor = () => {
     const SidebarRef =useRef(null)

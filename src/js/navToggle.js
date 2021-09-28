@@ -1,4 +1,4 @@
-const clickNav = (NavRef, SidebarRef, EditRef, EditorDivRef) => {
+const navToggle = (NavRef, SidebarRef, EditRef, EditorDivRef) => {
   if (EditRef.current.className === 'editor') {
     SidebarRef.current.style.display = 'block';
     EditRef.current.className = 'editorActive';
@@ -12,4 +12,4 @@ const clickNav = (NavRef, SidebarRef, EditRef, EditorDivRef) => {
   }
 };
 
-export default clickNav;
+export default navToggle;

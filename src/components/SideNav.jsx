@@ -1,9 +1,12 @@
+import navToggle from '../js/navToggle'
 import '../css/sideNav.css'
-import clickNav from '../js/clickNav'
+
 const SideNav = ({NavRef, SidebarRef, EditRef,EditorDivRef}) => {
+
     return (
+        
         <div className='sideBar'>
-            <button id="sideBar-button" onClick={()=>clickNav(NavRef,SidebarRef, EditRef,EditorDivRef)}>X <span>Close</span></button>
+            <button id="sideBar-button" onClick={()=>navToggle(NavRef,SidebarRef, EditRef,EditorDivRef)}>X <span>Close</span></button>
             <div id='sideBar-content'>
                 <div id='d'>
                     <h2>Are you ready to publish?</h2>
@@ -33,7 +36,9 @@ const SideNav = ({NavRef, SidebarRef, EditRef,EditorDivRef}) => {
                 </div>
             </div>
         </div>
+
     )
+
 }
 
 export default SideNav;

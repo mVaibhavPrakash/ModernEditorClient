@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Blockquote = (props) => {
     console.log(props)
     return (

@@ -1,10 +1,11 @@
 import {useContext} from 'react'
-import '../css/submit.css'
 import { EditContext } from '../hooks/EditContext'
 import { InputContext } from '../hooks/InputContext'
 import submitData from '../js/submitData.js'
+import '../css/submit.css'
 
 export const Submit = () => {
+
     const [Input, setInput] = useContext(InputContext)
     const [isEdit,setEdit] = useContext(EditContext)
 
