@@ -51,11 +51,13 @@
 #d h2{
     font-size: 0.42rem;
     padding: 0.28rem 0.28rem 0 0.28rem;
+    color: #161e42;
 }
 
 .sideBar-content-div h3{
     font-size: 0.35rem;
     padding: 0.28rem 0.28rem 0 0.28rem;
+    color: #2d386e;
 }
 #d p{
     font-size: 0.39rem;
