@@ -1,4 +1,4 @@
-import { useContext, useRef,useState} from 'react'
+import { lazy, Suspense, useRef,useState} from 'react'
 import Navbar from './Navbar'
 import Title from './Title'
 import Selector from './Selector'
@@ -18,10 +18,9 @@ const Editor = () => {
     const EditorDivRef =useRef(null)
     const NavRef = useRef(null)
     const ModalRef = useRef(null)
-    const [isClicked,setClicked] = useState(false)
     return (
         <>
-         <Navbar NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef} isClicked={isClicked} setClicked={setClicked}/>
+         <Navbar NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef}/>
             <div ref={EditRef} id='edit' className="editor">
                 <div ref={EditorDivRef} className='editorDiv'>
                     <InputContextProvider>
@@ -39,11 +38,7 @@ const Editor = () => {
                     </InputContextProvider>
                 </div>
                 <div ref={SidebarRef} className="sideBarDiv">
-                    {
-                        isClicked ? import('./SideNav').then((SideNav)=>{
-                            <SideNav NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef}/>
-                        }) :''
-                    }
+                    <SideNav NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef}/>
                 </div>
             </div>
             </>
