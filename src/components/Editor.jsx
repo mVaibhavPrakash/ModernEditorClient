@@ -1,4 +1,4 @@
-import { useRef,useState} from 'react'
+import { useContext, useRef,useState} from 'react'
 import Navbar from './Navbar'
 import Title from './Title'
 import Selector from './Selector'
@@ -18,10 +18,10 @@ const Editor = () => {
     const EditorDivRef =useRef(null)
     const NavRef = useRef(null)
     const ModalRef = useRef(null)
-    const [showSidenav,setshowSidenav] = useState(false)
+    const [isClicked,setClicked] = useState(false)
     return (
         <>
-         <Navbar NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef}/>
+         <Navbar NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef} isClicked={isClicked} setClicked={setClicked}/>
             <div ref={EditRef} id='edit' className="editor">
                 <div ref={EditorDivRef} className='editorDiv'>
                     <InputContextProvider>
@@ -39,7 +39,11 @@ const Editor = () => {
                     </InputContextProvider>
                 </div>
                 <div ref={SidebarRef} className="sideBarDiv">
-                    <SideNav NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef}/>
+                    {
+                        isClicked ? import('./SideNav').then((SideNav)=>{
+                            <SideNav NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef}/>
+                        }) :''
+                    }
                 </div>
             </div>
             </>
