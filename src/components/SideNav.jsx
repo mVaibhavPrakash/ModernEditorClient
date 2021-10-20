@@ -1,12 +1,12 @@
 import navToggle from '../js/navToggle'
 import '../css/sideNav.css'
 
-const SideNav = ({NavRef, SidebarRef, EditRef,EditorDivRef,setState,state}) => {
+const SideNav = ({NavRef, SidebarRef, EditRef,EditorDivRef}) => {
 
     return (
         
         <div className='sideBar'>
-            <button id="sideBar-button" onClick={()=>{navToggle(NavRef,SidebarRef, EditRef,EditorDivRef);setState(!state)}}>X <span>Close</span></button>
+            <button id="sideBar-button" onClick={()=>{navToggle(NavRef,SidebarRef, EditRef,EditorDivRef)}}>X <span>Close</span></button>
             <div id='sideBar-content'>
                 <div id='d'>
                     <h2>Are you ready to publish?</h2>

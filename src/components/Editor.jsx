@@ -1,16 +1,16 @@
-import { useRef,lazy,useState,Suspense } from 'react'
+import { useRef,useState} from 'react'
 import Navbar from './Navbar'
 import Title from './Title'
 import Selector from './Selector'
 import {Input} from './Input'
 import {Submit} from './Submit'
 import ShowPreview from './ShowPreview'
+import SideNav from './SideNav'
 import { InputContextProvider } from '../hooks/InputContext'
 import { EditContextProvider } from '../hooks/EditContext'
 import { SelectedTextContextProvider } from '../hooks/SelectedTextContext'
 import { RenderPreviewContextProvider } from '../hooks/RenderPreviewContext'
 import '../css/editor.css'
-const SideNav = lazy(() => import('./SideNav'))
 
 const Editor = () => {
     const SidebarRef =useRef(null)
@@ -21,7 +21,7 @@ const Editor = () => {
     const [showSidenav,setshowSidenav] = useState(false)
     return (
         <>
-         <Navbar NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef} setState={setshowSidenav} state={showSidenav}/>
+         <Navbar NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef}/>
             <div ref={EditRef} id='edit' className="editor">
                 <div ref={EditorDivRef} className='editorDiv'>
                     <InputContextProvider>
@@ -38,11 +38,9 @@ const Editor = () => {
                             </RenderPreviewContextProvider>
                     </InputContextProvider>
                 </div>
-                <Suspense fallback={<div>Loading.......</div>}>
-                   <div ref={SidebarRef} className="sideBarDiv">
-                        <SideNav NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef} setState={setshowSidenav} state={showSidenav}/>
-                    </div>
-                </Suspense>
+                <div ref={SidebarRef} className="sideBarDiv">
+                    <SideNav NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef}/>
+                </div>
             </div>
             </>
     )
