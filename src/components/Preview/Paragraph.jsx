@@ -10,7 +10,7 @@ const Paragraph = (props) => {
         margin:'0.5rem 0 0.5rem 0'
     }
     return (
-        <p className="preview-para" style={style}>{props.children}</p>
+        <p className="editor-preview-para" style={style}>{props.children}</p>
     )
 }
 

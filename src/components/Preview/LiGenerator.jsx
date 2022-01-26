@@ -3,7 +3,7 @@ const LiGenerator = (props) => {
     if (value.type === 'li') {
       return (
         <li
-          className="preview-li"
+          className="editor-preview-li"
           key={key}
           style={{
             paddingLeft: '0',

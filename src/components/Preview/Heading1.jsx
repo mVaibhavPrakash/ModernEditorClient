@@ -9,7 +9,7 @@ const Heading1 = (props) => {
         color:'#2d3e50'
     }
     return (
-        <h1 className='peview-head1' style={style}>{props.children}</h1>
+        <h1 className='editor-peview-head1' style={style}>{props.children}</h1>
     )
 }
 

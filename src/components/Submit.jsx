@@ -17,8 +17,8 @@ export const Submit = () => {
     },[Input,isEdit])
 
     return (
-        <div className="submitDiv">
-            <button id='submitBlog' onClick={e => submitData(e,data, Input, setInput,isEdit,setEdit)}>Submit</button>
+        <div className="editor-submitDiv">
+            <button id='editor-submitBlog' onClick={e => submitData(e,data, Input, setInput,isEdit,setEdit)}>Submit</button>
         </div>
     )
 }

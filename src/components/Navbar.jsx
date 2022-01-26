@@ -5,13 +5,13 @@ import '../css/navbar.css'
 
 const Navbar = ({NavRef,SidebarRef, EditRef,EditorDivRef}) => {
     return (
-        <nav ref={NavRef} className='nav'>
-            <div className='navbarLeft'>
-                <a id="navbarCompanyLogo">Company</a>
-                <a id="home">Home</a>
+        <nav ref={NavRef} className='editor-nav'>
+            <div className='editor-navbarLeft'>
+                <a id="editor-navbarCompanyLogo">Company</a>
+                <a id="editor-home">Home</a>
             </div>
-            <div className='navbarRight'>
-                <button id='cog' title='Settings' onClick={()=>{navToggle(NavRef,SidebarRef, EditRef,EditorDivRef)}}><FontAwesomeIcon icon={faCog}/></button>
+            <div className='editor-navbarRight'>
+                <button id='editor-cog' title='Settings' onClick={()=>{navToggle(NavRef,SidebarRef, EditRef,EditorDivRef)}}><FontAwesomeIcon icon={faCog}/></button>
             </div>
         </nav>
     )

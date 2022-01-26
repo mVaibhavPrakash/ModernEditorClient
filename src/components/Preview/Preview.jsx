@@ -37,7 +37,7 @@ const Preview = ({ModalRef,dat}) => {
     },[data,dat])
 
     return (
-        <div className='preview' style={{marginBottom:'20px',overflow:'scroll'}}>
+        <div className='editor-preview' style={{marginBottom:'20px',overflow:'scroll'}}>
             <div style={{display:'flex',justifyContent:'flex-start',marginTop:'15px'}}>
                 <Edit ModalRef={ModalRef} data={data} />
                 <SubmitBlog data={data}/>

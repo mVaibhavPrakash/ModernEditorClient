@@ -16,9 +16,9 @@ const ShowPreview = ({ModalRef}) => {
     const [state,setState] = useContext(RenderPreviewContext)
 
     return ReactDom.createPortal(
-        <div ref={ModalRef} id="myModal" className="modal">
-            <div className="modal-content" style={style}>
-                <span className="close" onClick={(e) =>closeModal(e,ModalRef)}>&times;</span>
+        <div ref={ModalRef} id="editor-myModal" className="editor-modal">
+            <div className="editor-modal-content" style={style}>
+                <span className="editor-close" onClick={(e) =>closeModal(e,ModalRef)}>&times;</span>
                 <Preview ModalRef={ModalRef} dat={state}/>
             </div>
         </div>,document.getElementById('preview-portal')

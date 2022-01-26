@@ -1,11 +1,11 @@
-.select{
+.editor-select{
     background-color:#2d386e;
     height:1.2rem;
     padding:0.2rem 0 0.2rem 0;
     box-sizing: border-box;
 }
 
-.selector{
+.editor-selector{
     display: flex;
     height: 0.8rem;
     font-size: 0.4rem;
@@ -15,7 +15,7 @@
     float: right;
 }
 
-.selector button{
+.editor-selector button{
     color: white;
     background-color: inherit;
     font-size: 0.4rem;
@@ -24,14 +24,14 @@
     text-align: center;
 }
 
-.selector button:hover{
+.editor-selector button:hover{
     background-color: white;
     color:rgb(45,56,110);
     border-radius: 0.2rem;
     
 }
 
-.showpreview-div{
+.editor-showpreview-div{
     display: flex;
     height:0.8rem;
     width:25%;
@@ -40,7 +40,7 @@
     justify-content:space-evenly;
 }
 
-.showpreview{
+.editor-showpreview{
     display: block;
     border-style: none;
     margin: 0 auto;
@@ -52,7 +52,7 @@
     text-align: center;
 }
 
-.showpreview-div button:hover{
+.editor-showpreview-div button:hover{
     background-color:white;
     color:#4ba4fa;
     border-radius: 0.2rem;

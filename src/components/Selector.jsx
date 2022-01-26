@@ -14,21 +14,21 @@ const Selector = ({ModalRef}) => {
     const [selected,setSelected] = useContext(SelectedTextContext)
 
     return (
-            <div className='select'>
-                <div className='selector'>
-                    <button id='head-btn' aria-label='justify' title='Header' onClick={(e) =>markdownEdit(e,'head-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faHeading}/></button>
-                    <button id='bold-btn' aria-label='justify'  title='Bold text' onClick={(e) =>markdownEdit(e,'bold-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faBold}/></button>
-                    <button id='italic-btn' aria-label='justify'  title='Italic text' onClick={(e) =>markdownEdit(e,'italic-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faItalic}/></button>
-                    <button id='block-btn' aria-label='justify'  title='Block Quote' onClick={(e) =>markdownEdit(e,'block-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faQuoteLeft}/></button>
-                    <button id='link-btn' aria-label='justify'  title='Link' onClick={(e) =>markdownEdit(e,'link-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faLink}/></button>
-                    <button id='code-btn' aria-label='justify'  title='Code' onClick={(e) =>markdownEdit(e,'code-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faCode}/></button>
-                    <button id='image-btn' aria-label='justify'  title='Image' onClick={(e) =>markdownEdit(e,'imae-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faImage}/></button>
-                    <button id='ul-btn' aria-label='justify'  title='Un-ordered List' onClick={(e) =>markdownEdit(e,'ul-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faListUl}/></button>
-                    <button id='ol-btn' aria-label='justify'  title='Ordered List' onClick={(e) =>markdownEdit(e,'ol-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faListOl}/></button>
+            <div className='editor-select'>
+                <div className='editor-selector'>
+                    <button id='editor-head-btn' aria-label='justify' title='Header' onClick={(e) =>markdownEdit(e,'head-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faHeading}/></button>
+                    <button id='editor-bold-btn' aria-label='justify'  title='Bold text' onClick={(e) =>markdownEdit(e,'bold-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faBold}/></button>
+                    <button id='editor-italic-btn' aria-label='justify'  title='Italic text' onClick={(e) =>markdownEdit(e,'italic-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faItalic}/></button>
+                    <button id='editor-block-btn' aria-label='justify'  title='Block Quote' onClick={(e) =>markdownEdit(e,'block-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faQuoteLeft}/></button>
+                    <button id='editor-link-btn' aria-label='justify'  title='Link' onClick={(e) =>markdownEdit(e,'link-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faLink}/></button>
+                    <button id='editor-code-btn' aria-label='justify'  title='Code' onClick={(e) =>markdownEdit(e,'code-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faCode}/></button>
+                    <button id='editor-image-btn' aria-label='justify'  title='Image' onClick={(e) =>markdownEdit(e,'imae-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faImage}/></button>
+                    <button id='editor-ul-btn' aria-label='justify'  title='Un-ordered List' onClick={(e) =>markdownEdit(e,'ul-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faListUl}/></button>
+                    <button id='editor-ol-btn' aria-label='justify'  title='Ordered List' onClick={(e) =>markdownEdit(e,'ol-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faListOl}/></button>
                 </div>
-                <div className="showpreview-div">
-                    <button aria-label='justify'  title='Serach Markdown Syntax' className='showpreview'><FontAwesomeIcon icon={faMars} /></button>
-                    <button aria-label='justify'  title='Preview' className='showpreview' onClick={(e) =>showPreview(e,ModalRef,state,setState,Input)}><FontAwesomeIcon icon={faEye} /></button>
+                <div className="editor-showpreview-div">
+                    <button aria-label='justify'  title='Serach Markdown Syntax' className='editor-showpreview'><FontAwesomeIcon icon={faMars} /></button>
+                    <button aria-label='justify'  title='Preview' className='editor-showpreview' onClick={(e) =>showPreview(e,ModalRef,state,setState,Input)}><FontAwesomeIcon icon={faEye} /></button>
                 </div>
             </div>
     )

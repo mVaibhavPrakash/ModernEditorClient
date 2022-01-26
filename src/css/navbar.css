@@ -1,10 +1,10 @@
-.nav{
+.editor-nav{
     height:1.4rem;
     width:100vw;
     background-color: white;
     font-family: monospace;
     position:fixed;
-    font-size: 0.4rem;
+    font-size: 0.2rem;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: rgb(195, 197, 197);
@@ -12,33 +12,35 @@
     z-index:2;
 }
 
-.navbarLeft{
+.editor-navbarLeft{
     display: inline;
     float: left;
     margin-left: 3.3vw;
 }
 
-#navbarCompanyLogo{
+#editor-navbarCompanyLogo{
     display: inline;
     font-size: 0.6rem;
     color:#2d386e;
 }
 
-#home{
+#editor-home{
     display: inline;
     margin-left: 4vw;
     line-height: 1.4rem;
+    font-size: 0.4rem;
     cursor: pointer;
 }
 
-.navbarRight{
+.editor-navbarRight{
     display: inline;
     float: right;
     margin-right: 1.3vw;
 }
 
-#cog{
+#editor-cog{
     color: #2d386e;
+    display: inline;
     background-color: white;
     font-size: 0.6rem;
     border: none;

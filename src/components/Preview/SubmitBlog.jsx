@@ -9,7 +9,7 @@ const SubmitBlog = () => {
         borderLeft:'1px solid grey'
     }
     return (
-        <button id='submit-blog-btn' style={style}>Submit Blog</button>
+        <button id='editor-submit-blog-btn' style={style}>Submit Blog</button>
     )
 }
 

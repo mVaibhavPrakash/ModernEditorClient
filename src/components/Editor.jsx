@@ -6,6 +6,7 @@ import {Input} from './Input'
 import {Submit} from './Submit'
 import ShowPreview from './ShowPreview'
 import SideNav from './SideNav'
+import Footer from '../../../LandingpageClient/src/components/Footer'
 import { InputContextProvider } from '../hooks/InputContext'
 import { EditContextProvider } from '../hooks/EditContext'
 import { SelectedTextContextProvider } from '../hooks/SelectedTextContext'
@@ -21,8 +22,8 @@ const Editor = () => {
     return (
         <>
          <Navbar NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef}/>
-            <div ref={EditRef} id='edit' className="editor">
-                <div ref={EditorDivRef} className='editorDiv'>
+            <div ref={EditRef} id='editor-edit' className="editor-editor">
+                <div ref={EditorDivRef} className='editor-editorDiv'>
                     <InputContextProvider>
                         <Title/>
                             <RenderPreviewContextProvider>
@@ -37,7 +38,7 @@ const Editor = () => {
                             </RenderPreviewContextProvider>
                     </InputContextProvider>
                 </div>
-                <div ref={SidebarRef} className="sideBarDiv">
+                <div ref={SidebarRef} className="editor-sideBarDiv">
                     <SideNav NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef}/>
                 </div>
             </div>
