@@ -1,12 +1,13 @@
-import navToggle from '../js/navToggle'
+import { RefObject } from 'react'
+import {navToggle} from '../js/navToggle'
 import '../css/sideNav.css'
 
-const SideNav = ({NavRef, SidebarRef, EditRef,EditorDivRef}) => {
+const SideNav = ({NavRef, SidebarRef, EditRef,EditorDivRef,footerRef}) => {
 
     return (
         
         <div className='editor-sideBar'>
-            <button id="editor-sideBar-button" onClick={()=>{navToggle(NavRef,SidebarRef, EditRef,EditorDivRef)}}>X <span>Close</span></button>
+            <button id="editor-sideBar-button" onClick={()=>{navToggle(NavRef,SidebarRef, EditRef,EditorDivRef,footerRef)}}>X <span>Close</span></button>
             <div id='editor-sideBar-content'>
                 <div id='editor-d'>
                     <h2>Are you ready to publish?</h2>
@@ -15,12 +16,12 @@ const SideNav = ({NavRef, SidebarRef, EditRef,EditorDivRef}) => {
                 <div className='editor-sideBar-content-div'>
                     <h3>SEO Title (Optional)</h3>
                     <p style={{wordBreak:'break-word'}}>The SEO Title will be shown in place of your Title on search engine results pages, such as a Google search. SEO titles between 40 and 50 characters with commonly searched words have the best click-through-rates.</p>
-                    <textarea type="text" placeholder='Enter meta title' id='editor-textarea-seo-title'/>
+                    <textarea placeholder='Enter meta title' id='editor-textarea-seo-title'/>
                 </div>
                 <div className='editor-sideBar-content-div'>
                     <h3>SEO Description (Optional)</h3>
                     <p style={{wordBreak:'break-word'}}>The SEO Description will be used in place of your Subtitle on search engine results pages. Good SEO descriptions utilize keywords, summarize the story and are between 140-156 characters long.</p>
-                    <textarea type="text" placeholder='Enter meta description' id='editor-textarea-seo-desc'/>
+                    <textarea placeholder='Enter meta description' id='editor-textarea-seo-desc'/>
                 </div>
                 <div className="editor-sideBar-content-div">
                     <h3>Disable comments?</h3>

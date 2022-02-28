@@ -1,4 +1,4 @@
-import {useContext} from 'react'
+import {useContext,RefObject} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBold, faCode, faEye, faHeading, faImage, faItalic, faLink, faListOl, faListUl, faMars, faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 import { InputContext} from '../hooks/InputContext'
@@ -9,9 +9,9 @@ import markdownEdit from '../js/markdownEdit'
 import '../css/selector.css'
 
 const Selector = ({ModalRef}) => {
-    const [state, setState] = useContext(RenderPreviewContext)
+    const [state,setState]= useContext(RenderPreviewContext)
     const [Input,setInput] = useContext(InputContext)
-    const [selected,setSelected] = useContext(SelectedTextContext)
+    const [selected, setSelected] = useContext(SelectedTextContext)
 
     return (
             <div className='editor-select'>

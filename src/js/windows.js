@@ -1,6 +1,6 @@
-window.onclick = function (event) {
-  let modal = document.getElementById('editor-myModal');
+document.onclick = function (event) {
+  let modal = document.getElementById('editor-myModal')
   if (event.target == modal) {
-    modal.style.display = 'none';
+    modal.style.display = 'none'
   }
-};
+}

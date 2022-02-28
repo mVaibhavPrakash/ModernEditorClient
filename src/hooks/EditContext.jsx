@@ -1,6 +1,7 @@
-import {createContext,useState} from 'react'
+import React, {createContext,useState} from 'react'
 
-export const EditContext=createContext();
+
+export const EditContext=createContext(null);
 
 export const EditContextProvider = ({children}) =>{
     const [isEdit, setEdit] = useState(false);

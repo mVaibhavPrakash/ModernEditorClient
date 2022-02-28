@@ -1,4 +1,4 @@
-import {useContext} from 'react'
+import {RefObject, useContext} from 'react'
 import ReactDom from 'react-dom'
 import Preview from './Preview/Preview'
 import { RenderPreviewContext } from '../hooks/RenderPreviewContext'
@@ -6,7 +6,8 @@ import closeModal from '../js/closeModal'
 import '../css/showPreview.css'
 import '../js/windows'
 
-const ShowPreview = ({ModalRef}) => {
+
+const ShowPreview = ({ModalRef,windowRef}) => {
     const style={
         width:'60vw',
         margin:'0 auto',

@@ -6,10 +6,10 @@ import '../css/input.css'
 
 export const Input = () => {
 
-    const [Input, setInput] = useContext(InputContext);
+    const [Input,setInput] = useContext(InputContext);
     const [selected, setSelected] = useContext(SelectedTextContext)
 
     return (
-        <textarea id='editor-input' placeholder="Type something here!" type="text" className="editor-blogInput" value={Input} onChange={e => setInput(e.target.value)} onSelect={(e) =>selectInputText(e,selected,setSelected,Input,setInput)}/>
+        <textarea id='editor-input' placeholder="Type something here!" className="editor-blogInput" value={Input} onChange={e => setInput(e.target.value)} onSelect={(e) =>selectInputText(e,selected,setSelected,Input,setInput)}/>
     )
 }

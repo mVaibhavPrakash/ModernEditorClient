@@ -1,10 +1,10 @@
-import { createContext, useState} from 'react'
+import { createContext, useState,ReactNode} from 'react'
 
-export const RenderPreviewContext = createContext();
+export const RenderPreviewContext = createContext(null);
 
 export const RenderPreviewContextProvider = ({children}) =>{
 
-    const [state,setState]= useState(0);
+    const [state,setState]= useState<boolean>(false);
 
     return(
         <RenderPreviewContext.Provider value={[state,setState]}>

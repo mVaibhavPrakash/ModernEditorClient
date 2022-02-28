@@ -1,10 +1,10 @@
-import {useState,createContext} from 'react'
+import {useState,createContext,ReactNode} from 'react'
 
-export const SelectedTextContext = createContext()
+export const SelectedTextContext = createContext(null)
 
 export const SelectedTextContextProvider = ({children}) =>{
 
-    const [selected, setSelected] = useState()
+    const [selected, setSelected] = useState('')
 
     return(
         < SelectedTextContext.Provider value={[selected, setSelected]}>

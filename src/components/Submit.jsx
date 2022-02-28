@@ -8,7 +8,6 @@ export const Submit = () => {
 
     const [Input, setInput] = useContext(InputContext)
     const [isEdit,setEdit] = useContext(EditContext)
-    let data;
 
     useEffect(() =>{
 
