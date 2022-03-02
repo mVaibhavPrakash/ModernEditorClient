@@ -4,7 +4,7 @@ export const RenderPreviewContext = createContext(null);
 
 export const RenderPreviewContextProvider = ({children}) =>{
 
-    const [state,setState]= useState<boolean>(false);
+    const [state,setState]= useState(false);
 
     return(
         <RenderPreviewContext.Provider value={[state,setState]}>

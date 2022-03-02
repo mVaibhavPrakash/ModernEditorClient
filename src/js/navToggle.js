@@ -1,4 +1,3 @@
-import { RefObject } from 'react'
 export const navToggle = (
   NavRef,
   SidebarRef,

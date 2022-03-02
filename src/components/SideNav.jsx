@@ -1,4 +1,3 @@
-import { RefObject } from 'react'
 import {navToggle} from '../js/navToggle'
 import '../css/sideNav.css'
 

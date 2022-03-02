@@ -21,7 +21,7 @@ const Editor = ({footerRef}) => {
     return (
         <>
          <Navbar NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef} footerRef={footerRef}/>
-            <div ref={EditRef} id='editor-edit' className="editor-editor">
+            <div ref={EditRef} className="editor-editor">
                 <div ref={EditorDivRef} className='editor-editorDiv'>
                     <InputContextProvider>
                         <Title/>
