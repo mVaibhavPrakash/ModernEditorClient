@@ -1,4 +1,4 @@
-import { useRef} from 'react'
+import { useEffect, useRef} from 'react'
 import Navbar from './Navbar'
 import Title from './Title'
 import Selector from './Selector'
@@ -18,6 +18,13 @@ const Editor = ({footerRef}) => {
     const EditorDivRef =useRef(null)
     const NavRef = useRef(null)
     const ModalRef = useRef(null)
+
+    useEffect( () =>{
+		footerRef.current.style.width='100vw'
+		return ()=>{
+			footerRef.current.style.width='100vw'
+		}
+    })
     return (
         <>
          <Navbar NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef} footerRef={footerRef}/>
