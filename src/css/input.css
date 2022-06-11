@@ -11,3 +11,8 @@
     font-family: monospace;
     box-sizing: border-box;
 }
+
+.editor-blogInput::placeholder{
+    color: black;
+    font-size: 0.4rem;
+}

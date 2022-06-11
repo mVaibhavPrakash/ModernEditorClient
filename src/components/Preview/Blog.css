@@ -1,0 +1,77 @@
+    
+    .quote {
+      font-family: Georgia, serif;
+      font-size: 14px;
+      font-style: italic;
+      background-color: rgba(45, 62, 80,0.2);
+      padding: 10px;
+      margin-top:0.2rem;
+      margin-bottom:0.2rem;
+    }
+    
+    .curly-quotes{
+      padding-left: 52px;
+    }
+
+    .curly-quotes:before, .curly-quotes:after {
+      display: block;
+      height: 30px;
+      line-height: 48px;
+      font-size: 50px;
+      opacity: .4;
+      margin-left: 4px;
+      margin-right: -8px;
+    }
+    
+    .curly-quotes:before {
+      content: '\201C';
+    }
+    
+    .curly-quotes:after {
+      content: '\201D';
+    }
+    
+    ::marker{
+        margin-right:1.5vw;
+        color: #c3baaa;
+    }
+
+    #blog-link{
+        color: #111;
+        -webkit-text-decoration: underline;
+        text-decoration: underline;
+        font-weight: 600;
+        overflow-wrap: break-word;
+        white-space: nowrap;
+        font-family: 'serif';
+        color: rgb(45, 62, 80);
+        font-style: italic;
+        font-size: 0.4rem;
+    }
+
+    .editor-preview-para{
+
+        text-align:justify;
+        font-size:.47rem;
+        width:100%;
+        font-family: sans-serif;
+        color: #111111;
+        margin:0.5rem 0 0.5rem 0;
+        overflow-wrap:break-word;
+        line-height:1.8;
+        tab-size:4;
+    }
+
+    blockquote p{
+        display:inline;
+        font-size:0.4rem;
+        margin-bottom:0;
+    }
+
+    .inline-pre{
+        display:inline;
+        background-color:rgb(217, 219, 222);
+        font-size: 0.35rem;
+        padding: 3px 10px 3px 10px;
+        color: rgb(45, 62, 80);
+    }

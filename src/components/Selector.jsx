@@ -22,7 +22,7 @@ const Selector = ({ModalRef}) => {
                     <button id='editor-block-btn' aria-label='justify'  title='Block Quote' onClick={(e) =>markdownEdit(e,'block-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faQuoteLeft}/></button>
                     <button id='editor-link-btn' aria-label='justify'  title='Link' onClick={(e) =>markdownEdit(e,'link-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faLink}/></button>
                     <button id='editor-code-btn' aria-label='justify'  title='Code' onClick={(e) =>markdownEdit(e,'code-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faCode}/></button>
-                    <button id='editor-image-btn' aria-label='justify'  title='Image' onClick={(e) =>markdownEdit(e,'imae-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faImage}/></button>
+                    <button id='editor-image-btn' aria-label='justify'  title='Image' onClick={(e) =>markdownEdit(e,'image-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faImage}/></button>
                     <button id='editor-ul-btn' aria-label='justify'  title='Un-ordered List' onClick={(e) =>markdownEdit(e,'ul-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faListUl}/></button>
                     <button id='editor-ol-btn' aria-label='justify'  title='Ordered List' onClick={(e) =>markdownEdit(e,'ol-btn',selected,Input,setInput)}><FontAwesomeIcon icon={faListOl}/></button>
                 </div>

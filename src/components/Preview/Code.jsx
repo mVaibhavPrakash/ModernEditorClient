@@ -1,13 +1,17 @@
 import '../../css/preview.css'
+import './Blog.css'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
 const Code = (props) => {
-    
     const match = /language-(\w+)/.exec(props.className || '')
+    let result=[];
+    props.inline === true ? result.push(<pre className='inline-pre' key={1}>{props.children}</pre>) : result.push(<SyntaxHighlighter key={2} language={match !== null ? match[1] : null} CodeTag={code} customStyle={{height:'100%',backgroundColor:'#2d3e50',color:'white',fontSize:'.36rem',marginTop:'12px'}}>
+    {props.children}
+</SyntaxHighlighter>)
     return (
-        <SyntaxHighlighter language={match[1] ?? null} CodeTag={code} customStyle={{height:'100%',backgroundColor:'#2d3e50',color:'white',fontSize:'.36rem',marginTop:'12px'}}>
-            {props.children ?? ''}
-        </SyntaxHighlighter>
+        <>
+        {result}
+        </>
     )
 }
 

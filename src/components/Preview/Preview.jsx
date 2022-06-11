@@ -10,10 +10,11 @@ import Image from './Image'
 import Blockquote from './Blockquote'
 import Code from './Code'
 import OList from './Olist'
+import Link from './Link'
 import Edit from './Edit'
 import SubmitBlog from './SubmitBlog'
 
-const Preview = ({ModalRef,dat}) => {
+const Preview = ({ModalRef, dat}) => {
     
     const [data,setData] = useState();
     const renderers={
@@ -25,6 +26,7 @@ const Preview = ({ModalRef,dat}) => {
         code:Code,
         ul:UList,
         ol:OList,
+        a:Link,
         blockquote:Blockquote
     }
 
@@ -38,7 +40,7 @@ const Preview = ({ModalRef,dat}) => {
 
     return (
         <div className='editor-preview' style={{marginBottom:'20px',overflow:'scroll'}}>
-            <div style={{display:'flex',justifyContent:'flex-start',marginTop:'15px'}}>
+            <div  style={{display:'flex',justifyContent:'space-between',marginTop:'15px'}}>
                 <Edit ModalRef={ModalRef} data={data} />
                 <SubmitBlog data={data}/>
             </div>

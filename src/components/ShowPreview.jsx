@@ -7,7 +7,7 @@ import '../css/showPreview.css'
 import '../js/windows'
 
 
-const ShowPreview = ({ModalRef,windowRef}) => {
+const ShowPreview = ({ModalRef}) => {
     const style={
         width:'60vw',
         margin:'0 auto',

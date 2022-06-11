@@ -1,12 +1,12 @@
 
 const SubmitBlog = () => {
     const style={
-        width:'12vw',
-        height:'0.8rem',
+        width:'25vw',
+        height:'1rem',
         color:'#2d3e50',
         fontSize:'0.5rem',
         borderStyle:'none',
-        borderLeft:'1px solid grey'
+        backgroundColor:'rgb(50, 190, 143)'
     }
     return (
         <button id='editor-submit-blog-btn' style={style}>Submit Blog</button>

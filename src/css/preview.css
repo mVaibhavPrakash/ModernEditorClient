@@ -2,3 +2,17 @@
     width:60vw;
     margin: 0 auto;
 }
+
+.editor-close {
+    color: rgb(45,62,80);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .editor-close:hover,
+  .editor-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
