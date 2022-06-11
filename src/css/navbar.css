@@ -18,17 +18,24 @@
 }
 
 #editor-navbarCompanyLogo{
-    display: inline;
-    font-size: 0.6rem;
-    color:#2d386e;
+    position: absolute;
+    top:0.7rem;
+    left:5.4vw;
+    height:1.2rem;
+    line-height: 1.2rem;
+    width:1.8rem;
+    transform: translate(-50%, -50%);
+    color:white;
 }
 
 #editor-home{
     display: inline;
-    margin-left: 4vw;
+    margin-left: 8.8vw;
     line-height: 1.4rem;
     font-size: 0.4rem;
     cursor: pointer;
+    color: white;
+    text-decoration: none;
 }
 
 .editor-navbarRight{
@@ -38,9 +45,9 @@
 }
 
 #editor-cog{
-    color: #2d386e;
     display: inline;
-    background-color: white;
+    color: white;
+    background-color: inherit;
     font-size: 0.6rem;
     border: none;
     width:0.8rem;

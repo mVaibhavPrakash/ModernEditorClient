@@ -1,0 +1,49 @@
+.blog-head{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    min-height: 100vh;  
+}
+
+.blog-bulk-div{
+    position: relative;
+	top:3rem;
+}
+
+.blog-bulk-content{
+    width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px dashed grey;
+}
+
+.download-icon{
+    font-size: 6rem;
+    color: grey;
+    margin-top: 20px;
+}
+
+.blog-bulk-input{
+    display: flex;
+    flex-direction: row;
+    align-items:stretch;
+    margin-top: 20px;
+}
+
+.blog-bulk-file{
+    display: block;
+    width: 70%;
+}
+
+.blog-bulk-submit{
+    display: block;
+    height:30px;
+    width: 20%;
+    background-color: gray;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: white;
+}

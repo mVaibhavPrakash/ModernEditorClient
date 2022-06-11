@@ -1,17 +1,20 @@
+
+import { Link } from 'react-router-dom';
 import { faCog} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {navToggle} from '../js/navToggle';
 import '../css/navbar.css'
+import img from '../../../../../public/img/newgen.png'
 
 const Navbar = ({NavRef,SidebarRef, EditRef,EditorDivRef,footerRef}) => {
     return (
         <nav ref={NavRef} className='editor-nav'>
             <div className='editor-navbarLeft'>
-                <a id="editor-navbarCompanyLogo">Company</a>
-                <a id="editor-home">Home</a>
+            <img id="editor-navbarCompanyLogo" src={img} alt='img'/>
+                <Link to={'/'} id="editor-home">Home</Link>
             </div>
             <div className='editor-navbarRight'>
-                <button id='editor-cog' title='Settings' onClick={()=>{navToggle(NavRef,SidebarRef, EditRef,EditorDivRef,footerRef)}}><FontAwesomeIcon icon={faCog}/></button>
+                <button id='editor-cog' title='Settings' onClick={()=>{navToggle(NavRef,SidebarRef, EditRef,EditorDivRef,footerRef)}}><FontAwesomeIcon icon={faCog} id='editor-cog-btn'/></button>
             </div>
         </nav>
     )
