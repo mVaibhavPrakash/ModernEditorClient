@@ -12,14 +12,14 @@ import { SelectedTextContextProvider } from '../hooks/SelectedTextContext'
 import { RenderPreviewContextProvider } from '../hooks/RenderPreviewContext'
 import '../css/editor.css'
 
-const Editor = ({footerRef}) => {
+const Editor = ({footerRef,Image}) => {
     const SidebarRef =useRef(null)
     const EditRef =useRef(null)
     const EditorDivRef =useRef(null)
     const NavRef = useRef(null)
     const ModalRef = useRef(null)
 
-    useEffect( () =>{
+   useEffect( () =>{
 		footerRef.current.style.width='100vw'
 		return ()=>{
 			footerRef.current.style.width='100vw'
@@ -27,7 +27,7 @@ const Editor = ({footerRef}) => {
     })
     return (
         <>
-         <Navbar NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef} footerRef={footerRef}/>
+         <Navbar Image={Image} NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef} footerRef={footerRef}/>
             <div ref={EditRef} className="editor-editor">
                 <div ref={EditorDivRef} className='editor-editorDiv'>
                     <InputContextProvider>

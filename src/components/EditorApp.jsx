@@ -1,11 +1,15 @@
 import Editor from './Editor';
 import '../css/editorapp.css'
+import image from '../../public/img/newgen.png'
 
 const EditorApp = ({footerRef}) =>{
+  const img = props.img !=='standalone' ? null  : image
   return (
-    <div className='editor-editor-app'>
-        <Editor footerRef={footerRef}/>
-    </div>
+    <>
+      <div className='editor-editor-app'>
+          <Editor footerRef={footerRef} Image={img}/>
+      </div>
+    </>
   )
 }
 

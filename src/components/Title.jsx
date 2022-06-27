@@ -2,9 +2,9 @@ import { useState } from 'react';
 import '../css/title.css'
 
 const Title = () => {
-    const [title,setTitle] = useState('')
+    const [CoverImage,setCoverImage] = useState('')
     return (
-        <div title='Enter Title of the Blog' className="editor-title"><input type="text" className='editor-title-input' value={title} onChange={e => setTitle(e.target.value)} placeholder='tiTle!!' /></div>
+        <div title='Enter url of cover image' className="editor-cover-image"><input type="text" className='editor-cover-image-input' value={CoverImage} onChange={e => setCoverImage(e.target.value)} placeholder='Enter Image Url' /></div>
     )
 }
 

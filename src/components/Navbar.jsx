@@ -4,9 +4,10 @@ import { faCog} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {navToggle} from '../js/navToggle';
 import '../css/navbar.css'
-import img from '../../../../../public/img/newgen.png'
+import imge from '../../../../../public/img/newgen.png'
 
-const Navbar = ({NavRef,SidebarRef, EditRef,EditorDivRef,footerRef}) => {
+const Navbar = ({Image,NavRef,SidebarRef, EditRef,EditorDivRef,footerRef}) => {
+    const img = Image === null ? imge : Image
     return (
         <nav ref={NavRef} className='editor-nav'>
             <div className='editor-navbarLeft'>

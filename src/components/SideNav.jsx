@@ -13,7 +13,7 @@ const SideNav = ({NavRef, SidebarRef, EditRef,EditorDivRef,footerRef}) => {
                     <p>Double-check your article settings before publishing.</p>
                 </div>
                 <div className='editor-sideBar-content-div'>
-                    <h3>SEO Title (Optional)</h3>
+                    <h3>SEO Title (Required)</h3>
                     <p style={{wordBreak:'break-word'}}>The SEO Title will be shown in place of your Title on search engine results pages, such as a Google search. SEO titles between 40 and 50 characters with commonly searched words have the best click-through-rates.</p>
                     <textarea placeholder='Enter meta title' id='editor-textarea-seo-title'/>
                 </div>
@@ -26,14 +26,7 @@ const SideNav = ({NavRef, SidebarRef, EditRef,EditorDivRef,footerRef}) => {
                     <h3>Disable comments?</h3>
                     <p><input type="checkbox" name="Yes" id="editor-check" /> Yes</p>
                 </div>
-                <div className="editor-sideBar-content-div">
-                    <h3>Disable comments?</h3>
-                    <p><input type="checkbox" name="Yes" id="editor-check" /> Yes</p>
-                </div>
-                <div className="editor-sideBar-content-div">
-                    <h3>Disable comments?</h3>
-                    <p><input type="checkbox" name="Yes" id="editor-check" /> Yes</p>
-                </div>
+                <input type='submit' id='editor-input-seo-title' value='Submit Blog'/>
             </div>
         </div>
 

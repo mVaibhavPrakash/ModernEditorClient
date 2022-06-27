@@ -1,4 +1,4 @@
-import {useState,createContext,ReactNode} from 'react'
+import {useState,createContext} from 'react'
 
 export const SelectedTextContext = createContext(null)
 
