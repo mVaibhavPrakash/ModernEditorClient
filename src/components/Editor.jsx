@@ -11,6 +11,7 @@ import { EditContextProvider } from '../hooks/EditContext'
 import { SelectedTextContextProvider } from '../hooks/SelectedTextContext'
 import { RenderPreviewContextProvider } from '../hooks/RenderPreviewContext'
 import '../css/editor.css'
+import ('../js/resizes.js')
 
 const Editor = ({footerRef,Image}) => {
     const SidebarRef =useRef(null)
@@ -21,15 +22,17 @@ const Editor = ({footerRef,Image}) => {
 
    useEffect( () =>{
 		footerRef.current.style.width='100vw'
+        footerRef.current.style.backgroundColor='#2d386e';
 		return ()=>{
 			footerRef.current.style.width='100vw'
+            footerRef.current.style.backgroundColor='rgb(50, 190, 143)';
 		}
     })
     return (
         <>
          <Navbar Image={Image} NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef} footerRef={footerRef}/>
             <div ref={EditRef} className="editor-editor">
-                <div ref={EditorDivRef} className='editor-editorDiv'>
+                <div ref={EditorDivRef} className='editor-editorDiv resize'>
                     <InputContextProvider>
                         <Title/>
                             <RenderPreviewContextProvider>

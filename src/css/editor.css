@@ -8,7 +8,10 @@
 .editor-editorActive{
     display: grid;
     grid-template-columns: 3fr 2fr;
+    left: 0;
+    position:relative;
     grid-template-rows: 1fr;
+    min-width: 30vw;
 }
 
 .editor-editorDiv{

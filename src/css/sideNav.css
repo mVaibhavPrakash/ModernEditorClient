@@ -1,6 +1,8 @@
 .editor-sideBar{
     width: 35vw;
     z-index: 3;
+    right:0;
+    position:relative;
     border-left-style: solid;
     border-left-width: 1px;
     border-left-color: rgb(195, 197, 197);
@@ -110,4 +112,11 @@
     margin: 0 auto;
     margin-bottom:0.35rem ;
     background-color: rgba(45,56,110,0.7);
+    box-shadow: 0 9px #999;
+}
+
+#editor-input-seo-title:active{
+
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }

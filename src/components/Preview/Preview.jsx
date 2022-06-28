@@ -1,5 +1,6 @@
 import {useEffect,useState} from 'react'
 import ReactMarkdown from 'react-markdown'
+import gfm from 'remark-gfm'
 import '../../css/preview.css'
 import Heading1 from './Heading1'
 import Heading2 from './Heading2'
@@ -44,7 +45,7 @@ const Preview = ({ModalRef, dat}) => {
                 <Edit ModalRef={ModalRef} data={data} />
                 <SubmitBlog data={data}/>
             </div>
-            <ReactMarkdown  children={data} components={renderers} />
+            <ReactMarkdown  children={data} components={renderers} rehypePlugins={[gfm]} />
         </div>
     )
 }

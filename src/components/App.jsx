@@ -2,6 +2,7 @@ import {Suspense, useRef} from 'react'
 import {Routes,Route} from 'react-router-dom'
 import Spinner from './Spinner';
 import EditorApp from './EditorApp'
+import Footer from './Footer';
 
 const App = () => {
   const footerRef= useRef(null)
