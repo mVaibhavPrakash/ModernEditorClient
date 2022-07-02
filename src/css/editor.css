@@ -1,24 +1,30 @@
-.editor-editor{
+#editor-container{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr .5fr;
+    grid-template-columns: 65vw auto;
+    overflow: scroll;
+}
+
+.main{
+    position: fixed;
+}
+
+.editor-editor{
+    position: relative;
+    min-width: 35vw;
+    width:60vw;
+    max-width: 65vw;
+    left: 20vw;
     margin: 0 auto;
 }
 
 .editor-editorActive{
-    display: grid;
-    grid-template-columns: 3fr 2fr;
     left: 0;
-    position:relative;
-    grid-template-rows: 1fr;
-    min-width: 30vw;
-}
-
-.editor-editorDiv{
-    width: 60vw;
+    width:65vw;
+    min-width: 35vw;
+    max-width: 65vw;
 }
 
 .editor-sideBarDiv{
-    width: 35vw;
+    grid-column-start: 2;
     display: none;
 }

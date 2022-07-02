@@ -1,6 +1,8 @@
+
 .editor-nav{
     height:1.4rem;
     width:100vw;
+    min-width: 35vw;
     background-color: white;
     font-family: monospace;
     position:fixed;

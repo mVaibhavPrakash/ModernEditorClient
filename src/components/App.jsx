@@ -2,7 +2,6 @@ import {Suspense, useRef} from 'react'
 import {Routes,Route} from 'react-router-dom'
 import Spinner from './Spinner';
 import EditorApp from './EditorApp'
-import Footer from './Footer';
 
 const App = () => {
   const footerRef= useRef(null)
@@ -13,7 +12,6 @@ const App = () => {
               <Route path='/' element={<EditorApp footerRef={footerRef} img='standalone'/>}/>
           </Routes>
       </Suspense>
-      <Footer footerRef={footerRef}/>
     </>
   )
 }
