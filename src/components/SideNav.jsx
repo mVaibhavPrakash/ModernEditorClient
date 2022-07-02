@@ -1,12 +1,11 @@
-import {navToggle} from '../js/navToggle'
+import closeModal from '../js/closeModal'
 import '../css/sideNav.css'
 
-const SideNav = ({NavRef, SidebarRef, EditRef,EditorDivRef,footerRef}) => {
-
+const SideNav = ({ModalRef}) => {
     return (
         
         <div className='editor-sideBar'>
-            <button id="editor-sideBar-button" onClick={()=>{navToggle(NavRef,SidebarRef, EditRef,EditorDivRef,footerRef)}}>X <span>Close</span></button>
+            <button id="editor-sideBar-button" onClick={(e)=>closeModal(e,ModalRef)}>X <span>Close</span></button>
             <div id='editor-sideBar-content'>
                 <div id='editor-d'>
                     <h2>Are you ready to publish?</h2>
@@ -28,7 +27,7 @@ const SideNav = ({NavRef, SidebarRef, EditRef,EditorDivRef,footerRef}) => {
                 </div>
                 <input type='submit' id='editor-input-seo-title' value='Submit Blog'/>
             </div>
-        </div>
+    </div>
 
     )
 

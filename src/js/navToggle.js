@@ -1,6 +1,6 @@
 export const navToggle = (NavRef, SidebarRef, EditRef, EditorDivRef) => {
   const container = document.getElementById('editor-container')
-  const sideBar = document.getElementsByClassName('editor-sideBar')[0]
+  const sideBar = document.getElementsByClassName('editor-preview')[0]
   if (EditRef.current.className === 'editor-editor') {
     SidebarRef.current.style.display = 'block'
     EditRef.current.className = 'editor-editorActive'

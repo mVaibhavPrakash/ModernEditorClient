@@ -1,7 +1,6 @@
 import {useEffect,useState} from 'react'
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
-import '../../css/preview.css'
 import Heading1 from './Heading1'
 import Heading2 from './Heading2'
 import Heading3 from './Heading3'
@@ -12,10 +11,9 @@ import Blockquote from './Blockquote'
 import Code from './Code'
 import OList from './Olist'
 import Link from './Link'
-import Edit from './Edit'
-import SubmitBlog from './SubmitBlog'
+import '../../css/preview.css'
 
-const Preview = ({ModalRef, dat}) => {
+const Preview = ({dat}) => {
     
     const [data,setData] = useState();
     const renderers={
@@ -40,11 +38,9 @@ const Preview = ({ModalRef, dat}) => {
     },[data,dat])
 
     return (
-        <div className='editor-preview' style={{marginBottom:'20px',overflow:'scroll'}}>
-            <div  style={{display:'flex',justifyContent:'space-between',marginTop:'15px'}}>
-                <Edit ModalRef={ModalRef} data={data} />
-                <SubmitBlog data={data}/>
-            </div>
+        <div className='editor-preview-content' style={{
+            margin: '0.5rem',
+            marginTop: '0.25rem'}}>
             <ReactMarkdown  children={data} components={renderers} rehypePlugins={[gfm]} />
         </div>
     )

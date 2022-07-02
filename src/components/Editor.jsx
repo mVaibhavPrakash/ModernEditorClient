@@ -4,8 +4,8 @@ import Title from './Title'
 import Selector from './Selector'
 import {Input} from './Input'
 import {Submit} from './Submit'
-import ShowPreview from './ShowPreview'
-import SideNav from './SideNav'
+import SideNavBar from './SideNavBar'
+import PreviewBar from './PreviewBar'
 import { InputContextProvider } from '../hooks/InputContext'
 import { EditContextProvider } from '../hooks/EditContext'
 import { SelectedTextContextProvider } from '../hooks/SelectedTextContext'
@@ -40,7 +40,7 @@ const Editor = ({Image}) => {
                                 <EditContextProvider>
                                     <Input />
                                     <Submit />
-                                    <ShowPreview ModalRef={ModalRef}/>
+                                    <SideNavBar ModalRef={ModalRef}/>
                                 </EditContextProvider>
                                 </SelectedTextContextProvider>
                             </RenderPreviewContextProvider>
@@ -48,9 +48,11 @@ const Editor = ({Image}) => {
                 </div>
             </div>
         </div>
-        <div ref={SidebarRef} className="editor-sideBarDiv">
-            <SideNav NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef} />
+        <RenderPreviewContextProvider>
+        <div ref={SidebarRef} className="editor-previewDiv">
+            <PreviewBar NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef} />
         </div>
+        </RenderPreviewContextProvider>
     </div>
 </>
     )

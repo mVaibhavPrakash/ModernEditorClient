@@ -24,7 +24,7 @@
     max-width: 65vw;
 }
 
-.editor-sideBarDiv{
+.editor-previewDiv{
     grid-column-start: 2;
     display: none;
 }
