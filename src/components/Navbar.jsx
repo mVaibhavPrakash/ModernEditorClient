@@ -1,13 +1,18 @@
 
 import { Link } from 'react-router-dom';
-import { faCog} from '@fortawesome/free-solid-svg-icons';
+import { faEye} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {navToggle} from '../js/navToggle';
 import '../css/navbar.css'
 import imge from '../../../../../public/img/newgen.png'
+import { useState } from 'react';
 
 const Navbar = ({Image,NavRef,SidebarRef, EditRef,EditorDivRef,footerRef}) => {
     const img = Image === null ? imge : Image
+    const [isWindowNotLoaded,setLoadStatus]=useState(true)
+    window.onload = function(){
+        setLoadStatus(false);
+    }
     return (
         <nav ref={NavRef} className='editor-nav'>
             <div className='editor-navbarLeft'>
@@ -15,7 +20,7 @@ const Navbar = ({Image,NavRef,SidebarRef, EditRef,EditorDivRef,footerRef}) => {
                 <Link to={'/'} id="editor-home">Home</Link>
             </div>
             <div className='editor-navbarRight'>
-                <button id='editor-cog' title='Settings' onClick={()=>{navToggle(NavRef,SidebarRef, EditRef,EditorDivRef,footerRef)}}><FontAwesomeIcon icon={faCog} id='editor-cog-btn'/></button>
+                <button id='editor-cog' title='Settings' onClick={()=>{navToggle(NavRef,SidebarRef, EditRef,EditorDivRef,footerRef)}} disabled={isWindowNotLoaded}><FontAwesomeIcon icon={faEye} id='editor-cog-btn'/></button>
             </div>
         </nav>
     )

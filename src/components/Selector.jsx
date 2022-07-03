@@ -1,6 +1,6 @@
-import {useContext,RefObject} from 'react'
+import {useContext} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBold, faCode, faEye, faHeading, faImage, faItalic, faLink, faListOl, faListUl, faMars, faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
+import { faBold, faCode, faCog, faHeading, faImage, faItalic, faLink, faListOl, faListUl, faMars, faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 import { InputContext} from '../hooks/InputContext'
 import { RenderPreviewContext } from '../hooks/RenderPreviewContext'
 import { SelectedTextContext } from '../hooks/SelectedTextContext'
@@ -28,7 +28,7 @@ const Selector = ({ModalRef}) => {
                 </div>
                 <div className="editor-showpreview-div">
                     <button aria-label='justify'  title='Serach Markdown Syntax' className='editor-showpreview'><FontAwesomeIcon icon={faMars} /></button>
-                    <button aria-label='justify'  title='Preview' className='editor-showpreview' onClick={(e) =>showPreview(e,ModalRef,state,setState,Input)}><FontAwesomeIcon icon={faEye} /></button>
+                    <button aria-label='justify'  title='Preview' className='editor-showpreview' onClick={(e) =>showPreview(e,ModalRef,state,setState,Input)}><FontAwesomeIcon icon={faCog} /></button>
                 </div>
             </div>
     )

@@ -20,11 +20,6 @@ const Editor = ({Image}) => {
     const NavRef = useRef(null)
     const ModalRef = useRef(null)
 
-  
-    useEffect(() =>{
-        import ('../js/resizes.js')
-    },[])
-
     return (
         <>
         <div id='editor-container'>
