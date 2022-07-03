@@ -4,7 +4,7 @@ import { faEye} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {navToggle} from '../js/navToggle';
 import '../css/navbar.css'
-import imge from '../../../../../public/img/newgen.png'
+import imge from '../../public/img/newgen.png'
 import { useState } from 'react';
 
 const Navbar = ({Image,NavRef,SidebarRef, EditRef,EditorDivRef,footerRef}) => {
