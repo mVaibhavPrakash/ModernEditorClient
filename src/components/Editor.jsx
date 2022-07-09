@@ -34,7 +34,7 @@ const Editor = ({Image}) => {
                                     <Selector ModalRef={ModalRef}/>
                                 <EditContextProvider>
                                     <Input />
-                                    <Submit />
+                                    <Submit ModalRef={ModalRef}/>
                                     <SideNavBar ModalRef={ModalRef}/>
                                 </EditContextProvider>
                                 </SelectedTextContextProvider>
