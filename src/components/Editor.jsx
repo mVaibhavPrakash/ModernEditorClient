@@ -22,34 +22,32 @@ const Editor = ({Image}) => {
 
     return (
         <>
-        <div id='editor-container'>
-        <div className='main'>
-         <Navbar Image={Image} NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef}/>
-            <div ref={EditRef} id='edit-ref' className="editor-editor">
-                <div ref={EditorDivRef} className='editor-editorDiv'>
-                    <InputContextProvider>
-                        <Title/>
-                            <RenderPreviewContextProvider>
-                                <SelectedTextContextProvider>
-                                    <Selector ModalRef={ModalRef}/>
-                                <EditContextProvider>
-                                    <Input />
-                                    <Submit ModalRef={ModalRef}/>
-                                    <SideNavBar ModalRef={ModalRef}/>
-                                </EditContextProvider>
-                                </SelectedTextContextProvider>
-                            </RenderPreviewContextProvider>
-                    </InputContextProvider>
+            <div id='editor-container'>
+                <InputContextProvider>
+                <RenderPreviewContextProvider>
+                <SelectedTextContextProvider>
+                <EditContextProvider>
+                <div className='main'>
+                <Navbar Image={Image} NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef}/>
+                    <div ref={EditRef} id='edit-ref' className="editor-editor">
+                        <div ref={EditorDivRef} className='editor-editorDiv'>
+                            <Title/>
+                            <Selector ModalRef={ModalRef}/>
+                            <Input />
+                            <Submit ModalRef={ModalRef}/>
+                            <SideNavBar ModalRef={ModalRef}/>
+                        </div>
+                    </div>
                 </div>
+                <div ref={SidebarRef} className="editor-previewDiv">
+                    <PreviewBar NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef} />
+                </div>
+                </EditContextProvider>
+                </SelectedTextContextProvider>
+                </RenderPreviewContextProvider>
+                </InputContextProvider>
             </div>
-        </div>
-        <RenderPreviewContextProvider>
-        <div ref={SidebarRef} className="editor-previewDiv">
-            <PreviewBar NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef} />
-        </div>
-        </RenderPreviewContextProvider>
-    </div>
-</>
+        </>
     )
 }
 

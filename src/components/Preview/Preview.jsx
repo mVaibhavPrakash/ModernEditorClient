@@ -1,4 +1,4 @@
-import {useEffect,useState} from 'react'
+import {useContext, useEffect,useState} from 'react'
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
 import Heading1 from './Heading1'
@@ -12,10 +12,12 @@ import Code from './Code'
 import OList from './Olist'
 import Link from './Link'
 import '../../css/preview.css'
+import { InputContext } from '../../hooks/InputContext'
 
-const Preview = ({dat}) => {
+const Preview = () => {
     
-    const [data,setData] = useState();
+    const [Input,setInput] = useContext(InputContext)
+    console.log(Input)
     const renderers={
         h1:Heading1,
         h2:Heading2,
@@ -30,18 +32,14 @@ const Preview = ({dat}) => {
     }
 
     useEffect(() =>{
-
-        if(data !== localStorage.getItem('data')){
-            setData(localStorage.getItem('data'))
-        }
-            
-    },[data,dat])
+        console.log(Input)
+    },[Input])
 
     return (
         <div className='editor-preview-content' style={{
             margin: '0.5rem',
             marginTop: '0.25rem'}}>
-            <ReactMarkdown  children={data} components={renderers} rehypePlugins={[gfm]} />
+            <ReactMarkdown  children={Input} components={renderers} rehypePlugins={[gfm]} />
         </div>
     )
 }
