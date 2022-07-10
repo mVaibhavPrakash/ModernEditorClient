@@ -8,8 +8,6 @@ export const Input = () => {
 
     const [Input,setInput] = useContext(InputContext);
     const [selected, setSelected] = useContext(SelectedTextContext)
-    console.log(Input)
-
     return (
         <textarea id='editor-input' autoFocus placeholder="Type something here!" className="editor-blogInput" value={Input} onChange={e => setInput(e.target.value)} onSelect={(e) =>selectInputText(e,selected,setSelected,Input,setInput)}/>
     )

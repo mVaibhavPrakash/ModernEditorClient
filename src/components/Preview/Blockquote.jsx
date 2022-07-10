@@ -8,7 +8,7 @@ console.log(props.children)
                 {props.children}
                 </blockquote>
         </figure>
-</div>
+        </div>
     )
 }
 

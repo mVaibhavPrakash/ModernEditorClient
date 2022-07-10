@@ -1,9 +1,14 @@
 
 const Heading1 = (props) => {
+    console.log('width',window.innerWidth)
     const style={
         textAlign:'justify',
         fontSize:'unset',
-        fontSize:'0.8rem',
+        textAlign: 'center',
+        textDecorationColor: 'rgb(17, 24, 39)',
+        textDecorationLine: 'none',
+        textDecorationStyle: 'solid',
+        textDecorationThickness: 'auto',
         margin:'0.6rem 0 0.6rem 0',
         color:'#2d3e50',
         fontFamily:'serif',

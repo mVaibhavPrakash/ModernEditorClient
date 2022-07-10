@@ -11,19 +11,37 @@ import Blockquote from './Blockquote'
 import Code from './Code'
 import OList from './Olist'
 import Link from './Link'
+import Pre from './Pre'
 import '../../css/preview.css'
 import { InputContext } from '../../hooks/InputContext'
 
 const Preview = () => {
-    
     const [Input,setInput] = useContext(InputContext)
-    console.log(Input)
+    const [Result,setResult] = useState('')
+
+    const debounce = () =>{
+        let time;
+        return (Input,setResult) =>{
+            clearTimeout(time);
+            time = setTimeout(() =>{
+                setResult(Input)
+            },1000)
+        }
+    }
+
+    const deb = debounce()
+    
+    useEffect(()=>{
+        deb(Input,setResult)
+    },[Input,setResult])
+
     const renderers={
         h1:Heading1,
         h2:Heading2,
         h3:Heading3,
         p:Paragraph,
         img:Image,
+        pre:Pre,
         code:Code,
         ul:UList,
         ol:OList,
@@ -39,7 +57,7 @@ const Preview = () => {
         <div className='editor-preview-content' style={{
             margin: '0.5rem',
             marginTop: '0.25rem'}}>
-            <ReactMarkdown  children={Input} components={renderers} rehypePlugins={[gfm]} />
+            <ReactMarkdown  children={Result} components={renderers} rehypePlugins={[gfm]} />
         </div>
     )
 }

@@ -50,16 +50,15 @@
     }
 
     .editor-preview-para{
-
         text-align:justify;
-        font-size:.47rem;
+        font-size:.46rem;
         width:100%;
-        font-family: sans-serif;
+        font-family:serif;
         color: #111111;
-        margin:0.5rem 0 0.5rem 0;
+        margin: 0;
+        margin-bottom: 0.5rem;
         overflow-wrap:break-word;
         line-height:1.8;
-        tab-size:4;
     }
 
     blockquote p{
@@ -71,7 +70,25 @@
     .inline-pre{
         display:inline;
         background-color:rgb(217, 219, 222);
-        font-size: 0.35rem;
+        font-size: 0.40rem;
         padding: 3px 10px 3px 10px;
+        line-height: 1.8;
         color: rgb(45, 62, 80);
+    }
+
+    .real-code{
+      overflow-wrap: break-word;
+      text-shadow: none;
+      background: none;
+      font-size: 0.4rem;
+      font-family: monospace;
+      padding: 5px;
+      line-height: 1.8;
+      background-color: rgb(45, 56, 110);
+    }
+
+    #pre{
+      margin-bottom: 0.5rem;
+      padding:10px;
+      overflow-wrap: break-word;
     }

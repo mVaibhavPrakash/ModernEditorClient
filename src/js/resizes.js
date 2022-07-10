@@ -11,8 +11,8 @@ const mouseDown = (e) => {
   console.log(e.offsetX, element.clientWidth)
   if (element.className === 'editor-editor') {
     if (
-      e.offsetX > element.clientWidth - 10 &&
-      element.clientWidth + 10 > e.offsetX
+      e.offsetX > element.clientWidth - 30 &&
+      element.clientWidth + 30 > e.offsetX
     ) {
       resize(e)
     } else {
@@ -21,7 +21,7 @@ const mouseDown = (e) => {
   } else {
     if (
       e.offsetX > element.clientWidth - 110 &&
-      element.clientWidth - 90 > e.offsetX
+      element.clientWidth + 50 > e.offsetX
     ) {
       resize(e)
     } else {

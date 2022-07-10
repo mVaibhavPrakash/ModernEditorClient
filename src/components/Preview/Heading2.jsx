@@ -1,5 +1,6 @@
 
 const Heading2 = (props) => {
+    console.log('width',document.documentElement.clientWidth)
     const style={
         textAlign:'justify',
         fontSize:'unset',

@@ -3,7 +3,7 @@ const Heading3 = (props) => {
     const style={
         textAlign:'justify',
         fontSize:'unset',
-        fontSize:'0.62rem',
+        fontSize:'0.6rem',
         margin:'0.6rem 0 0.6rem 0',
         color:'#2d3e50',
         overflowWrap:'break-word'
