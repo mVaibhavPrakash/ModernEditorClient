@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Live AT
 
-Click on [https://stirring-tiramisu-3c2d7a.netlify.app/](This link)
+Click on [This link](https://stirring-tiramisu-3c2d7a.netlify.app/)
 
 ## Available Scripts
 
