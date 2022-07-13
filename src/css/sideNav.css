@@ -11,11 +11,11 @@
 }
 
 #editor-sideBar-button{
-    font-size: 0.35rem;
+    font-size: 0.45rem;
     font-weight: 600;
     border: none;
-    margin-left: 0.35rem;
-    padding:0.15rem;
+    margin-left: 0.45rem;
+    padding:0.2rem;
     color: rgb(45,56,110);
     background-color:rgb(248, 248, 248);
     cursor: pointer;
@@ -28,12 +28,12 @@
 
 #editor-sideBar-button span{
     padding-left: 5px;
-    font-size: 0.35rem;
+    font-size: 0.45rem;
 }
 
 #editor-sideBar-content{
-    margin: 0.5rem;
-    margin-top: 0.25rem;
+    margin: 0.6rem;
+    margin-top: 0.3rem;
     border-top-style:solid ;
     border-top-width: 1px ;
     border-top-color: rgb(195, 197, 197);
@@ -42,58 +42,63 @@
 .editor-sideBar-content-div{
     border-style: solid;
     border-width: 1px;
-    border-radius: 0.15rem;
+    border-radius: 0.2rem;
     border-color :rgb(195, 197, 197);
-    margin-bottom:0.35rem ;
+    margin-bottom:0.45rem ;
     background-color: white;
 }
 
 #editor-d{
-    margin-bottom:0.35rem ;
+    margin-bottom:0.4rem ;
 }
 
 #editor-d h2{
-    font-size: 0.42rem;
-    padding: 0.28rem 0.28rem 0 0.28rem;
+    font-size: 0.55rem;
+    padding: 0.32rem 0rem 0 0rem;
     color: #161e42;
 }
 
 .editor-sideBar-content-div h3{
-    font-size: 0.35rem;
-    padding: 0.28rem 0.28rem 0 0.28rem;
+    font-size: 0.52rem;
+    padding: 0.36rem 0.36rem 0 0.36rem;
+    margin-bottom:.25rem;
     color: #2d386e;
 }
 #editor-d p{
-    font-size: 0.39rem;
-    padding: 0.28rem;
+    font-size: 0.52rem;
+    padding: 0.2rem 0rem 0.32rem 0rem;
     color: rgba(45,56,110,0.7);
     font-family:'Times New Roman', Times, serif;
 }
 .editor-sideBar-content-div p{
-    font-size: 0.32rem;
-    padding: 0.28rem;
+    width:54.7vw;
+    margin: 0 auto;
+    font-size: 0.45rem;
     color: rgba(45,56,110,0.7);
     font-family:'Times New Roman', Times, serif;
 }
 
 .editor-sideBar-content-div textarea {
-    width: 52.5vw;
-    font-size: 0.32rem;
-    height: 0.6rem;
-    line-height: 0.6rem;
-    padding: 0.30rem;
-    margin: 0 0.25rem 0.25rem 0.25rem;
+    width: 52.6vw;
+    display: block;
+    font-size: 0.38rem;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    padding: 0.40rem;
+    margin:0 auto;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
     border-style: solid;
     border-width: 1px;
     border-color: rgba(45,56,110,0.4);
-    border-radius: 8px;
+    border-radius: 0.24rem;
     resize: vertical;
     color: rgba(45,56,110,0.7);
 }
 
 #editor-textarea-seo-desc{
-    height: 1.2rem;
-    line-height: 1.2rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
 }
 
 .editor-sideBar-content-div textarea:focus{
@@ -102,22 +107,26 @@
 
 #editor-input-seo-title{
     width: 54.5vw;
-    font-size: 0.32rem;
+    font-size: 0.4rem;
     height: 100%;
-    padding: 0.30rem;
+    padding: 0.35rem;
     border-style: solid;
     border-color: rgba(45,56,110,0.4);
     color: white;
     border-width: 1px;
-    border-radius: 0.15rem;
+    border-radius: 0.2rem;
     margin: 0 auto;
-    margin-bottom:0.35rem ;
+    margin-bottom:0.4rem ;
     background-color: rgba(45,56,110,0.7);
-    box-shadow: 0 9px #999;
+    box-shadow: 0 0.18rem #999;
 }
 
 #editor-input-seo-title:active{
 
-  box-shadow: 0 5px #666;
+  box-shadow: 0 0.1rem #666;
   transform: translateY(4px);
+}
+
+#editor-check {
+    margin-bottom: 0.5rem;
 }

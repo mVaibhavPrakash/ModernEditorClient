@@ -28,7 +28,7 @@ const Selector = ({ModalRef}) => {
                 </div>
                 <div className="editor-showpreview-div">
                     <button aria-label='justify'  title='Serach Markdown Syntax' className='editor-showpreview'><FontAwesomeIcon icon={faMars} /></button>
-                    <button aria-label='justify'  title='Preview' className='editor-showpreview' onClick={(e) =>showPreview(e,ModalRef,state,setState,Input)}><FontAwesomeIcon icon={faCog} /></button>
+                    <button aria-label='justify'  title='Settings' className='editor-showpreview' onClick={(e) =>showPreview(e,ModalRef,state,setState,Input)}><FontAwesomeIcon icon={faCog} /></button>
                 </div>
             </div>
     )

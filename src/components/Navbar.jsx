@@ -20,7 +20,7 @@ const Navbar = ({Image,NavRef,SidebarRef, EditRef,EditorDivRef,footerRef}) => {
                 <Link to={'/'} id="editor-home">Home</Link>
             </div>
             <div className='editor-navbarRight'>
-                <button id='editor-cog' title='Settings' onClick={()=>{navToggle(NavRef,SidebarRef, EditRef,EditorDivRef,footerRef)}} disabled={isWindowNotLoaded}><FontAwesomeIcon icon={faEye} id='editor-cog-btn'/></button>
+                <button id='editor-cog' title='Preview' onClick={()=>{navToggle(NavRef,SidebarRef, EditRef,EditorDivRef,footerRef)}} disabled={isWindowNotLoaded}><FontAwesomeIcon icon={faEye} id='editor-cog-btn'/></button>
             </div>
         </nav>
     )
