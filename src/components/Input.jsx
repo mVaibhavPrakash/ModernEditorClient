@@ -3,12 +3,27 @@ import { InputContext } from '../hooks/InputContext';
 import { SelectedTextContext } from '../hooks/SelectedTextContext';
 import selectInputText from '../js/selectInputText'
 import '../css/input.css'
+import { useEffect } from 'react';
 
 export const Input = () => {
 
-    const [Input,setInput] = useContext(InputContext);
+    const [Result,setResult] = useContext(InputContext);
     const [selected, setSelected] = useContext(SelectedTextContext)
+
+    const debounce = () =>{
+        let time;
+        return (Input,setResult) =>{
+            clearTimeout(time);
+            time = setTimeout(() =>{
+                console.log(Input)
+                setResult(Input)
+            },1000)
+        }
+    }
+    const deb = debounce()
+
     return (
-        <textarea id='editor-input' autoFocus placeholder="Type something here!" className="editor-blogInput" value={Input} onChange={e => setInput(e.target.value)} onSelect={(e) =>selectInputText(e,selected,setSelected,Input,setInput)}/>
+        <textarea id='editor-input' autoFocus placeholder="Type something here!" onChange={(e) => deb(e.target.value,setResult)}
+        className="editor-blogInput" onSelect={(e) =>selectInputText(e,setSelected,Result)}/>
     )
 }

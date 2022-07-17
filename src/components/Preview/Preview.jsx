@@ -16,25 +16,7 @@ import '../../css/preview.css'
 import { InputContext } from '../../hooks/InputContext'
 
 const Preview = () => {
-    const [Input,setInput] = useContext(InputContext)
-    const [Result,setResult] = useState('')
-
-    const debounce = () =>{
-        let time;
-        return (Input,setResult) =>{
-            clearTimeout(time);
-            time = setTimeout(() =>{
-                setResult(Input)
-            },1000)
-        }
-    }
-
-    const deb = debounce()
-    
-    useEffect(()=>{
-        deb(Input,setResult)
-    },[Input,setResult])
-
+    const [Result,setResultt] = useContext(InputContext)
     const renderers={
         h1:Heading1,
         h2:Heading2,
@@ -48,11 +30,6 @@ const Preview = () => {
         a:Link,
         blockquote:Blockquote
     }
-
-    useEffect(() =>{
-        console.log(Input)
-    },[Input])
-
     return (
         <div className='editor-preview-content' style={{
             margin: '0.5rem',

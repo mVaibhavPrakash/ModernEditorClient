@@ -8,7 +8,6 @@ let x = 0
 let w = 0
 
 const mouseDown = (e) => {
-  console.log(e.offsetX, element.clientWidth)
   if (element.className === 'editor-editor') {
     if (
       e.offsetX > element.clientWidth - 30 &&
