@@ -19,6 +19,7 @@ const Editor = ({Image}) => {
     const EditorDivRef =useRef(null)
     const NavRef = useRef(null)
     const ModalRef = useRef(null)
+    const previewRef = useRef(null)
 
     return (
         <>
@@ -28,7 +29,7 @@ const Editor = ({Image}) => {
                 <SelectedTextContextProvider>
                 <EditContextProvider>
                 <div className='main'>
-                <Navbar Image={Image} NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef}/>
+                <Navbar previewRef={previewRef} Image={Image} NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef}/>
                     <div ref={EditRef} id='edit-ref' className="editor-editor">
                         <div ref={EditorDivRef} className='editor-editorDiv'>
                             <Title/>
@@ -40,7 +41,7 @@ const Editor = ({Image}) => {
                     </div>
                 </div>
                 <div ref={SidebarRef} className="editor-previewDiv">
-                    <PreviewBar NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef} />
+                    <PreviewBar previewRef={previewRef} NavRef={NavRef} SidebarRef={SidebarRef} EditRef={EditRef} EditorDivRef={EditorDivRef} />
                 </div>
                 </EditContextProvider>
                 </SelectedTextContextProvider>

@@ -1,7 +1,26 @@
-export const navToggle = (NavRef, SidebarRef, EditRef, EditorDivRef) => {
+export const navToggle = (
+  previewRef,
+  NavRef,
+  SidebarRef,
+  EditRef,
+  EditorDivRef,
+  isFullSize = false,
+  setFullSize = null
+) => {
   const container = document.getElementById('editor-container')
-  const sideBar = document.getElementsByClassName('editor-preview')[0]
+  if (isFullSize) {
+    previewRef.current.style.maxWidth = '65vw'
+    previewRef.current.style.display = 'none'
+    NavRef.current.style.display = 'block'
+    EditRef.current.style.display = 'block'
+    EditorDivRef.current.style.display = 'block'
+    EditRef.current.style.width = '65vw'
+    NavRef.current.style.width = '65vw'
+    NavRef.current.style.maxWidth = '65vw'
+  }
   if (EditRef.current.className === 'editor-editor') {
+    previewRef.current.style.display = 'block'
+    previewRef.current.style.width = '35vw'
     SidebarRef.current.style.display = 'block'
     EditRef.current.className = 'editor-editorActive'
     EditorDivRef.current.style.margin = '0 1.7vw 0 3.3vw'
@@ -18,6 +37,6 @@ export const navToggle = (NavRef, SidebarRef, EditRef, EditorDivRef) => {
     container.style.gridTemplateColumns = `65vw auto`
     NavRef.current.style.width = '100vw'
     NavRef.current.style.maxWidth = '100vw'
-    sideBar.style.width = `35vw`
+    previewRef.current.style.width = `35vw`
   }
 }

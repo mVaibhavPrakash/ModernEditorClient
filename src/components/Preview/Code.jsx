@@ -18,7 +18,6 @@ const Code = (props) => {
 const code = (props) =>{
     const array= props.children[1].map((value,key) =>{
         if(value.type==="span"){
-            console.log(value)
             let style;
             if(value.props.style.background !== undefined)
             {
