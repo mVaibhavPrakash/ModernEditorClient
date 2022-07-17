@@ -15,9 +15,8 @@ export const Input = () => {
         return (Input,setResult) =>{
             clearTimeout(time);
             time = setTimeout(() =>{
-                console.log(Input)
                 setResult(Input)
-            },1000)
+            },500)
         }
     }
     const deb = debounce()
