@@ -13,13 +13,20 @@ import { RenderPreviewContextProvider } from '../hooks/RenderPreviewContext'
 import '../css/editor.css'
 import ('../js/resizes.js')
 
-const Editor = ({Image}) => {
+const Editor = ({footerRef,Image}) => {
     const SidebarRef =useRef(null)
     const EditRef =useRef(null)
     const EditorDivRef =useRef(null)
     const NavRef = useRef(null)
     const ModalRef = useRef(null)
     const previewRef = useRef(null)
+    
+    useEffect(() =>{
+        footerRef.current.style.display='none'
+        return() =>{
+            footerRef.current.style.display='block'
+        }
+      },[])
 
     return (
         <>

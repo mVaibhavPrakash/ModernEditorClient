@@ -1,9 +1,16 @@
+import { useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import Navbar from '../../../../LandingpageClient/src/components/Navbar'
 import '../../css/blogbulkupload.css'
 
-const BlogBulkUpload = () => {
+const BlogBulkUpload = ({footerRef}) => {
+  useEffect(() =>{
+    footerRef.current.style.display='none'
+    return() =>{
+        footerRef.current.style.display='block'
+    }
+},[])
   return (
     <div className='blog-head'>
       <Navbar/>

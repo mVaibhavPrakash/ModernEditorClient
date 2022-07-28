@@ -46,7 +46,7 @@ const mouseMove = (e) => {
   }
 }
 
-const mouseUp = (e) => {
+const mouseUp = (event) => {
   blogInput.style.cursor = 'auto'
   document.removeEventListener('mousemove', mouseMove)
   document.removeEventListener('mouseup', mouseUp)

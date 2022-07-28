@@ -1,22 +1,22 @@
-
 import { Link } from 'react-router-dom';
+import { useState,useEffect } from 'react';
 import { faEye} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {navToggle} from '../js/navToggle';
 import '../css/navbar.css'
-import imge from '../../public/img/newgen.png'
-import { useState } from 'react';
+import ImageNotStandalone from './ImageNotStandalone';
+import ImageStandalone from './ImageStandalone';
 
 const Navbar = ({previewRef, Image,NavRef,SidebarRef, EditRef,EditorDivRef,footerRef}) => {
-    const img = Image === null ? imge : Image
     const [isWindowNotLoaded,setLoadStatus]=useState(true)
     window.onload = function(){
         setLoadStatus(false);
     }
+
     return (
         <nav ref={NavRef} className='editor-nav'>
             <div className='editor-navbarLeft'>
-            <img id="editor-navbarCompanyLogo" src={img} alt='img'/>
+            {Image === 'not-standalone' ? <ImageNotStandalone/> : <ImageStandalone/>}
                 <Link to={'/'} id="editor-home">Home</Link>
             </div>
             <div className='editor-navbarRight'>
