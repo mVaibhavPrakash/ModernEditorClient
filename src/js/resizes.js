@@ -1,3 +1,5 @@
+const resizes = () =>{
+  
 const element = document.getElementsByClassName('editor-editor')[0]
 const nav = document.getElementsByClassName('editor-nav')[0]
 const side = document.getElementsByClassName('editor-preview')[0]
@@ -62,3 +64,7 @@ const resize = (e) => {
 }
 
 element.addEventListener('mousedown', mouseDown)
+
+}
+
+export default resizes;

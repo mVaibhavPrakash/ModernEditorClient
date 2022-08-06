@@ -17,3 +17,13 @@
     color: black;
     font-size: 0.5rem;
 }
+
+@media screen and (max-width:1000px) {
+    .editor-blogInput{
+        font-size: 0.5rem;
+        margin-bottom:.35rem;
+    }
+    .editor-blogInput::placeholder{
+        font-size: 0.8rem;
+    }
+}

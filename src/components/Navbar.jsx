@@ -9,9 +9,15 @@ import ImageStandalone from './ImageStandalone';
 
 const Navbar = ({previewRef, Image,NavRef,SidebarRef, EditRef,EditorDivRef,footerRef}) => {
     const [isWindowNotLoaded,setLoadStatus]=useState(true)
-    window.onload = function(){
-        setLoadStatus(false);
-    }
+
+    useEffect(() =>{
+        if(isWindowNotLoaded){
+            switch (document.readyState) {
+                case 'complete' :   
+                    setLoadStatus(false);
+            }
+        }
+    },[isWindowNotLoaded])
 
     return (
         <nav ref={NavRef} className='editor-nav'>

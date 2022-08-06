@@ -11,7 +11,6 @@ import { EditContextProvider } from '../hooks/EditContext'
 import { SelectedTextContextProvider } from '../hooks/SelectedTextContext'
 import { RenderPreviewContextProvider } from '../hooks/RenderPreviewContext'
 import '../css/editor.css'
-import ('../js/resizes.js')
 
 const Editor = ({footerRef,Image}) => {
     const SidebarRef =useRef(null)
@@ -22,6 +21,13 @@ const Editor = ({footerRef,Image}) => {
     const previewRef = useRef(null)
     
     useEffect(() =>{
+        switch (document.readyState) {
+            case 'complete' :
+                ( async () =>{
+                    const {default : resizes} = await import('../js/resizes.js')
+                    resizes()
+                })()
+        }
         if(footerRef?.current){
         footerRef.current.style.display='none'
         }

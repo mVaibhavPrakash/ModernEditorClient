@@ -7,7 +7,7 @@
     border: 1px solid rgb(195, 197, 197);
     margin: 0 0 0 0;
     box-sizing: border-box;
-    font-size:.40rem;
+    font-size:0.4rem;
     font-weight: 600;
 }
 
@@ -20,4 +20,24 @@
 .editor-submitDiv{
     height:1rem;
     margin-bottom: 10px;
+}
+
+@media screen and (max-width:1000px) {
+    #editor-submitBlog{
+        font-size:0.8rem;
+    }
+    .editor-submitDiv{
+        height:2rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    #editor-submitBlog{
+        font-size:1rem;
+    }
+    .editor-submitDiv{
+        height:2.2rem;
+        margin-bottom: 20px;
+    }
 }

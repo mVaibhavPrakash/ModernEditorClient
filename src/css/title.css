@@ -23,3 +23,28 @@
     color: black;
     font-size: 0.5rem;
 }
+
+
+@media screen and (max-width:1000px) {
+    .editor-cover-image{
+        margin-top:4.4rem;
+    }.editor-cover-image-input{
+        height:2.6rem;
+        font-size: 0.8rem;
+    }
+    .editor-cover-image-input::placeholder{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .editor-cover-image{
+        margin-top:8rem;
+    }.editor-cover-image-input{
+        height:3rem;
+        font-size: 1rem;
+    }
+    .editor-cover-image-input::placeholder{
+        font-size: 1rem;
+    }
+}
