@@ -4,7 +4,6 @@ import { faEye} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {navToggle} from '../js/navToggle';
 import '../css/navbar.css'
-import ImageNotStandalone from './ImageNotStandalone';
 import ImageStandalone from './ImageStandalone';
 
 const Navbar = ({previewRef, Image,NavRef,SidebarRef, EditRef,EditorDivRef,footerRef}) => {
