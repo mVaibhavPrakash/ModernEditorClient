@@ -6,10 +6,17 @@ import previewFull from '../js/previewFull'
 
 const PreviewBar = ({previewRef, NavRef, SidebarRef, EditRef,EditorDivRef,footerRef}) => {
     const [isFullSize,setFullSize] = useState(false)
+    const ContentRef = useRef(null)
     useEffect(() =>{
         if(!isFullSize){
             const editorWidth =parseInt(EditRef.current.style.width.split('vw')[0])
             previewRef.current.style.width = `${100 - editorWidth}vw`
+            ContentRef.current.style.width=`90%`
+            ContentRef.current.style.margin=`0 auto`
+        }
+        else{
+            ContentRef.current.style.width='60%'
+            ContentRef.current.style.margin=`0 auto`
         }
     },[isFullSize])
     return (
@@ -18,7 +25,7 @@ const PreviewBar = ({previewRef, NavRef, SidebarRef, EditRef,EditorDivRef,footer
                 <button id="editor-preview-btn1" className='editor-preview-button' onClick={()=>{navToggle(previewRef,NavRef,SidebarRef, EditRef,EditorDivRef,isFullSize,setFullSize);setFullSize(false)}}>X <span>Close</span></button>
                 <button id="editor-preview-btn2" className='editor-preview-button' onClick={()=>{previewFull(isFullSize,setFullSize,previewRef,NavRef, EditRef,EditorDivRef,SidebarRef)}}>{!isFullSize ?  <span>+ Full</span>:  <span>X Min</span>}</button>
             </div>
-            <Preview />
+            <Preview ContentRef={ContentRef}/>
         </div>
     )
 }

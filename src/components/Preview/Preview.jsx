@@ -15,7 +15,7 @@ import Pre from './Pre'
 import '../../css/preview.css'
 import { InputContext } from '../../hooks/InputContext'
 
-const Preview = () => {
+const Preview = ({ContentRef}) => {
     const [Result,setResultt] = useContext(InputContext)
     const renderers={
         h1:Heading1,
@@ -31,9 +31,7 @@ const Preview = () => {
         blockquote:Blockquote
     }
     return (
-        <div className='editor-preview-content' style={{
-            margin: '0.5rem',
-            marginTop: '0.25rem'}}>
+        <div className='editor-preview-content' ref={ContentRef} >
             <ReactMarkdown  children={Result} components={renderers} rehypePlugins={[gfm]} />
         </div>
     )

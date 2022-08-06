@@ -22,9 +22,13 @@ const Editor = ({footerRef,Image}) => {
     const previewRef = useRef(null)
     
     useEffect(() =>{
+        if(footerRef?.current){
         footerRef.current.style.display='none'
+        }
         return() =>{
-            footerRef.current.style.display='block'
+            if(footerRef?.current){
+                footerRef.current.style.display='block'
+            }
         }
       },[])
 

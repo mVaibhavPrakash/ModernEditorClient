@@ -13,6 +13,42 @@
       padding-left: 52px;
     }
 
+    .editor-preview-head1{
+      text-align:justify;
+      font-size:unset;
+      text-align: center;
+      text-decoration-color: rgb(17, 24, 39);
+      text-decoration-line: none;
+      text-decoration-style: solid;
+      text-decoration-thickness: auto;
+      margin:0.6rem 0 70px 0;
+      color:#2d3e50;
+      font-family:serif;
+      font-size:0.96rem;
+      line-height:1.3;
+      overflow-wrap:break-word;
+    }
+
+    .editor-preview-head2{
+      text-align:justify;
+      font-size:unset;
+      font-size:0.72rem;
+      margin:0.6rem 0 0.6rem 0;
+      color:#2d3e50;
+      font-family:manrope;
+      line-height:0.8;
+      overflow-wrap:break-word;
+    }
+
+.editor-preview-head3{
+    text-align:justify;
+    font-size:unset;
+    font-size:0.6rem;
+    margin:0.6rem 0 0.6rem 0;
+    color:#2d3e50;
+    overflow-wrap:break-word;
+    font-weight: 600;
+}
     .curly-quotes:before, .curly-quotes:after {
       display: block;
       height: 30px;
@@ -46,16 +82,15 @@
         font-family: 'serif';
         color: rgb(45, 62, 80);
         font-style: italic;
-        font-size: 0.4rem;
     }
 
     .editor-preview-para{
         text-align:justify;
-        font-size:.46rem;
         width:100%;
         font-family:serif;
         color: #111111;
         margin: 0;
+        font-size:0.46rem;
         margin-bottom: 0.5rem;
         overflow-wrap:break-word;
         line-height:1.8;
@@ -63,14 +98,12 @@
 
     blockquote p{
         display:inline;
-        font-size:0.4rem;
         margin-bottom:0;
     }
 
     .inline-pre{
         display:inline;
-        background-color:rgb(217, 219, 222);
-        font-size: 0.40rem;
+        background-color:rgb(219, 224, 235);
         padding: 3px 10px 3px 10px;
         line-height: 1.8;
         color: rgb(45, 62, 80);
@@ -80,7 +113,6 @@
       overflow-wrap: break-word;
       text-shadow: none;
       background: none;
-      font-size: 0.4rem;
       font-family: monospace;
       padding: 5px;
       line-height: 1.8;
@@ -88,7 +120,30 @@
     }
 
     #pre{
-      margin-bottom: 0.5rem;
-      padding:10px;
       overflow-wrap: break-word;
+      padding-bottom: 15px;
+    }
+
+
+    @media screen and (max-width:1000px){
+      .editor-preview-para{
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        line-height: 2;
+      }.editor-preview-head1{
+        margin:1rem 0 70px 0;
+        font-size: 1.9rem;
+        line-height: 1.;
+      }.editor-preview-head2{
+        font-size: 1.6rem;
+        line-height: 1.5;
+      }.editor-preview-head3{
+        font-size: 1.4rem;
+        margin:1rem 0 1rem 0;
+      }.real-code{
+        line-height: 2;
+        font-size: .84rem;
+      }.inline-pre{
+        line-height: 3;
+      }
     }

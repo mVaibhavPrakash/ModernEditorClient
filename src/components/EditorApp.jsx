@@ -4,10 +4,13 @@ import '../css/editorapp.css'
 
 const EditorApp = ({footerRef,img}) =>{
   useEffect(() =>{
-  footerRef.current.style.display='none'
+    if(footerRef?.current){
+      footerRef.current.style.display='none'
+    }
   return() =>{
-    console.log('hmmmm')
+    if(footerRef?.current){
       footerRef.current.style.display='block'
+    }
   }
 },[])
   return (
