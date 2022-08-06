@@ -22,7 +22,10 @@ const Navbar = ({previewRef, Image,NavRef,SidebarRef, EditRef,EditorDivRef,foote
     return (
         <nav ref={NavRef} className='editor-nav'>
             <div className='editor-navbarLeft'>
-            {Image === 'not-standalone' ? <ImageNotStandalone/> : <ImageStandalone/>}
+            {Image === 'not-standalone' ? ( async () =>{
+                    const {default : ImageNotStandalone} = await import('./ImageNotStandalone');
+                    <ImageNotStandalone/>
+                })(): <ImageStandalone/>}
                 <Link to={'/'} id="editor-home">Home</Link>
             </div>
             <div className='editor-navbarRight'>
