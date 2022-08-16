@@ -25,7 +25,7 @@ const SideNav = ({ModalRef}) => {
                     <h3>Disable comments?</h3>
                     <p><input type="checkbox" name="Yes" id="editor-check" /> Yes</p>
                 </div>
-                <input type='submit' id='editor-input-seo-title' value='Submit Blog'/>
+                <input type='submit' id='editor-input-seo-title' value='Publish'/>
             </div>
     </div>
 

@@ -9,7 +9,7 @@ const App = () => {
     <>
       <Suspense fallback={<Spinner/>}>
           <Routes>
-              <Route path='/' element={<EditorApp footerRef={footerRef} img='standalone'/>}/>
+              <Route path='/' element={<EditorApp/>}/>
           </Routes>
       </Suspense>
     </>

@@ -1,12 +1,13 @@
-import { useRef,useState,useEffect} from 'react'
+import { useRef,useContext,useEffect} from 'react'
 import {navToggle} from '../js/navToggle'
 import '../css/preview.css'
 import Preview from './Preview/Preview'
 import previewFull from '../js/previewFull'
+import { TogglePreviewSize } from '../hooks/TogglePreviewSize'
 
-const PreviewBar = ({previewRef, NavRef, SidebarRef, EditRef,EditorDivRef,footerRef}) => {
-    const [isFullSize,setFullSize] = useState(false)
+const PreviewBar = ({previewRef, NavRef, SidebarRef, EditRef,EditorDivRef}) => {
     const ContentRef = useRef(null)
+    const [isFullSize,setFullSize] = useContext(TogglePreviewSize)
     useEffect(() =>{
         if(!isFullSize){
             const editorWidth =parseInt(EditRef.current.style.width.split('vw')[0])
@@ -23,7 +24,7 @@ const PreviewBar = ({previewRef, NavRef, SidebarRef, EditRef,EditorDivRef,footer
         <div ref={previewRef} className='editor-preview'>
             <div className='editor-preview-btnDiv'>
                 <button id="editor-preview-btn1" className='editor-preview-button' onClick={()=>{navToggle(previewRef,NavRef,SidebarRef, EditRef,EditorDivRef,isFullSize,setFullSize);setFullSize(false)}}>X <span>Close</span></button>
-                <button id="editor-preview-btn2" className='editor-preview-button' onClick={()=>{previewFull(isFullSize,setFullSize,previewRef,NavRef, EditRef,EditorDivRef,SidebarRef)}}>{!isFullSize ?  <span>+ Full</span>:  <span>X Min</span>}</button>
+                <button id="editor-preview-btn2" className='editor-preview-button' onClick={()=>{previewFull(setFullSize,previewRef,NavRef,SidebarRef, EditRef,EditorDivRef,isFullSize)}}>{!isFullSize ?  <span>+ Full</span>:  <span>X Min</span>}</button>
             </div>
             <Preview ContentRef={ContentRef}/>
         </div>

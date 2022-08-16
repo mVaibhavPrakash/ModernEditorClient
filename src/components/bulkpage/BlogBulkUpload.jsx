@@ -6,10 +6,9 @@ import '../../css/blogbulkupload.css'
 
 const BlogBulkUpload = ({footerRef}) => {
   useEffect(() =>{
+    console.log(footerRef)
+    if(footerRef.current !== null && footerRef.current.style.display !=='none')
     footerRef.current.style.display='none'
-    return() =>{
-        footerRef.current.style.display='block'
-    }
 },[])
   return (
     <div className='blog-head'>

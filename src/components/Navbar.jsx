@@ -1,17 +1,25 @@
 import { Link } from 'react-router-dom';
 import { useState,useEffect } from 'react';
-import { faEye} from '@fortawesome/free-solid-svg-icons';
+import { faUpRightFromSquare} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {navToggle} from '../js/navToggle';
+import previewFull from '../js/previewFull';
 import '../css/navbar.css'
-import ImageStandalone from './ImageStandalone';
+import Image from '../../public/img/newgen.png' 
+import { useContext } from 'react';
+import { TogglePreviewSize } from '../hooks/TogglePreviewSize';
 
-const Navbar = ({previewRef, Image,NavRef,SidebarRef, EditRef,EditorDivRef,footerRef}) => {
+const Navbar = ({previewRef, NavRef,SidebarRef, EditRef,EditorDivRef,footerRef}) => {
     const [isWindowNotLoaded,setLoadStatus]=useState(true)
+    const [isFullSize,setFullSize] = useContext(TogglePreviewSize)
 
     useEffect(() =>{
         if(isWindowNotLoaded){
             switch (document.readyState) {
+                case 'loading' :
+                    setLoadStatus(true)
+                case 'interactive' :
+                    setLoadStatus(true)
                 case 'complete' :   
                     setLoadStatus(false);
             }
@@ -21,14 +29,10 @@ const Navbar = ({previewRef, Image,NavRef,SidebarRef, EditRef,EditorDivRef,foote
     return (
         <nav ref={NavRef} className='editor-nav'>
             <div className='editor-navbarLeft'>
-            {Image === 'not-standalone' ? ( async () =>{
-                    const {default : ImageNotStandalone} = await import('./ImageNotStandalone');
-                    <ImageNotStandalone/>
-                })(): <ImageStandalone/>}
-                <Link to={'/'} id="editor-home">Home</Link>
+            <img id="editor-navbarCompanyLogo" src={Image} alt='img'/>
             </div>
             <div className='editor-navbarRight'>
-                <button id='editor-cog' title='Preview' onClick={()=>{navToggle(previewRef,NavRef,SidebarRef, EditRef,EditorDivRef)}} disabled={isWindowNotLoaded}><FontAwesomeIcon icon={faEye} id='editor-cog-btn'/></button>
+                <button id='editor-cog' title='Preview' onClick={()=>{window.innerWidth > 760 ? navToggle(previewRef,NavRef,SidebarRef, EditRef,EditorDivRef):previewFull(setFullSize,previewRef,NavRef, SidebarRef,EditRef,EditorDivRef,isFullSize)}} disabled={isWindowNotLoaded}><FontAwesomeIcon icon={faUpRightFromSquare} id='editor-cog-btn'/></button>
             </div>
         </nav>
     )

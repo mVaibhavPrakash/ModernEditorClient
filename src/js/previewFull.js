@@ -1,12 +1,17 @@
 const previewFull = (
-  isFullSize,
   setFullSize,
   previewRef,
   NavRef,
+  SidebarRef,
   EditRef,
-  EditorDivRef
+  EditorDivRef,
+  isFullSize
 ) => {
   if (!isFullSize) {
+    if (window.innerWidth < 760) {
+      SidebarRef.current.style.display = 'block'
+      previewRef.current.style.display = 'block'
+    }
     previewRef.current.style.maxWidth = '100vw'
     previewRef.current.style.width = '100vw'
     NavRef.current.style.display = 'none'
@@ -15,6 +20,7 @@ const previewFull = (
     setFullSize(!isFullSize)
   } else {
     previewRef.current.style.maxWidth = '65vw'
+    if (window.innerWidth < 760) SidebarRef.current.style.display = 'none'
     NavRef.current.style.display = 'block'
     EditRef.current.style.display = 'block'
     EditorDivRef.current.style.display = 'block'

@@ -1,3 +1,5 @@
+import { decrypt, encrypt } from './hash'
+
 const submitData = (e, data, Input, setInput, isEdit, setEdit) => {
   e.preventDefault()
   if (Input) {
@@ -10,6 +12,9 @@ const submitData = (e, data, Input, setInput, isEdit, setEdit) => {
     } else {
       localStorage.setItem('data', Input)
     }
+    const dat = encrypt(Input)
+    console.log(dat)
+    console.log(decrypt(dat))
     setInput('')
   }
 }
