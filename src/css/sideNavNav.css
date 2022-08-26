@@ -36,6 +36,7 @@
   border: none;
   border-right: 1px solid rgb(248, 248, 248);
   color: white;
+  margin-right:0.25rem;
 }
 
 .sidenavnav-icon{
@@ -50,13 +51,17 @@
     bottom: 0px;
   }
   .sidenavnav-btn{
-    height:2rem;
-    line-height: 2rem;
-    border-radius: 0.4rem;
+    height:3rem;
+    line-height: 3rem;
+    border-radius: 0.6rem;
+    font-size: 1rem;
   }
   .sidenavnav-btn button{
-    height: 1.5rem;
-    width: 1.5rem ;
+    height: 2rem;
+    width: 2rem ;
+    margin-right:0.5rem;
+  }.sidenavnav-icon{
+    font-size: 1rem;
   }
 }
 
@@ -68,12 +73,17 @@
     bottom: 0px;
   }
   .sidenavnav-btn{
-    height:2.5rem;
-    line-height: 2.5rem;
-    border-radius: 0.5rem;
+    height:4rem;
+    line-height: 4rem;
+    border-radius: 0.8rem;
+    font-size: 1rem;
   }
   .sidenavnav-btn button{
-    height: 1.8rem;
-    width: 1.8rem ;
+    height: 3rem;
+    width: 3em ;
+    margin-right:0.5rem;
+  }
+  .sidenavnav-icon{
+    font-size: 1rem;
   }
 }

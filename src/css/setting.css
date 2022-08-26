@@ -90,27 +90,55 @@
 }
 
 #editor-check {
-    margin-bottom: 0.5rem;
+    margin-bottom: 20px;
 }
 
-@media screen and (max-width:1000px) {
-    .editor-select{
-        height:2.5rem;
-        padding:0.4rem 0 0.4rem 0;
+@media screen and (max-width:900px) {
+    #editor-d h2{
+        font-size: 1rem;
     }
-    .editor-selector{
-        height: 1.8rem;
-        font-size: 0.1rem;
-        width: 75%;
+    .editor-sideBar-setting-div h3{
+        font-size: 0.90rem;
     }
-    .editor-selector button{ 
-        font-size:1rem;
-        width:1.4rem;   
-    }.editor-showpreview-div{
-        height:1.8rem;
-        width:25%;
-    }.editor-showpreview{
-        font-size:1rem;
-        width: 1.7rem;
+    #editor-d p{
+        font-size: 0.9rem;
     }
+.editor-sideBar-setting-div p{
+    font-size: 0.8rem;
+}
+.editor-sideBar-setting-div textarea {
+    font-size: 0.7rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    border-radius: 0.5rem;
+}
+#editor-input-seo-title{
+    font-size: 0.8rem;
+    height: 1.5rem;
+}
+}
+
+@media screen and (max-width:600px) {
+    #editor-d h2{
+        font-size: 1.3rem;
+    }
+    .editor-sideBar-setting-div h3{
+        font-size: 1.2rem;
+    }
+    #editor-d p{
+        font-size: 1.2rem;
+    }
+.editor-sideBar-setting-div p{
+    font-size: 1.1rem;
+}
+.editor-sideBar-setting-div textarea {
+    font-size: 0.9rem;
+    height: 3rem;
+    line-height: 3rem;
+    border-radius: 0.7rem;
+}
+#editor-input-seo-title{
+    font-size: 1.1rem;
+    height: 2rem;
+}
 }
