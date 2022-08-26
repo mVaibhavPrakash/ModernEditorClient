@@ -1,5 +1,5 @@
 .editor-select{
-    background-color:#2d386e;
+    background-color:var(--navy);
     height:1.5rem;
     padding:0.25rem 0 0.25rem 0;
     box-sizing: border-box;
@@ -26,7 +26,7 @@
 
 .editor-selector button:hover{
     background-color: white;
-    color:rgb(45,56,110);
+    color:var(--lightest-navy);
     border-radius: 0.25rem;
     
 }
@@ -54,7 +54,7 @@
 
 .editor-showpreview-div button:hover{
     background-color:white;
-    color:#4ba4fa;
+    color:var(--lightest-navy);
     border-radius: 0.25rem;
 }
 

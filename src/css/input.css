@@ -14,7 +14,7 @@
 }
 
 .editor-blogInput::placeholder{
-    color: black;
+    color: var(--navy);
     font-size: 0.4rem;
 }
 

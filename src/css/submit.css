@@ -2,7 +2,7 @@
     display: block;
     width:100%;
     height:100%;
-    color:rgb(45,56,110);
+    color:var(--navy);
     border: none;
     border: 1px solid rgb(195, 197, 197);
     margin: 0 0 0 0;
@@ -13,7 +13,7 @@
 
 #editor-submitBlog:active{
     border: 1px solid rgb(48, 49, 49);
-    color: rgb(13, 26, 87);
+    color: var(--navy);
     background-color:rgba(208, 211, 226, 0.5);
 }
 

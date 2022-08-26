@@ -16,7 +16,7 @@
     border: none;
     margin-left: 0.45rem;
     padding:0.2rem;
-    color: rgb(45,56,110);
+    color: var(--navy);
     background-color:rgb(248, 248, 248);
     cursor: pointer;
 }
@@ -62,19 +62,19 @@
     font-size: 0.52rem;
     padding: 0.36rem 0.36rem 0 0.36rem;
     margin-bottom:.25rem;
-    color: #2d386e;
+    color: var(--lightest-navy);
 }
 #editor-d p{
     font-size: 0.52rem;
     padding: 0.2rem 0rem 0.32rem 0rem;
-    color: rgba(45,56,110,0.7);
+    color: var(--lightest-navy);
     font-family:'Times New Roman', Times, serif;
 }
 .editor-sideBar-content-div p{
     width:54.7vw;
     margin: 0 auto;
     font-size: 0.45rem;
-    color: rgba(45,56,110,0.7);
+    color: var(--lightest-navy);
     font-family:'Times New Roman', Times, serif;
 }
 
@@ -90,10 +90,10 @@
     margin-bottom: 0.5rem;
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(45,56,110,0.4);
+    border-color: var(--lightest-navy);
     border-radius: 0.24rem;
     resize: vertical;
-    color: rgba(45,56,110,0.7);
+    color: var(--lightest-navy);
 }
 
 #editor-textarea-seo-desc{
@@ -102,7 +102,7 @@
 }
 
 .editor-sideBar-content-div textarea:focus{
-    border-color: rgba(45,56,110,1);
+    border-color: var(--navy);
 }
 
 #editor-input-seo-title{
@@ -111,13 +111,13 @@
     height: 100%;
     padding: 0.35rem;
     border-style: solid;
-    border-color: rgba(45,56,110,0.4);
+    border-color: var(--lightest-navy);
     color: white;
     border-width: 1px;
     border-radius: 0.2rem;
     margin: 0 auto;
     margin-bottom:0.4rem ;
-    background-color: rgba(45,56,110,0.7);
+    background-color: var(--lightest-navy);
     box-shadow: 0 0.18rem #999;
 }
 

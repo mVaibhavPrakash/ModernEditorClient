@@ -7,9 +7,9 @@
     font-family: monospace;
     position:fixed;
     font-size: 0.2rem;
-    background-color: #2d386e;
-    border-bottom: 0.5px solid #2d386e ;
-    color: #2d386e;
+    background-color: var(--navy);
+    border-bottom: 0.5px solid var(--navy) ;
+    color: var(--navy);
     z-index:2;
 }
 

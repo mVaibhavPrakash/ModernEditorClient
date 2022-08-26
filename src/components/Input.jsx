@@ -23,6 +23,7 @@ export const Input = () => {
 
     return (
         <textarea id='editor-input' autoFocus placeholder="Type something here!" onChange={(e) => deb(e.target.value,setResult)}
-        className="editor-blogInput" onSelect={(e) =>selectInputText(e,setSelected,Result)}/>
+        className="editor-blogInput"
+        spellCheck='true' onSelect={(e) =>selectInputText(e,setSelected,Result)}/>
     )
 }
