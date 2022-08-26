@@ -26,6 +26,10 @@ body,html{
     flex: 1;
   }
 
+  #preview-portal{
+    background-color: var(--navy);
+  }
+
   :root{
     --blue:#2d386e;
     --dark-navy: #020c1b;

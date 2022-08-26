@@ -1,0 +1,116 @@
+
+.editor-sideBar-setting-div{
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.2rem;
+    border-color :rgb(195, 197, 197);
+    margin-bottom:0.45rem ;
+    background-color: white;
+}
+
+#editor-d{
+    width: 100%;
+    margin-bottom:0.4rem ;
+}
+
+#editor-d h2{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 0.55rem;
+    color: #161e42;
+}
+
+.editor-sideBar-setting-div h3{
+    width: 95%;
+    margin: 0 auto;
+    font-size: 0.52rem;
+    margin-top: 20px;
+    margin-bottom:.25rem;
+    color: var(--lightest-navy);
+}
+#editor-d p{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-size: 0.52rem;
+    color: var(--lightest-navy);
+    font-family:'Times New Roman', Times, serif;
+}
+.editor-sideBar-setting-div p{
+    width: 95%;
+    margin: 0 auto;
+    font-size: 0.45rem;
+    color: var(--lightest-navy);
+    font-family:'Times New Roman', Times, serif;
+}
+
+.editor-sideBar-setting-div textarea {
+    width: 95%;
+    box-sizing: border-box;
+    display: block;
+    font-size: 0.38rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    margin:0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--lightest-navy);
+    border-radius: 0.24rem;
+    resize: none;
+    color: var(--lightest-navy);
+}
+
+.editor-sideBar-setting-div textarea:focus{
+    border-color: var(--navy);
+}
+
+#editor-input-seo-title{
+    width: 100%;
+    margin: 0 auto;
+    font-size: 0.4rem;
+    height: 1rem;
+    border-style: solid;
+    border-color: var(--lightest-navy);
+    color: white;
+    border-width: 1px;
+    border-radius: 0.2rem;
+    margin-bottom:0.4rem ;
+    background-color: var(--lightest-navy);
+    box-shadow: 0 0.18rem #999;
+}
+
+#editor-input-seo-title:active{
+
+  box-shadow: 0 0.1rem #666;
+  transform: translateY(4px);
+}
+
+#editor-check {
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width:1000px) {
+    .editor-select{
+        height:2.5rem;
+        padding:0.4rem 0 0.4rem 0;
+    }
+    .editor-selector{
+        height: 1.8rem;
+        font-size: 0.1rem;
+        width: 75%;
+    }
+    .editor-selector button{ 
+        font-size:1rem;
+        width:1.4rem;   
+    }.editor-showpreview-div{
+        height:1.8rem;
+        width:25%;
+    }.editor-showpreview{
+        font-size:1rem;
+        width: 1.7rem;
+    }
+}

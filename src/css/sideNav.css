@@ -1,154 +1,72 @@
 .editor-sideBar{
-    position: absolute;
-    left: 20vw;
-    width: 60vw;
-    margin: 0 auto;
-    z-index: 500;
-    border-left-style: solid;
-    border-left-width: 1px;
-    border-left-color: rgb(195, 197, 197);
-    background-color: rgb(248, 248, 248);
-}
-
-#editor-sideBar-button{
-    font-size: 0.45rem;
-    font-weight: 600;
-    border: none;
-    margin-left: 0.45rem;
-    padding:0.2rem;
-    color: var(--navy);
-    background-color:rgb(248, 248, 248);
-    cursor: pointer;
-}
-
-#editor-sideBar-button:hover{
-    background-color: rgb(195, 197, 197);
-    
-}
-
-#editor-sideBar-button span{
-    padding-left: 5px;
-    font-size: 0.45rem;
+    position: fixed;
+    top:25px;
+    bottom: 25px;
+    overflow-y: scroll;
+    background-color: var(--navy);
 }
 
 #editor-sideBar-content{
-    margin: 0.6rem;
-    margin-top: 0.3rem;
+    width: 55vw;
+    margin: 0 auto;
+    height: 100vh;
+    overflow: auto;
+    padding-top: 0;
+    margin-left:30vw;
+    margin-top: 0;
+    border-left: 1px dashed var(--navy);
+    background-color: rgb(248, 248, 248);
+}
+
+.setting{
+    width:90%;
+    margin: 0 auto;
     border-top-style:solid ;
     border-top-width: 1px ;
     border-top-color: rgb(195, 197, 197);
 }
 
-.editor-sideBar-content-div{
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 0.2rem;
-    border-color :rgb(195, 197, 197);
-    margin-bottom:0.45rem ;
-    background-color: white;
-}
-
-#editor-d{
-    margin-bottom:0.4rem ;
-}
-
-#editor-d h2{
-    font-size: 0.55rem;
-    padding: 0.32rem 0rem 0 0rem;
-    color: #161e42;
-}
-
-.editor-sideBar-content-div h3{
-    font-size: 0.52rem;
-    padding: 0.36rem 0.36rem 0 0.36rem;
-    margin-bottom:.25rem;
-    color: var(--lightest-navy);
-}
-#editor-d p{
-    font-size: 0.52rem;
-    padding: 0.2rem 0rem 0.32rem 0rem;
-    color: var(--lightest-navy);
-    font-family:'Times New Roman', Times, serif;
-}
-.editor-sideBar-content-div p{
-    width:54.7vw;
-    margin: 0 auto;
-    font-size: 0.45rem;
-    color: var(--lightest-navy);
-    font-family:'Times New Roman', Times, serif;
-}
-
-.editor-sideBar-content-div textarea {
-    width: 52.6vw;
-    display: block;
-    font-size: 0.38rem;
-    height: 0.7rem;
-    line-height: 0.7rem;
-    padding: 0.40rem;
+#editor-sideBar-button{
+    height: 60px;
+    width: 90%;
     margin:0 auto;
-    margin-top: 0.3rem;
-    margin-bottom: 0.5rem;
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--lightest-navy);
-    border-radius: 0.24rem;
-    resize: vertical;
-    color: var(--lightest-navy);
+    font-weight: 600;
+    color: var(--navy);
+    cursor: pointer;
 }
 
-#editor-textarea-seo-desc{
-    height: 1.5rem;
-    line-height: 1.5rem;
+#editor-sideBar-button button{
+    display: block;
+    padding: 17.5px;
+    height: 25px;
+    font-size: 25px;
+    background-color: rgb(248, 248, 248);
+    border: none;
 }
 
-.editor-sideBar-content-div textarea:focus{
-    border-color: var(--navy);
+#editor-sideBar-button button:hover{
+    background-color: rgb(195, 197, 197);
+    
 }
 
-#editor-input-seo-title{
-    width: 54.5vw;
-    font-size: 0.4rem;
-    height: 100%;
-    padding: 0.35rem;
-    border-style: solid;
-    border-color: var(--lightest-navy);
-    color: white;
-    border-width: 1px;
-    border-radius: 0.2rem;
-    margin: 0 auto;
-    margin-bottom:0.4rem ;
-    background-color: var(--lightest-navy);
-    box-shadow: 0 0.18rem #999;
-}
 
-#editor-input-seo-title:active{
-
-  box-shadow: 0 0.1rem #666;
-  transform: translateY(4px);
-}
-
-#editor-check {
-    margin-bottom: 0.5rem;
-}
-
-@media screen and (max-width:1000px) {
-    .editor-select{
-        height:2.5rem;
-        padding:0.4rem 0 0.4rem 0;
+@media screen and (max-width:900px) {
+    .editor-sideBar{
+        top:0px;
+        bottom: 0px;
     }
-    .editor-selector{
-        height: 1.8rem;
-        font-size: 0.1rem;
-        width: 75%;
+    #editor-sideBar-content{
+        width: 70vw;
+        margin-left:25vw;
     }
-    .editor-selector button{ 
-        font-size:1rem;
-        width:1.4rem;   
-    }.editor-showpreview-div{
-        height:1.8rem;
-        width:25%;
-    }.editor-showpreview{
-        font-size:1rem;
-        width: 1.7rem;
+}
+@media screen and (max-width:600px) {
+    .editor-sideBar{
+        top:0px;
+        bottom: 0px;
+    }
+    #editor-sideBar-content{
+        width: 70vw;
+        margin-left:30vw;
     }
 }
