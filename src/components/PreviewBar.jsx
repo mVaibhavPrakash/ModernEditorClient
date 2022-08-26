@@ -1,13 +1,14 @@
-import { useRef,useContext,useEffect} from 'react'
+import { useRef,useContext,useEffect,lazy} from 'react'
 import {navToggle} from '../js/navToggle'
 import '../css/preview.css'
-import Preview from './Preview/Preview'
 import previewFull from '../js/previewFull'
 import { TogglePreviewSize } from '../hooks/TogglePreviewSize'
+import Preview from './Preview/Preview'
 
 const PreviewBar = ({previewRef, NavRef, SidebarRef, EditRef,EditorDivRef}) => {
     const ContentRef = useRef(null)
     const [isFullSize,setFullSize] = useContext(TogglePreviewSize)
+
     useEffect(() =>{
         if(!isFullSize){
             const editorWidth =parseInt(EditRef.current.style.width.split('vw')[0])

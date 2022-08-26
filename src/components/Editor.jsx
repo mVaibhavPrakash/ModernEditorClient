@@ -1,17 +1,19 @@
-import {useEffect, useRef,useState} from 'react'
+import {lazy, useEffect, useRef,useState} from 'react'
 import Navbar from './Navbar'
 import Title from './Title'
 import Selector from './Selector'
 import {Input} from './Input'
 import {Submit} from './Submit'
-import SideNavBar from './SideNavBar'
-import PreviewBar from './PreviewBar'
 import { InputContextProvider } from '../hooks/InputContext'
 import { EditContextProvider } from '../hooks/EditContext'
 import { SelectedTextContextProvider } from '../hooks/SelectedTextContext'
 import { RenderPreviewContextProvider } from '../hooks/RenderPreviewContext'
 import { TogglePreviewSizeProvider } from '../hooks/TogglePreviewSize'
 import '../css/editor.css'
+const SideNavBar = lazy(() =>import('./SideNavBar'))
+const PreviewBar = lazy(() =>import('./PreviewBar'))
+//import SideNavBar from './SideNavBar'
+//import PreviewBar from './PreviewBar'
 
 const Editor = () => {
     const SidebarRef =useRef(null)

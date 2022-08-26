@@ -1,12 +1,13 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   entry: './src/components/Index.jsx',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'clientbundle.js',
+    path: path.resolve(__dirname, 'build'),
+    filename: 'bundle.js',
     assetModuleFilename: 'img/[hash]][ext][query]',
   },
   module: {
@@ -44,4 +45,4 @@ module.exports = {
     }),
   ],
   stats: 'errors-only',
-}
+};

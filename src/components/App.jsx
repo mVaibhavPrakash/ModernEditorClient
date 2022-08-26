@@ -1,7 +1,7 @@
-import {Suspense, useRef} from 'react'
+import {Suspense, useRef,lazy} from 'react'
 import {Routes,Route} from 'react-router-dom'
 import Spinner from './Spinner';
-import EditorApp from './EditorApp'
+const EditorApp = lazy(() => import('./EditorApp'))
 
 const App = () => {
   const footerRef= useRef(null)

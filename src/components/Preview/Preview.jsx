@@ -1,4 +1,4 @@
-import {useContext, useEffect,useState} from 'react'
+import {useContext} from 'react'
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
 import Heading1 from './Heading1'
