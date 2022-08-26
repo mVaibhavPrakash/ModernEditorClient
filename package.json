@@ -12,8 +12,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --config  webpack.config.js  --env env=dev",
-    "build": "webpack --config webpack.config.js --env env=prod",
-    "postbuild": "cd build/ && gzip *.js && cd css/ && gzip *.css"
+    "build": "webpack --config webpack.config.js --env env=prod"
   },
   "browserslist": {
     "production": [
@@ -46,7 +45,6 @@
     "babel-loader": "^8.2.3",
     "babel-plugin-prismjs": "^2.1.0",
     "clean-webpack-plugin": "^4.0.0",
-    "compression-webpack-plugin": "^10.0.0",
     "css-loader": "^6.6.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
