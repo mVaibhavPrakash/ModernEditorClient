@@ -17,7 +17,7 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/i,
         type: 'asset/resource',
       },
       {
@@ -36,7 +36,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './public/index.html'),
-      favicon: './public/img/newgen.ico',
+      favicon: './public/img/neu.ico',
     }),
     new MiniCssExtractPlugin({
       filename: 'css/style.[fullhash:8].css',
