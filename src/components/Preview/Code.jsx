@@ -2,9 +2,7 @@ import { useEffect } from 'react'
 import '../../css/preview.css'
 import './Blog.css'
 import Prism from 'prismjs'
-
 const Code = (props) => {
-    console.log(props.children)
     useEffect(() => {
         Prism.highlightAll();
       });
@@ -14,7 +12,7 @@ const Code = (props) => {
     props.inline === true ? result.push(<code className='inline-pre' key={1}>{props.children}</code>) : result.push(<code children={props.children} className={`language-${lan}`} />)
     return (
         <>
-            {result}
+             <pre className="code-toolbar" >{result}</pre>
         </>
     )
 }

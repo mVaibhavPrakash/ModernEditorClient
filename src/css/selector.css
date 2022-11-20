@@ -9,7 +9,7 @@
     display: flex;
     height: 1rem;
     font-size: 0.6rem;
-    width: 75%;
+    width: 100%;
     margin: auto;
     justify-content: space-evenly;
     float: right;
@@ -31,34 +31,7 @@
     
 }
 
-.editor-showpreview-div{
-    display: flex;
-    height:1rem;
-    width:25%;
-    margin-bottom: 10px;
-    margin: auto;
-    justify-content:space-evenly;
-}
-
-.editor-showpreview{
-    display: block;
-    border-style: none;
-    margin: 0 auto;
-    color:white;
-    font-size:0.6rem;
-    background-color: inherit;
-    border: none;
-    width: 1rem;
-    text-align: center;
-}
-
-.editor-showpreview-div button:hover{
-    background-color:white;
-    color:var(--lightest-navy);
-    border-radius: 0.25rem;
-}
-
-@media screen and (max-width:1000px) {
+@media screen and (max-width:900px) {
     .editor-select{
         height:2.5rem;
         padding:0.4rem 0 0.4rem 0;
@@ -66,16 +39,9 @@
     .editor-selector{
         height: 1.8rem;
         font-size: 0.1rem;
-        width: 75%;
     }
     .editor-selector button{ 
         font-size:1rem;
         width:1.4rem;   
-    }.editor-showpreview-div{
-        height:1.8rem;
-        width:25%;
-    }.editor-showpreview{
-        font-size:1rem;
-        width: 1.7rem;
     }
 }

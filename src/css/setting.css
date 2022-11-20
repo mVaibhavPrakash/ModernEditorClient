@@ -19,7 +19,7 @@
     margin: 0 auto;
     margin-top: 30px;
     font-size: 0.55rem;
-    color: #161e42;
+    color: white;
 }
 
 .editor-sideBar-setting-div h3{
@@ -33,9 +33,10 @@
 #editor-d p{
     width: 100%;
     margin: 0 auto;
+    margin-top: 10px;
     margin-bottom: 30px;
     font-size: 0.52rem;
-    color: var(--lightest-navy);
+    color:rgb(195, 197, 197);
     font-family:'Times New Roman', Times, serif;
 }
 .editor-sideBar-setting-div p{
@@ -80,7 +81,7 @@
     border-radius: 0.2rem;
     margin-bottom:0.4rem ;
     background-color: var(--lightest-navy);
-    box-shadow: 0 0.18rem #999;
+    box-shadow: 0 0.18rem var(--navy);
 }
 
 #editor-input-seo-title:active{

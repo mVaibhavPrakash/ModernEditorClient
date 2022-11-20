@@ -1,43 +1,73 @@
-const markdownEdit = (e, text, selected, Input, setInput) => {
-  e.preventDefault()
-
-  if (Input) {
-    let oldString = Input
-    let newString
+const markdownEdit = (
+  e,
+  text,
+  selected,
+  setSelected,
+  Result,
+  setResult,
+  InputRef
+) => {
+  e.preventDefault();
+  if (Result && selected.start !== selected.end) {
+    let newString = '';
     if (text === 'bold-btn') {
-      newString = '**' + selected.input + '**'
+      newString = '**' + selected.input.trim() + '**';
     }
     if (text === 'italic-btn') {
-      newString = '*' + selected.input + '*'
+      newString = '*' + selected.input.trim() + '*';
     }
     if (text === 'head-btn') {
-      newString = '\n' + '#' + ' ' + selected.input
+      newString = '\n' + '#' + ' ' + selected.input.trim();
     }
     if (text === 'code-btn') {
-      newString = '\n' + '~~~' + 'js' + '\n' + selected.input + '\n' + '~~~'
+      newString =
+        '\n' + '~~~' + 'js' + '\n' + selected.input.trim() + '\n' + '~~~';
     }
     if (text === 'ul-btn') {
-      newString = '\n' + '*' + ' ' + selected.input
+      newString = '\n' + '*' + ' ' + selected.input.trim();
     }
     if (text === 'block-btn') {
-      newString = '> ' + selected.input + '\n'
+      newString = '> ' + selected.input.trim() + '\n';
     }
     if (text === 'link-btn' || text === 'image-btn') {
-      let array = selected.input.split(' ')
-      let last = array.pop()
-      let input = '[' + array.join(' ') + ']'
-      input = input + '(' + last + ')'
+      let array = selected.input.trim().split(' ');
+      let last = array.pop();
+      let input = '[' + array.join(' ') + ']';
+      input = input + '(' + last + ')';
       if (text === 'image-btn') {
-        input = '!' + input
+        input = '!' + input;
       }
-      newString = input
+      newString = input;
     }
-    setInput(
-      oldString.substring(0, selected.start) +
+    setResult(
+      Result.substring(0, selected.start) +
         newString +
-        oldString.substring(selected.end + 1, oldString.length)
-    )
+        Result.substring(selected.end, Result.length)
+    );
+    InputRef.current.value =
+      Result.substring(0, selected.start) +
+      newString +
+      Result.substring(selected.end, Result.length);
   }
-}
+  if (text === 'table-btn') {
+    let newString =
+      '\n' +
+      `| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| left text   | middle-text | right text    |` +
+      '\n';
 
-export default markdownEdit
+    setResult(
+      Result.substring(0, selected.start) +
+        newString +
+        Result.substring(selected.end, Result.length)
+    );
+    InputRef.current.value =
+      Result.substring(0, selected.start) +
+      newString +
+      Result.substring(selected.end, Result.length);
+  }
+  setSelected('');
+};
+
+export default markdownEdit;

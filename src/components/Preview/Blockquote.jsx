@@ -1,14 +1,20 @@
 import './Blog.css'
 const Blockquote = (props) => {
-console.log(props.children)
+    console.log(props.children)
+    const array =props.children.map((val,ind) =>{
+        if(val.props!== undefined && val.props.node.tagName==='p'){
+            console.log(val.props)
+            return <p className='blockquotes-paragraph'>{val.props.children}</p>
+        }
+        else{
+            return val;
+        }
+    })
+    console.log(array)
     return (
-        <div className="notepaper">
-            <figure className="quote">
-                <blockquote className="curly-quotes" style={{display:'inline'}}>
-                {props.children}
-                </blockquote>
-        </figure>
-        </div>
+        <blockquote className="editor-quotes">
+            {array}
+        </blockquote>
     )
 }
 

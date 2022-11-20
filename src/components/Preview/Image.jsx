@@ -6,7 +6,7 @@ const Image = (props) => {
         height:'600px'
     }
     return (
-        <img src={props.src} style={style} className='editor-previewImage'/>
+        <img src={props.src} style={style} className='editor-image'/>
     )
 }
 

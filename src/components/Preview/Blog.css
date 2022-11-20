@@ -9,11 +9,55 @@
       margin-bottom:0.2rem;
     }
     
-    .curly-quotes{
+    .editor-submit-btn{
+      width:25vw;
+      height:1rem;
+      color:#2d3e50;
+      font-size:0.5rem;
+      border-style:none;
+      background-color:rgb(50, 190, 143);
+    }
+
+    .editor-quotes{
       padding-left: 52px;
     }
 
-    .editor-preview-head1{
+    .editor-table{
+      align-content: center;
+    }
+
+    .editor-table {
+      width: 100%;
+      margin-bottom: 1rem;
+      color: #212529;
+      border: 1px solid #dee2e6;
+      border-collapse: collapse;
+    }
+
+    .editor-table-head{
+      border-bottom: 2px solid #dee2e6;
+    }
+
+    .editor-table-head td, .editor-table-head th {
+      border-bottom-width: 2px;
+    }
+    .editor-table-head th {
+      vertical-align: bottom;
+      border-bottom: 2px solid #dee2e6;
+      border-bottom-width: 2px;
+    }
+    .editor-table td, .editor-table th {
+      border: 1px solid #dee2e6;
+        border-bottom-color: rgb(222, 226, 230);
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        padding: .75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+
+    .editor-head1{
       text-align:justify;
       font-size:unset;
       text-align: center;
@@ -29,7 +73,7 @@
       overflow-wrap:break-word;
     }
 
-    .editor-preview-head2{
+    .editor-head2{
       text-align:justify;
       font-size:unset;
       font-size:0.72rem;
@@ -40,7 +84,7 @@
       overflow-wrap:break-word;
     }
 
-.editor-preview-head3{
+.editor-head3{
     text-align:justify;
     font-size:unset;
     font-size:0.6rem;
@@ -49,22 +93,11 @@
     overflow-wrap:break-word;
     font-weight: 600;
 }
-    .curly-quotes:before, .curly-quotes:after {
-      display: block;
-      height: 30px;
-      line-height: 48px;
-      font-size: 50px;
-      opacity: .4;
-      margin-left: 4px;
-      margin-right: -8px;
-    }
-    
-    .curly-quotes:before {
-      content: '\201C';
-    }
-    
-    .curly-quotes:after {
-      content: '\201D';
+    .blockquotes-paragraph {
+      display:inline;
+      margin-bottom:0;
+      color:blue;
+      text-align: center;
     }
     
     ::marker{
@@ -72,7 +105,7 @@
         color: #c3baaa;
     }
 
-    #blog-link{
+    #editor-link{
         color: #111;
         -webkit-text-decoration: underline;
         text-decoration: underline;
@@ -84,7 +117,7 @@
         font-style: italic;
     }
 
-    .editor-preview-para{
+    .editor-paragraph{
         text-align:justify;
         width:100%;
         font-family:serif;
@@ -94,11 +127,6 @@
         margin-bottom: 0.5rem;
         overflow-wrap:break-word;
         line-height:1.8;
-    }
-
-    blockquote p{
-        display:inline;
-        margin-bottom:0;
     }
 
     .inline-pre{
@@ -119,25 +147,48 @@
       background-color: rgb(45, 56, 110);
     }
 
-    #pre{
+    #editor-pre{
       overflow-wrap: break-word;
       padding-bottom: 15px;
     }
 
+    .editor-ol,.editor-ul{
+      list-style-position: inside;
+      margin:0 auto;
+      padding:0;
+      width:100%;
+      font-size:0.55rem;
+      margin-top:0.7rem;
+      margin-bottom:0.7rem;
+    }
+
+    .editor-ol li, .editor-ul li{
+      margin: 0 auto;
+      color:red;
+      font-size:0.47rem;
+      font-family:inter;
+      line-height:1.8;
+      padding-left: 1.28571429em;
+      text-indent: -1.28571429em;
+      margin-bottom:0.4rem;
+      tab-size:3
+    }
+
+
 
     @media screen and (max-width:1000px){
-      .editor-preview-para{
+      .editor-paragraph{
         font-size: 0.9rem;
         margin-bottom: 1rem;
         line-height: 2;
-      }.editor-preview-head1{
+      }.editor-head1{
         margin:1rem 0 70px 0;
         font-size: 1.9rem;
         line-height: 1.;
-      }.editor-preview-head2{
+      }.editor-head2{
         font-size: 1.6rem;
         line-height: 1.5;
-      }.editor-preview-head3{
+      }.editor-head3{
         font-size: 1.4rem;
         margin:1rem 0 1rem 0;
       }.real-code{

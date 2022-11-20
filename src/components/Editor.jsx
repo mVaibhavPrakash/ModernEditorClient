@@ -12,8 +12,6 @@ import { TogglePreviewSizeProvider } from '../hooks/TogglePreviewSize'
 import '../css/editor.css'
 const SideNavBar = lazy(() =>import('./SideNavBar'))
 const PreviewBar = lazy(() =>import('./PreviewBar'))
-//import SideNavBar from './SideNavBar'
-//import PreviewBar from './PreviewBar'
 
 const Editor = () => {
     const SidebarRef =useRef(null)
@@ -22,6 +20,7 @@ const Editor = () => {
     const NavRef = useRef(null)
     const ModalRef = useRef(null)
     const previewRef = useRef(null)
+    const InputRef = useRef(null)
 
     const [isWindowNotLoaded,setLoadStatus]=useState(true)
 
@@ -55,8 +54,8 @@ const Editor = () => {
                     <div ref={EditRef} id='edit-ref' className="editor-editor">
                         <div ref={EditorDivRef} className='editor-editorDiv'>
                             <Title/>
-                            <Selector ModalRef={ModalRef}/>
-                            <Input />
+                            <Selector ModalRef={ModalRef} InputRef={InputRef}/>
+                            <Input InputRef={InputRef}/>
                             <Submit ModalRef={ModalRef}/>
                             <SideNavBar ModalRef={ModalRef}/>
                         </div>

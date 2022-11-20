@@ -16,10 +16,13 @@ const SideNav = ({ModalRef}) => {
                 {Active === 'setting' ? <Setting/>:''}
                 {Active === 'share' ? <Share/>:''}
                 {Active === 'print' ? <Print/>:''}
-                {Active === 'cheat' ? <Cheat/>:''}
-                {Active === 'print' ? <Print/>:''}
-                {Active === 'print' ? <Print/>:''}
-                {Active === 'print' ? <Print/>:''}
+                {Active === 'about' ? <About/>:''}
+                {Active === 'save' ? <Save/>:''}
+                {Active === 'export' ? <Export/>:''}
+                {Active === 'import' ? <Import/>:''}
+                {Active === 'docs' ? <Docs/>:''}
+                {Active === 'drafts' ? <Drafts/>:''}
+                {Active === 'current' ? <Current/>:''}
             </div>
         </div>
 

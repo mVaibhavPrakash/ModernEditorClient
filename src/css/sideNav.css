@@ -1,29 +1,22 @@
 .editor-sideBar{
     position: fixed;
-    top:25px;
-    bottom: 25px;
-    overflow-y: scroll;
     background-color: var(--navy);
 }
 
 #editor-sideBar-content{
-    width: 55vw;
+    width: 90vw;
     margin: 0 auto;
     height: 100vh;
     overflow: auto;
     padding-top: 0;
-    margin-left:30vw;
+    margin-left:10vw;
     margin-top: 0;
-    border-left: 1px dashed var(--navy);
-    background-color: rgb(248, 248, 248);
+    background-color: var(--lightest-navy);
 }
 
 .setting{
     width:90%;
     margin: 0 auto;
-    border-top-style:solid ;
-    border-top-width: 1px ;
-    border-top-color: rgb(195, 197, 197);
 }
 
 #editor-sideBar-button{
@@ -31,8 +24,10 @@
     width: 90%;
     margin:0 auto;
     font-weight: 600;
-    color: var(--navy);
     cursor: pointer;
+    border-bottom-style:solid ;
+    border-bottom-width: 1px ;
+    border-bottom-color: var(--navy)
 }
 
 #editor-sideBar-button button{
@@ -40,8 +35,9 @@
     padding: 17.5px;
     height: 25px;
     font-size: 25px;
-    background-color: rgb(248, 248, 248);
+    background-color: var(--lightest-navy);
     border: none;
+    color: white;
 }
 
 #editor-sideBar-button button:hover{
