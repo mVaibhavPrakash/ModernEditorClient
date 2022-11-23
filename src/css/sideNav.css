@@ -65,4 +65,14 @@
         width: 70vw;
         margin-left:30vw;
     }
+    #editor-sideBar-button{
+        height: 50px;
+    }
+
+    #editor-sideBar-button button{
+        padding: 15px;
+        height: 18px;
+        font-size: 18px;
+    }
+    
 }

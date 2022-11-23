@@ -43,6 +43,7 @@
     width: 95%;
     margin: 0 auto;
     font-size: 0.45rem;
+    margin-top: 10px;
     color: var(--lightest-navy);
     font-family:'Times New Roman', Times, serif;
 }
@@ -54,6 +55,8 @@
     font-size: 0.38rem;
     height: 1.5rem;
     line-height: 1.5rem;
+    padding-left: 10px;
+    padding-right: 10px;
     margin:0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
