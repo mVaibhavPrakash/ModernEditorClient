@@ -33,15 +33,30 @@
 
 @media screen and (max-width:900px) {
     .editor-select{
-        height:2.5rem;
+        height:3rem;
         padding:0.4rem 0 0.4rem 0;
     }
     .editor-selector{
         height: 1.8rem;
-        font-size: 0.1rem;
+        font-size: 0.2rem;
     }
     .editor-selector button{ 
-        font-size:1rem;
+        font-size:1.5rem;
+        width:1.4rem;   
+    }
+}
+
+@media screen and (max-width:550px) {
+    .editor-select{
+        height:3.4rem;
+        padding:0.85rem 0 0.85rem 0;
+    }
+    .editor-selector{
+        height: 2rem;
+        font-size: 0.25rem;
+    }
+    .editor-selector button{ 
+        font-size:1.7rem;
         width:1.4rem;   
     }
 }

@@ -28,3 +28,19 @@
     grid-column-start: 2;
     display: none;
 }
+
+@media screen and (max-width:550px) {
+    .editor-editor{
+        min-width: 80vw;
+        width:80vw;
+        max-width: 80vw;
+        left: 10vw;
+    }
+    
+    .editor-editorActive{
+        min-width: 80vw;
+        width:80vw;
+        max-width: 80vw;
+        left: 10vw;
+    }
+}

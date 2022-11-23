@@ -24,20 +24,20 @@
 
 @media screen and (max-width:1000px) {
     #editor-submitBlog{
-        font-size:0.8rem;
+        font-size:1rem;
     }
     .editor-submitDiv{
-        height:2rem;
+        height:2.4rem;
         margin-bottom: 20px;
     }
 }
 
 @media screen and (max-width:550px) {
     #editor-submitBlog{
-        font-size:1rem;
+        font-size:1.4rem;
     }
     .editor-submitDiv{
-        height:2.2rem;
-        margin-bottom: 20px;
+        height:3rem;
+        margin-bottom: 25px;
     }
 }
