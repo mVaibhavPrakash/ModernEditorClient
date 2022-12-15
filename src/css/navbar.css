@@ -58,6 +58,21 @@
     cursor: pointer;
 }
 
+.editor-nav-container{
+    height:30px;
+    background-color: red;
+    margin-top: 1.8rem;
+}
+
+.page-btn{
+    color: white;
+}
+
+.page-btn-close{
+    border-radius: 50%;
+    background-color:green;
+}
+
 @media screen and (max-width:1000px) {
     .editor-nav{
         height:3rem;
